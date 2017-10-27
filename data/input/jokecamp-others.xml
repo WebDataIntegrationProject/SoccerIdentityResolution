@@ -1,0 +1,1587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clubs>
+  <club>
+    <id>jokecamp_1</id>
+    <name>Hamburg</name>
+    <nameOfStadium>Imtech Arena</nameOfStadium>
+    <league>Bundesliga</league>
+    <players>
+      <player>
+        <fullName>Rafael van der Vaart</fullName>
+        <height>176</height>
+        <shirtNumberOfClub>23</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Heiko Westermann</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>4</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Johan Djourou</fullName>
+        <height>191</height>
+        <shirtNumberOfClub>5</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marcell Jansen</fullName>
+        <height>191</height>
+        <shirtNumberOfClub>7</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-09</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Valon Behrami</fullName>
+        <height>185</height>
+        <shirtNumberOfClub>21</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Ivo Ilicevic</fullName>
+        <height>174</height>
+        <shirtNumberOfClub>11</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-08-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Jaroslav Drobny</fullName>
+        <height>192</height>
+        <shirtNumberOfClub>1</shirtNumberOfClub>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Gojko Kacar</fullName>
+        <height>185</height>
+        <shirtNumberOfClub>40</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-09</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>René Adler</fullName>
+        <height>191</height>
+        <shirtNumberOfClub>15</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-09-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Artjoms Rudnevs</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>16</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Zoltán Stieber</fullName>
+        <height>175</height>
+        <shirtNumberOfClub>17</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-09</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Nicolai Müller</fullName>
+        <height>173</height>
+        <shirtNumberOfClub>27</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Lewis Holtby</fullName>
+        <height>176</height>
+        <shirtNumberOfClub>18</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Petr Jirácek</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>19</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Dennis Diekmeier</fullName>
+        <height>188</height>
+        <shirtNumberOfClub>2</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-23</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Tolgay Arslan</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>8</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Pierre-Michel Lasogga</fullName>
+        <height>189</height>
+        <shirtNumberOfClub>10</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Matthias Ostrzolek</fullName>
+        <height>178</height>
+        <shirtNumberOfClub>22</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Valmir Nafiu</fullName>
+        <height>175</height>
+        <shirtNumberOfClub>34</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-09</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Cléber</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>3</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Matti Steinmann</fullName>
+        <height>188</height>
+        <shirtNumberOfClub>24</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Julian Green</fullName>
+        <height>172</height>
+        <shirtNumberOfClub>37</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Jonathan Tah</fullName>
+        <height>192</height>
+        <shirtNumberOfClub>28</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-08-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Ashton Götz</fullName>
+        <height>177</height>
+        <shirtNumberOfClub>39</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Tolcay Cigerci</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>35</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-09-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Alexander Brunst</fullName>
+        <height>195</height>
+        <shirtNumberOfClub>30</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Mohamed Gouaida</fullName>
+        <height>178</height>
+        <shirtNumberOfClub>25</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Ronny Marcos</fullName>
+        <height>174</height>
+        <shirtNumberOfClub>31</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>jokecamp_2</id>
+    <name>Schalke</name>
+    <nameOfStadium>VELTINS-Arena</nameOfStadium>
+    <league>Bundesliga</league>
+    <players>
+      <player>
+        <fullName>Klaas-Jan Huntelaar</fullName>
+        <height>186</height>
+        <shirtNumberOfClub>25</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Tranquillo Barnetta</fullName>
+        <height>178</height>
+        <shirtNumberOfClub>27</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Dennis Aogo</fullName>
+        <height>184</height>
+        <shirtNumberOfClub>15</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Kevin-Prince Boateng</fullName>
+        <height>186</height>
+        <shirtNumberOfClub>9</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-22</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Christian Wetklo</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>28</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Christian Fuchs</fullName>
+        <height>186</height>
+        <shirtNumberOfClub>23</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Chinedu Obasi</fullName>
+        <height>188</height>
+        <shirtNumberOfClub>20</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-08</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Ralf Fährmann</fullName>
+        <height>196</height>
+        <shirtNumberOfClub>1</shirtNumberOfClub>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Benedikt Höwedes</fullName>
+        <height>187</height>
+        <shirtNumberOfClub>4</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Felipe Santana</fullName>
+        <height>194</height>
+        <shirtNumberOfClub>5</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-22</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sidney Sam</fullName>
+        <height>174</height>
+        <shirtNumberOfClub>18</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-08</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Eric Choupo-Moting</fullName>
+        <height>191</height>
+        <shirtNumberOfClub>13</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Atsuto Uchida</fullName>
+        <height>176</height>
+        <shirtNumberOfClub>22</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Roman Neustädter</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>33</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Jan Kirchhoff</fullName>
+        <height>195</height>
+        <shirtNumberOfClub>3</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Joel Matip</fullName>
+        <height>195</height>
+        <shirtNumberOfClub>32</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-22</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Christian Clemens</fullName>
+        <height>181</height>
+        <shirtNumberOfClub>27</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marco Höger</fullName>
+        <height>182</height>
+        <shirtNumberOfClub>12</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Julian Draxler</fullName>
+        <height>187</height>
+        <shirtNumberOfClub>10</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-10-31</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sead Kolasinac</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>6</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-08-23</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Max Meyer</fullName>
+        <height>173</height>
+        <shirtNumberOfClub>7</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Kaan Ayhan</fullName>
+        <height>184</height>
+        <shirtNumberOfClub>24</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-22</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marcel Sobottka</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>35</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-08</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marvin Friedrich</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>2</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Leroy Sane</fullName>
+        <height>172</height>
+        <shirtNumberOfClub>19</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Maurice Multhaup</fullName>
+        <height>173</height>
+        <shirtNumberOfClub>16</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Axel Borgmann</fullName>
+        <height>179</height>
+        <shirtNumberOfClub>21</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>jokecamp_3</id>
+    <name>Stuttgart</name>
+    <nameOfStadium>Mercedes-Benz Arena</nameOfStadium>
+    <league>Bundesliga</league>
+    <players>
+      <player>
+        <fullName>Karim Haggui</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>5</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Vedad Ibisevic</fullName>
+        <height>188</height>
+        <shirtNumberOfClub>9</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-10-18</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Christian Gentner</fullName>
+        <height>189</height>
+        <shirtNumberOfClub>20</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Martin Harnik</fullName>
+        <height>185</height>
+        <shirtNumberOfClub>7</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Florian Klein</fullName>
+        <height>182</height>
+        <shirtNumberOfClub>16</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Daniel Schwaab</fullName>
+        <height>186</height>
+        <shirtNumberOfClub>3</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-23</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sven Ulreich</fullName>
+        <height>192</height>
+        <shirtNumberOfClub>1</shirtNumberOfClub>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Thorsten Kirschbaum</fullName>
+        <height>195</height>
+        <shirtNumberOfClub>22</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Adam Hlousek</fullName>
+        <height>189</height>
+        <shirtNumberOfClub>21</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Konstantin Rausch</fullName>
+        <height>182</height>
+        <shirtNumberOfClub>34</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sercan Sararer</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>23</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Georg Niedermeier</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>6</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Daniel Didavi</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>10</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-09-27</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Gotoku Sakai</fullName>
+        <height>176</height>
+        <shirtNumberOfClub>2</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Daniel Ginczek</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>33</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Oriol Romeu</fullName>
+        <height>181</height>
+        <shirtNumberOfClub>13</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-23</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Moritz Leitner</fullName>
+        <height>178</height>
+        <shirtNumberOfClub>8</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Antonio Rüdiger</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>24</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Filip Kostic</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>18</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Alexandru Maxim</fullName>
+        <height>177</height>
+        <shirtNumberOfClub>44</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Odisseas Vlachodimos</fullName>
+        <height>191</height>
+        <shirtNumberOfClub>17</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-23</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Carlos Gruezo</fullName>
+        <height>171</height>
+        <shirtNumberOfClub>11</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Timo Werner</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>19</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Timo Baumgartl</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>32</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>jokecamp_4</id>
+    <name>Werder Bremen</name>
+    <nameOfStadium>Weserstadion</nameOfStadium>
+    <league>Bundesliga</league>
+    <players>
+      <player>
+        <fullName>Clemens Fritz</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>8</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-23</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Ludovic Obraniak</fullName>
+        <height>174</height>
+        <shirtNumberOfClub>7</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-08</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Cédric Makiadi</fullName>
+        <height>177</height>
+        <shirtNumberOfClub>6</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Eljero Elia</fullName>
+        <height>176</height>
+        <shirtNumberOfClub>22</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-23</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Zlatko Junuzovic</fullName>
+        <height>172</height>
+        <shirtNumberOfClub>16</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Fin Bartels</fullName>
+        <height>176</height>
+        <shirtNumberOfClub>22</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Assani Lukimya</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>5</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Franco Di Santo</fullName>
+        <height>193</height>
+        <shirtNumberOfClub>9</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-08</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sebastian Prödl</fullName>
+        <height>194</height>
+        <shirtNumberOfClub>15</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Nils Petersen</fullName>
+        <height>188</height>
+        <shirtNumberOfClub>18</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Theodor Gebre Selassie</fullName>
+        <height>181</height>
+        <shirtNumberOfClub>23</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Raphael Wolf</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>1</shirtNumberOfClub>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Luca Caldirola</fullName>
+        <height>189</height>
+        <shirtNumberOfClub>3</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Felix Kroos</fullName>
+        <height>184</height>
+        <shirtNumberOfClub>18</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Izet Hajrovic</fullName>
+        <height>177</height>
+        <shirtNumberOfClub>14</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Santiago Garcia</fullName>
+        <height>191</height>
+        <shirtNumberOfClub>2</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-23</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Richard Strebinger</fullName>
+        <height>194</height>
+        <shirtNumberOfClub>30</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Janek Sternberg</fullName>
+        <height>182</height>
+        <shirtNumberOfClub>37</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Alejandro Gálvez</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>4</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Oliver Hüsing</fullName>
+        <height>193</height>
+        <shirtNumberOfClub>25</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-23</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Levent Aycicek</fullName>
+        <height>169</height>
+        <shirtNumberOfClub>21</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Davie Selke</fullName>
+        <height>192</height>
+        <shirtNumberOfClub>27</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Luca-Milan Zander</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>19</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Raif Husic</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>40</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-10-24</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marnon Busch</fullName>
+        <height>182</height>
+        <shirtNumberOfClub>38</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-10-24</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Maximilian Eggestein</fullName>
+        <height>181</height>
+        <shirtNumberOfClub>35</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>jokecamp_5</id>
+    <name>Borussia Dortmund</name>
+    <nameOfStadium>Signal Iduna Park</nameOfStadium>
+    <league>Bundesliga</league>
+    <players>
+      <player>
+        <fullName>Sebastian Kehl</fullName>
+        <height>187</height>
+        <shirtNumberOfClub>5</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Roman Weidenfeller</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>1</shirtNumberOfClub>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Lukasz Piszczek</fullName>
+        <height>184</height>
+        <shirtNumberOfClub>26</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Nuri Sahin</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>18</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Mats Hummels</fullName>
+        <height>191</height>
+        <shirtNumberOfClub>15</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sokratis</fullName>
+        <height>186</height>
+        <shirtNumberOfClub>25</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-09</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sven Bender</fullName>
+        <height>186</height>
+        <shirtNumberOfClub>6</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Adrián Ramos</fullName>
+        <height>185</height>
+        <shirtNumberOfClub>20</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Neven Subotic</fullName>
+        <height>191</height>
+        <shirtNumberOfClub>4</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Henrikh Mkhitaryan</fullName>
+        <height>177</height>
+        <shirtNumberOfClub>10</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Kevin Großkreutz</fullName>
+        <height>186</height>
+        <shirtNumberOfClub>19</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Mitch Langerak</fullName>
+        <height>193</height>
+        <shirtNumberOfClub>22</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marco Reus</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>11</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-22</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Shinji Kagawa</fullName>
+        <height>175</height>
+        <shirtNumberOfClub>7</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marcel Schmelzer</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>29</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Pierre-Emerick Aubameyang</fullName>
+        <height>187</height>
+        <shirtNumberOfClub>17</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Ciro Immobile</fullName>
+        <height>181</height>
+        <shirtNumberOfClub>9</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-22</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Ilkay Gündogan</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>8</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Matthias Ginter</fullName>
+        <height>189</height>
+        <shirtNumberOfClub>28</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Joseph-Claude Gyau</fullName>
+        <height>175</height>
+        <shirtNumberOfClub>38</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-10-04</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Erik Durm</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>37</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Milos Jojic</fullName>
+        <height>177</height>
+        <shirtNumberOfClub>14</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marian Sarr</fullName>
+        <height>188</height>
+        <shirtNumberOfClub>24</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-09-20</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Mitsuru Maruoka</fullName>
+        <height>170</height>
+        <shirtNumberOfClub>31</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-09-27</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Khaled Narey</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>30</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-08-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Jon Gorenc-Stankovic</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>47</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>jokecamp_6</id>
+    <name>Eintracht Frankfurt</name>
+    <nameOfStadium>Commerzbank Arena</nameOfStadium>
+    <league>Bundesliga</league>
+    <players>
+      <player>
+        <fullName>Alexander Meier</fullName>
+        <height>196</height>
+        <shirtNumberOfClub>14</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Timo Hildebrand</fullName>
+        <height>186</height>
+        <shirtNumberOfClub>26</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Nelson Valdez</fullName>
+        <height>178</height>
+        <shirtNumberOfClub>11</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-08-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Alexander Madlung</fullName>
+        <height>193</height>
+        <shirtNumberOfClub>17</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marco Russ</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>4</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Martin Lanig</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>13</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Stefan Aigner</fullName>
+        <height>185</height>
+        <shirtNumberOfClub>16</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Makoto Hasebe</fullName>
+        <height>177</height>
+        <shirtNumberOfClub>20</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Constant Djakpa</fullName>
+        <height>177</height>
+        <shirtNumberOfClub>15</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-09-20</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Johannes Flum</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>18</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-22</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Carlos Zambrano</fullName>
+        <height>185</height>
+        <shirtNumberOfClub>5</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-10-04</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Takashi Inui</fullName>
+        <height>169</height>
+        <shirtNumberOfClub>8</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Anderson</fullName>
+        <height>188</height>
+        <shirtNumberOfClub>23</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Slobodan Medojevic</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>25</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Kevin Trapp</fullName>
+        <height>189</height>
+        <shirtNumberOfClub>1</shirtNumberOfClub>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2014-09-23</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Bastian Oczipka</fullName>
+        <height>184</height>
+        <shirtNumberOfClub>6</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Timothy Chandler</fullName>
+        <height>186</height>
+        <shirtNumberOfClub>22</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Vaclav Kadlec</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>10</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-08</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Aleksandar Ignjovski</fullName>
+        <height>175</height>
+        <shirtNumberOfClub>27</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Haris Seferovic</fullName>
+        <height>185</height>
+        <shirtNumberOfClub>9</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Felix Wiedwald</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>30</shirtNumberOfClub>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sonny Kittel</fullName>
+        <height>178</height>
+        <shirtNumberOfClub>28</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Lucas Piazon</fullName>
+        <height>182</height>
+        <shirtNumberOfClub>19</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marc Stendera</fullName>
+        <height>171</height>
+        <shirtNumberOfClub>21</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>David Kinsombi</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>31</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-22</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>jokecamp_7</id>
+    <name>Hertha Berlin</name>
+    <nameOfStadium>Olympiastadion</nameOfStadium>
+    <league>Bundesliga</league>
+    <players>
+      <player>
+        <fullName>Rune Jarstein</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>22</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>John Heitinga</fullName>
+        <height>182</height>
+        <shirtNumberOfClub>5</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marcel Ndjeng</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>8</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Salomon Kalou</fullName>
+        <height>184</height>
+        <shirtNumberOfClub>11</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Per Skjelbred</fullName>
+        <height>175</height>
+        <shirtNumberOfClub>3</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Peter Niemeyer</fullName>
+        <height>191</height>
+        <shirtNumberOfClub>18</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Ronny</fullName>
+        <height>175</height>
+        <shirtNumberOfClub>12</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Roy Beerens</fullName>
+        <height>173</height>
+        <shirtNumberOfClub>27</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Änis Ben-Hatira</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>10</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Johannes van den Bergh</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>23</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-09-13</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sandro Wagner</fullName>
+        <height>194</height>
+        <shirtNumberOfClub>33</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Peter Pekarík</fullName>
+        <height>176</height>
+        <shirtNumberOfClub>2</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-07</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Fabian Lustenberger</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>28</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-07</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sebastian Langkamp</fullName>
+        <height>191</height>
+        <shirtNumberOfClub>15</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-08-23</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Hajime Hosogai</fullName>
+        <height>176</height>
+        <shirtNumberOfClub>7</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Jens Hegeler</fullName>
+        <height>193</height>
+        <shirtNumberOfClub>13</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Valentin Stocker</fullName>
+        <height>179</height>
+        <shirtNumberOfClub>14</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Thomas Kraft</fullName>
+        <height>187</height>
+        <shirtNumberOfClub>1</shirtNumberOfClub>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sascha Burchert</fullName>
+        <height>187</height>
+        <shirtNumberOfClub>30</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-10-18</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Julian Schieber</fullName>
+        <height>186</height>
+        <shirtNumberOfClub>16</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Nico Schulz</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>26</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marvin Plattenhardt</fullName>
+        <height>181</height>
+        <shirtNumberOfClub>21</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-07</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>John Anthony Brooks</fullName>
+        <height>193</height>
+        <shirtNumberOfClub>25</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Hany Mukhtar</fullName>
+        <height>174</height>
+        <shirtNumberOfClub>34</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-08-30</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Genki Haraguchi</fullName>
+        <height>177</height>
+        <shirtNumberOfClub>24</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>jokecamp_8</id>
+    <name>Freiburg</name>
+    <nameOfStadium>Schwarzwald-Stadion</nameOfStadium>
+    <league>Bundesliga</league>
+    <players>
+      <player>
+        <fullName>Sascha Riether</fullName>
+        <height>174</height>
+        <shirtNumberOfClub>22</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-08</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sebastian Freis</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>35</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marc Torrejón</fullName>
+        <height>187</height>
+        <shirtNumberOfClub>3</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Pavel Krmas</fullName>
+        <height>193</height>
+        <shirtNumberOfClub>2</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Mensur Mujdza</fullName>
+        <height>185</height>
+        <shirtNumberOfClub>24</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Karim Guédé</fullName>
+        <height>184</height>
+        <shirtNumberOfClub>31</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-22</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Julian Schuster</fullName>
+        <height>190</height>
+        <shirtNumberOfClub>23</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Mike Frantz</fullName>
+        <height>182</height>
+        <shirtNumberOfClub>8</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sebastian Mielitz</fullName>
+        <height>189</height>
+        <shirtNumberOfClub>21</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Admir Mehmedi</fullName>
+        <height>182</height>
+        <shirtNumberOfClub>14</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Roman Bürki</fullName>
+        <height>187</height>
+        <shirtNumberOfClub>1</shirtNumberOfClub>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Dani Schahin</fullName>
+        <height>187</height>
+        <shirtNumberOfClub>11</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Stefan Mitrovic</fullName>
+        <height>189</height>
+        <shirtNumberOfClub>15</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Vladimir Darida</fullName>
+        <height>171</height>
+        <shirtNumberOfClub>7</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Nicolas Höfler</fullName>
+        <height>181</height>
+        <shirtNumberOfClub>27</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Felix Klaus</fullName>
+        <height>179</height>
+        <shirtNumberOfClub>36</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Jonathan Schmid</fullName>
+        <height>179</height>
+        <shirtNumberOfClub>17</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Immanuel Höhn</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>41</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-08</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Oliver Sorg</fullName>
+        <height>175</height>
+        <shirtNumberOfClub>25</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Christian Günter</fullName>
+        <height>184</height>
+        <shirtNumberOfClub>30</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marc-Oliver Kempf</fullName>
+        <height>185</height>
+        <shirtNumberOfClub>20</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-10-04</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sebastian Kerk</fullName>
+        <height>184</height>
+        <shirtNumberOfClub>37</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-28</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Philipp Zulechner</fullName>
+        <height>182</height>
+        <shirtNumberOfClub>9</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-09-13</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Maximilian Philipp</fullName>
+        <height>184</height>
+        <shirtNumberOfClub>26</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-10-25</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>jokecamp_9</id>
+    <name>Real Madrid</name>
+    <nameOfStadium>Santiago Bernabéu</nameOfStadium>
+    <league>La Liga</league>
+    <players>
+      <player>
+        <fullName>Iker Casillas</fullName>
+        <height>185</height>
+        <shirtNumberOfClub>1</shirtNumberOfClub>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Cristiano Ronaldo</fullName>
+        <height>185</height>
+        <shirtNumberOfClub>7</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sergio Ramos</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>4</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Pepe</fullName>
+        <height>188</height>
+        <shirtNumberOfClub>3</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Álvaro Arbeloa</fullName>
+        <height>184</height>
+        <shirtNumberOfClub>17</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-22</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sami Khedira</fullName>
+        <height>189</height>
+        <shirtNumberOfClub>6</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-22</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Gareth Bale</fullName>
+        <height>183</height>
+        <shirtNumberOfClub>11</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Karim Benzema</fullName>
+        <height>187</height>
+        <shirtNumberOfClub>9</shirtNumberOfClub>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marcelo</fullName>
+        <height>174</height>
+        <shirtNumberOfClub>12</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Fábio Coentrão</fullName>
+        <height>179</height>
+        <shirtNumberOfClub>5</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Luka Modric</fullName>
+        <height>174</height>
+        <shirtNumberOfClub>19</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-08</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Toni Kroos</fullName>
+        <height>182</height>
+        <shirtNumberOfClub>8</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Javier Hernández</fullName>
+        <height>175</height>
+        <shirtNumberOfClub>14</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Keylor Navas</fullName>
+        <height>185</height>
+        <shirtNumberOfClub>13</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>James Rodríguez</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>10</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Isco</fullName>
+        <height>176</height>
+        <shirtNumberOfClub>23</shirtNumberOfClub>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Asier Illarramendi</fullName>
+        <height>179</height>
+        <shirtNumberOfClub>24</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Raphael Varane</fullName>
+        <height>191</height>
+        <shirtNumberOfClub>2</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Nacho</fullName>
+        <height>179</height>
+        <shirtNumberOfClub>18</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Daniel Carvajal</fullName>
+        <height>173</height>
+        <shirtNumberOfClub>15</shirtNumberOfClub>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Diego Llorente</fullName>
+        <height>185</height>
+        <shirtNumberOfClub>34</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-10-18</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Álvaro Medrán</fullName>
+        <height>176</height>
+        <shirtNumberOfClub>26</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-08</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Raúl de Tomás</fullName>
+        <height>178</height>
+        <shirtNumberOfClub>27</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-08-31</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sergio Aguza</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>30</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-08</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marcos Llorente</fullName>
+        <height>180</height>
+        <shirtNumberOfClub>36</shirtNumberOfClub>
+        <clubMembershipValidAsOf>2014-11-29</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+</clubs>

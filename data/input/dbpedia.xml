@@ -1,0 +1,1453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clubs>
+  <club>
+    <id>dbpedia_1</id>
+    <name>Hamburger SV</name>
+    <country>DEU</country>
+    <nameOfStadium>Volksparkstadion</nameOfStadium>
+    <cityOfStadium>Hamburg</cityOfStadium>
+    <stadiumCapacity>51500</stadiumCapacity>
+    <leagueLabel>Bundesliga</leagueLabel>
+    <players>
+      <player>
+        <fullName>Egon Horst</fullName>
+        <birthDate>1938-11-25</birthDate>
+        <birthplace>Aschaffenburg</birthplace>
+        <nationality>DEU</nationality>
+        <height>186</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1965-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Juhani Peltonen</fullName>
+        <birthDate>1936-11-09</birthDate>
+        <birthplace>Valkeakoski</birthplace>
+        <height>176</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1964-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Nabil Bahoui</fullName>
+        <birthDate>1991-02-05</birthDate>
+        <birthplace>Stockholm</birthplace>
+        <nationality>SWE</nationality>
+        <height>188</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Peter Barfuß</fullName>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1967-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Willi Schulz</fullName>
+        <birthDate>1938-10-04</birthDate>
+        <birthplace>Bochum</birthplace>
+        <nationality>DEU</nationality>
+        <height>181</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1965-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Peter Hidien</fullName>
+        <birthDate>1953-11-14</birthDate>
+        <birthplace>Koblenz</birthplace>
+        <nationality>DEU</nationality>
+        <height>178</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1972-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Jürgen Kurbjuhn</fullName>
+        <birthDate>1940-07-26</birthDate>
+        <birthplace>Sovetsk, Kaliningrad Oblast</birthplace>
+        <height>186</height>
+        <clubMembershipValidAsOf>1963-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Boriša Đorđević</fullName>
+        <birthDate>1953-10-30</birthDate>
+        <birthplace>Bor, Serbia</birthplace>
+        <nationality>SRB</nationality>
+        <height>177</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1981-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>René Adler</fullName>
+        <birthplace>Leipzig</birthplace>
+        <nationality>DEU</nationality>
+        <height>191</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2012-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Willy Giesemann</fullName>
+        <birthplace>Braunschweig</birthplace>
+        <nationality>DEU</nationality>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1963-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Manfred Kaltz</fullName>
+        <birthDate>1953-01-06</birthDate>
+        <birthplace>Ludwigshafen</birthplace>
+        <nationality>DEU</nationality>
+        <height>186</height>
+        <clubMembershipValidAsOf>1990-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Christian Mathenia</fullName>
+        <birthDate>1992-03-31</birthDate>
+        <birthplace>Mainz</birthplace>
+        <nationality>DEU</nationality>
+        <height>189</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Gert Dörfel</fullName>
+        <birthDate>1939-09-18</birthDate>
+        <birthplace>Hamburg</birthplace>
+        <nationality>DEU</nationality>
+        <height>170</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1960-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Lewis Holtby</fullName>
+        <birthDate>1990-09-18</birthDate>
+        <birthplace>Erkelenz</birthplace>
+        <nationality>DEU</nationality>
+        <height>176</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Ashton Götz</fullName>
+        <birthDate>1993-07-16</birthDate>
+        <birthplace>Pirmasens</birthplace>
+        <nationality>DEU</nationality>
+        <height>177</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Matthias Ostrzolek</fullName>
+        <birthDate>1990-06-05</birthDate>
+        <birthplace>Bochum</birthplace>
+        <nationality>DEU</nationality>
+        <height>178</height>
+        <clubMembershipValidAsOf>2014-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Johan Djourou</fullName>
+        <birthDate>1987-01-18</birthDate>
+        <birthplace>Abidjan</birthplace>
+        <height>192</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Luca Waldschmidt</fullName>
+        <birthDate>1996-05-19</birthDate>
+        <birthplace>Siegen</birthplace>
+        <nationality>DEU</nationality>
+        <height>177</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Pierre-Michel Lasogga</fullName>
+        <birthDate>1991-12-15</birthDate>
+        <birthplace>Gladbeck</birthplace>
+        <nationality>DEU</nationality>
+        <height>189</height>
+        <clubMembershipValidAsOf>2014-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Özcan Arkoç</fullName>
+        <birthDate>1939-12-02</birthDate>
+        <birthplace>Hayrabolu</birthplace>
+        <nationality>TUR</nationality>
+        <height>182</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>1967-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Nicolai Müller</fullName>
+        <birthDate>1987-09-25</birthDate>
+        <birthplace>Lohr am Main</birthplace>
+        <nationality>DEU</nationality>
+        <height>173</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Helmut Sandmann</fullName>
+        <birthDate>1944-12-21</birthDate>
+        <birthplace>Hamburg</birthplace>
+        <nationality>DEU</nationality>
+        <height>172</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1963-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Thomas Doll</fullName>
+        <birthDate>1966-04-09</birthDate>
+        <birthplace>Malchin</birthplace>
+        <nationality>DEU</nationality>
+        <height>176</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1998-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Gōtoku Sakai</fullName>
+        <birthDate>1991-03-14</birthDate>
+        <birthplace>New York City</birthplace>
+        <height>176</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Arianit Ferati</fullName>
+        <birthDate>1997-09-07</birthDate>
+        <birthplace>Stuttgart</birthplace>
+        <nationality>DEU</nationality>
+        <height>168</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Andreas Hirzel</fullName>
+        <birthDate>1993-03-25</birthDate>
+        <birthplace>Zürich</birthplace>
+        <nationality>CHE</nationality>
+        <height>190</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Hans-Jürgen Ripp</fullName>
+        <birthplace>Hamburg</birthplace>
+        <nationality>DEU</nationality>
+        <height>178</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1970-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Uwe Jähnig</fullName>
+        <birthDate>1969-08-26</birthDate>
+        <birthplace>Dresden</birthplace>
+        <nationality>DEU</nationality>
+        <height>181</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1995-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Heinz-Josef Koitka</fullName>
+        <birthDate>1952-02-12</birthDate>
+        <birthplace>Wattenscheid</birthplace>
+        <height>182</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>1987-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Josip Drmić</fullName>
+        <birthDate>1992-08-08</birthDate>
+        <birthplace>Lachen, Switzerland</birthplace>
+        <nationality>CHE</nationality>
+        <height>181</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Cléber (footballer, born 1990)</fullName>
+        <birthplace>São Francisco do Conde</birthplace>
+        <nationality>BRA</nationality>
+        <height>183</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Albin Ekdal</fullName>
+        <birthDate>1989-07-28</birthDate>
+        <birthplace>Stockholm</birthplace>
+        <nationality>SWE</nationality>
+        <height>186</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Volker Danner</fullName>
+        <birthDate>1942-08-21</birthDate>
+        <height>182</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>1973-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sascha Jusufi</fullName>
+        <birthDate>1963-01-20</birthDate>
+        <birthplace>Belgrade</birthplace>
+        <nationality>SRB</nationality>
+        <height>180</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1986-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Bastian Reinhardt</fullName>
+        <birthDate>1975-11-19</birthDate>
+        <birthplace>Ludwigslust</birthplace>
+        <nationality>DEU</nationality>
+        <height>194</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2003-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Aaron Hunt</fullName>
+        <birthDate>1986-09-04</birthDate>
+        <birthplace>Goslar</birthplace>
+        <nationality>DEU</nationality>
+        <height>183</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Manfred Pohlschmidt</fullName>
+        <birthDate>1940-08-27</birthDate>
+        <birthplace>Münster</birthplace>
+        <nationality>DEU</nationality>
+        <height>177</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1965-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Bernd Wehmeyer</fullName>
+        <birthplace>Herford</birthplace>
+        <nationality>DEU</nationality>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1978-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Benno Möhlmann</fullName>
+        <birthDate>1954-08-01</birthDate>
+        <birthplace>Lohne, Germany</birthplace>
+        <nationality>DEU</nationality>
+        <height>178</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1987-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Douglas Santos (footballer, born 1994)</fullName>
+        <birthDate>1994-03-22</birthDate>
+        <birthplace>João Pessoa, Paraíba</birthplace>
+        <nationality>BRA</nationality>
+        <height>173</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Hubert Schöll</fullName>
+        <birthDate>1946-10-20</birthDate>
+        <height>180</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1968-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Martin Dahlin</fullName>
+        <birthDate>1968-04-16</birthDate>
+        <birthplace>Uddevalla</birthplace>
+        <nationality>SWE</nationality>
+        <height>184</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1998-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Elard Ostermann</fullName>
+        <birthDate>1968-10-15</birthDate>
+        <height>180</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1996-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Ole Bjørnmose</fullName>
+        <birthDate>1944-05-07</birthDate>
+        <birthplace>Odense</birthplace>
+        <nationality>DNK</nationality>
+        <height>178</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1971-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Emir Spahić</fullName>
+        <birthDate>1980-08-18</birthDate>
+        <birthplace>Dubrovnik</birthplace>
+        <nationality>HRV</nationality>
+        <height>186</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Michael Gravgaard</fullName>
+        <birthDate>1978-04-03</birthDate>
+        <birthplace>Randers</birthplace>
+        <nationality>DNK</nationality>
+        <height>188</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2009-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Dick Been</fullName>
+        <birthDate>1914-12-28</birthDate>
+        <birthplace>Amsterdam</birthplace>
+        <nationality>NLD</nationality>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1942-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Allan Hansen</fullName>
+        <birthDate>1956-04-21</birthDate>
+        <birthplace>Odense</birthplace>
+        <nationality>DNK</nationality>
+        <height>172</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1982-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Filip Kostić</fullName>
+        <birthDate>1992-11-01</birthDate>
+        <birthplace>Kragujevac</birthplace>
+        <nationality>SRB</nationality>
+        <height>184</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Harry Bähre</fullName>
+        <birthDate>1941-07-22</birthDate>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1963-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Alen Halilović</fullName>
+        <birthDate>1996-06-18</birthDate>
+        <birthplace>Dubrovnik</birthplace>
+        <nationality>HRV</nationality>
+        <height>170</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Bobby Wood (soccer)</fullName>
+        <birthDate>1992-11-15</birthDate>
+        <birthplace>Honolulu</birthplace>
+        <height>177</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>dbpedia_2</id>
+    <name>FC Schalke 04</name>
+    <country>DEU</country>
+    <nameOfStadium>Veltins-Arena</nameOfStadium>
+    <cityOfStadium>Gelsenkirchen</cityOfStadium>
+    <stadiumCapacity>54740</stadiumCapacity>
+    <leagueLabel>Bundesliga</leagueLabel>
+    <players>
+      <player>
+        <fullName>Hans Sarpei</fullName>
+        <birthDate>1976-06-28</birthDate>
+        <birthplace>Tema</birthplace>
+        <nationality>GHA</nationality>
+        <height>178</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2010-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Raffael (footballer)</fullName>
+        <birthplace>Fortaleza</birthplace>
+        <nationality>BRA</nationality>
+        <height>174</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2013-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Dietmar Danner</fullName>
+        <birthDate>1950-11-29</birthDate>
+        <birthplace>Mannheim</birthplace>
+        <nationality>DEU</nationality>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1980-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Baba Rahman</fullName>
+        <birthDate>1994-07-02</birthDate>
+        <birthplace>Tamale, Ghana</birthplace>
+        <nationality>GHA</nationality>
+        <height>179</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Naldo (footballer, born 1982)</fullName>
+        <birthDate>1982-09-10</birthDate>
+        <birthplace>Londrina</birthplace>
+        <height>198</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Harald Klose</fullName>
+        <birthDate>1945-03-12</birthDate>
+        <birthplace>Igensdorf</birthplace>
+        <nationality>DEU</nationality>
+        <height>182</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1963-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Felix Schröter</fullName>
+        <birthDate>1996-01-23</birthDate>
+        <birthplace>Ulm</birthplace>
+        <nationality>DEU</nationality>
+        <height>177</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Klaus Fichtel</fullName>
+        <birthDate>1944-11-19</birthDate>
+        <birthplace>Castrop-Rauxel</birthplace>
+        <nationality>DEU</nationality>
+        <height>176</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1984-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Caspar Memering</fullName>
+        <birthDate>1953-06-01</birthDate>
+        <birthplace>Bockhorst</birthplace>
+        <nationality>DEU</nationality>
+        <height>178</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1984-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Ralf Fährmann</fullName>
+        <birthDate>1988-09-27</birthDate>
+        <birthplace>Chemnitz</birthplace>
+        <nationality>DEU</nationality>
+        <height>196</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2011-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Fabian Giefer</fullName>
+        <birthDate>1990-05-17</birthDate>
+        <birthplace>Adenau</birthplace>
+        <nationality>DEU</nationality>
+        <height>196</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2014-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Nicolas Plestan</fullName>
+        <birthDate>1981-06-02</birthDate>
+        <birthplace>Nice</birthplace>
+        <nationality>FRA</nationality>
+        <height>184</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2010-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marc Wilmots</fullName>
+        <birthDate>1969-02-22</birthDate>
+        <birthplace>Jodoigne</birthplace>
+        <nationality>BEL</nationality>
+        <height>184</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2001-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sascha Riether</fullName>
+        <birthDate>1983-03-23</birthDate>
+        <birthplace>Lahr</birthplace>
+        <nationality>DEU</nationality>
+        <height>174</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Jürgen Gredig</fullName>
+        <birthplace>Berlin</birthplace>
+        <nationality>DEU</nationality>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1990-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Franco Di Santo</fullName>
+        <birthDate>1989-04-07</birthDate>
+        <birthplace>Mendoza, Argentina</birthplace>
+        <nationality>ARG</nationality>
+        <height>193</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Kristijan Đorđević</fullName>
+        <birthDate>1976-01-06</birthDate>
+        <birthplace>Spaichingen</birthplace>
+        <nationality>DEU</nationality>
+        <height>184</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2001-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Eric Maxim Choupo-Moting</fullName>
+        <birthDate>1989-03-23</birthDate>
+        <birthplace>Altona, Hamburg</birthplace>
+        <nationality>DEU</nationality>
+        <height>190</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2014-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Mathias Schober</fullName>
+        <birthDate>1976-04-08</birthDate>
+        <birthplace>Marl, North Rhine-Westphalia</birthplace>
+        <nationality>DEU</nationality>
+        <height>191</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2007-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Lennart Larsson (footballer)</fullName>
+        <birthplace>Stockholm</birthplace>
+        <nationality>SWE</nationality>
+        <height>183</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1977-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Júnior Caiçara</fullName>
+        <birthDate>1989-04-27</birthDate>
+        <birthplace>São Paulo</birthplace>
+        <nationality>BRA</nationality>
+        <height>172</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Alexander Nübel</fullName>
+        <birthDate>1996-09-30</birthDate>
+        <birthplace>Paderborn</birthplace>
+        <nationality>DEU</nationality>
+        <height>193</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Thilo Kehrer</fullName>
+        <birthplace>Tübingen</birthplace>
+        <nationality>DEU</nationality>
+        <height>185</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Olaf Thon</fullName>
+        <birthDate>1966-05-01</birthDate>
+        <birthplace>Gelsenkirchen</birthplace>
+        <nationality>DEU</nationality>
+        <height>170</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1994-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Fabian Reese</fullName>
+        <birthDate>1997-11-29</birthDate>
+        <birthplace>Kiel</birthplace>
+        <nationality>DEU</nationality>
+        <height>187</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Alfred Pyka</fullName>
+        <birthplace>Silesian Voivodeship</birthplace>
+        <nationality>POL</nationality>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1965-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Alessandro Schöpf</fullName>
+        <birthplace>Umhausen</birthplace>
+        <nationality>AUT</nationality>
+        <height>178</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Breel Embolo</fullName>
+        <birthDate>1997-02-14</birthDate>
+        <birthplace>Yaoundé</birthplace>
+        <height>185</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Johannes Geis</fullName>
+        <birthDate>1993-08-17</birthDate>
+        <birthplace>Schweinfurt</birthplace>
+        <nationality>DEU</nationality>
+        <height>177</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Yevhen Konoplyanka</fullName>
+        <birthDate>1989-09-29</birthDate>
+        <birthplace>Kropyvnytskyi</birthplace>
+        <height>176</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Mike Büskens</fullName>
+        <birthDate>1968-03-19</birthDate>
+        <birthplace>Düsseldorf</birthplace>
+        <nationality>DEU</nationality>
+        <height>181</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2003-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Coke (footballer)</fullName>
+        <birthplace>Madrid</birthplace>
+        <nationality>ESP</nationality>
+        <height>176</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Andreas Müller (footballer)</fullName>
+        <birthDate>1962-12-13</birthDate>
+        <birthplace>Stuttgart</birthplace>
+        <nationality>DEU</nationality>
+        <height>180</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1988-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Willi Kraus</fullName>
+        <birthDate>1943-05-01</birthDate>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1966-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Johan de Kock</fullName>
+        <birthDate>1964-10-25</birthDate>
+        <birthplace>Sliedrecht</birthplace>
+        <nationality>NLD</nationality>
+        <height>190</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1996-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Benjamin Stambouli</fullName>
+        <birthDate>1990-08-13</birthDate>
+        <birthplace>Marseille</birthplace>
+        <nationality>FRA</nationality>
+        <height>180</height>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Reinhard Libuda</fullName>
+        <birthDate>1943-10-10</birthDate>
+        <birthplace>Dörentrup</birthplace>
+        <nationality>DEU</nationality>
+        <height>175</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1973-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Yves Eigenrauch</fullName>
+        <birthDate>1971-04-24</birthDate>
+        <birthplace>Minden</birthplace>
+        <nationality>DEU</nationality>
+        <height>179</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1990-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Norbert Janzon</fullName>
+        <birthDate>1950-12-21</birthDate>
+        <birthplace>Berlin</birthplace>
+        <nationality>DEU</nationality>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1981-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Matthias Herget</fullName>
+        <birthDate>1955-11-14</birthDate>
+        <birthplace>Annaberg-Buchholz</birthplace>
+        <nationality>DEU</nationality>
+        <height>178</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1989-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Oliver Reck</fullName>
+        <birthDate>1965-02-27</birthDate>
+        <birthplace>Frankfurt</birthplace>
+        <nationality>DEU</nationality>
+        <height>193</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>1998-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Dragan Holcer</fullName>
+        <birthplace>Zwiesel</birthplace>
+        <nationality>DEU</nationality>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1981-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Christoph Metzelder</fullName>
+        <birthDate>1980-11-05</birthDate>
+        <birthplace>Haltern am See</birthplace>
+        <nationality>DEU</nationality>
+        <height>194</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2010-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Dennis Aogo</fullName>
+        <birthDate>1987-01-14</birthDate>
+        <birthplace>Karlsruhe</birthplace>
+        <nationality>DEU</nationality>
+        <height>184</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Thorsten Legat</fullName>
+        <birthDate>1968-11-07</birthDate>
+        <birthplace>Bochum</birthplace>
+        <nationality>DEU</nationality>
+        <height>185</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2000-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Klaas-Jan Huntelaar</fullName>
+        <birthDate>1983-08-12</birthDate>
+        <birthplace>Gelderland</birthplace>
+        <nationality>NLD</nationality>
+        <height>186</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2010-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Mario Boljat</fullName>
+        <birthDate>1951-08-31</birthDate>
+        <birthplace>Split, Croatia</birthplace>
+        <nationality>HRV</nationality>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1979-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Sven Kmetsch</fullName>
+        <birthDate>1970-08-13</birthDate>
+        <birthplace>Bautzen</birthplace>
+        <nationality>DEU</nationality>
+        <height>178</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1998-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Herbert Lütkebohmert</fullName>
+        <birthDate>1948-03-24</birthDate>
+        <birthplace>Heiden, Germany</birthplace>
+        <nationality>DEU</nationality>
+        <height>179</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1968-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Andreas Sandt</fullName>
+        <position>GK</position>
+        <clubMembershipValidAsOf>1980-01-01</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>dbpedia_3</id>
+    <name>VfB Stuttgart</name>
+    <nameOfStadium>Mercedes-Benz Arena (Stuttgart)</nameOfStadium>
+    <cityOfStadium>Stuttgart</cityOfStadium>
+    <stadiumCapacity>60469</stadiumCapacity>
+    <leagueLabel>2. Bundesliga</leagueLabel>
+    <players>
+      <player>
+        <fullName>Kevin Großkreutz</fullName>
+        <birthDate>1988-07-19</birthDate>
+        <birthplace>Dortmund</birthplace>
+        <nationality>DEU</nationality>
+        <height>186</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Serey Die</fullName>
+        <birthDate>1984-11-07</birthDate>
+        <birthplace>Abidjan</birthplace>
+        <height>179</height>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Florian Klein</fullName>
+        <birthDate>1986-11-17</birthDate>
+        <birthplace>Linz</birthplace>
+        <nationality>AUT</nationality>
+        <height>180</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Manfred Weidmann</fullName>
+        <birthDate>1945-01-15</birthDate>
+        <height>174</height>
+        <clubMembershipValidAsOf>1967-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Christian Gentner</fullName>
+        <birthDate>1985-08-14</birthDate>
+        <birthplace>Nürtingen</birthplace>
+        <nationality>DEU</nationality>
+        <height>189</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2010-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Günter Sawitzki</fullName>
+        <birthDate>1932-11-22</birthDate>
+        <height>182</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>1963-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Rudi Lorch</fullName>
+        <birthDate>1966-01-20</birthDate>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1983-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Michael Mayer (footballer)</fullName>
+        <birthDate>1970-10-17</birthDate>
+        <birthplace>Reutlingen</birthplace>
+        <nationality>DEU</nationality>
+        <height>178</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1991-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Federico Barba</fullName>
+        <birthDate>1993-09-01</birthDate>
+        <birthplace>Rome</birthplace>
+        <nationality>ITA</nationality>
+        <height>188</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Takuma Asano</fullName>
+        <birthDate>1994-11-10</birthDate>
+        <birthplace>Komono, Mie</birthplace>
+        <nationality>JPN</nationality>
+        <height>171</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Emiliano Insúa</fullName>
+        <birthDate>1989-01-07</birthDate>
+        <birthplace>Buenos Aires</birthplace>
+        <nationality>ARG</nationality>
+        <height>180</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Toni Šunjić</fullName>
+        <birthDate>1988-12-15</birthDate>
+        <birthplace>Mostar</birthplace>
+        <nationality>BIH</nationality>
+        <height>193</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Jean Zimmer</fullName>
+        <birthDate>1993-12-06</birthDate>
+        <birthplace>Bad Dürkheim</birthplace>
+        <nationality>DEU</nationality>
+        <height>171</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Hermann Ohlicher</fullName>
+        <birthDate>1949-11-02</birthDate>
+        <birthplace>Bräunlingen</birthplace>
+        <nationality>DEU</nationality>
+        <height>175</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1973-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Hajime Hosogai</fullName>
+        <birthDate>1986-06-10</birthDate>
+        <birthplace>Maebashi</birthplace>
+        <nationality>JPN</nationality>
+        <height>177</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Eberhard Trautner</fullName>
+        <birthDate>1967-02-07</birthDate>
+        <birthplace>Stuttgart</birthplace>
+        <nationality>DEU</nationality>
+        <height>184</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>1986-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Robbie Kruse</fullName>
+        <birthDate>1988-10-05</birthDate>
+        <birthplace>Brisbane</birthplace>
+        <nationality>AUS</nationality>
+        <height>179</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Jens Grahl</fullName>
+        <birthDate>1988-09-22</birthDate>
+        <birthplace>Stuttgart</birthplace>
+        <nationality>DEU</nationality>
+        <height>193</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marvin Wanitzek</fullName>
+        <birthplace>Bruchsal</birthplace>
+        <nationality>DEU</nationality>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marijan Kovačević</fullName>
+        <birthDate>1973-08-31</birthDate>
+        <birthplace>Hamburg</birthplace>
+        <nationality>DEU</nationality>
+        <height>184</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2008-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Hans Eisele (footballer)</fullName>
+        <birthDate>1940-08-07</birthDate>
+        <birthplace>Stuttgart</birthplace>
+        <nationality>DEU</nationality>
+        <height>173</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1958-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Mitko Stojkovski</fullName>
+        <birthDate>1972-12-18</birthDate>
+        <birthplace>Bitola</birthplace>
+        <height>184</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1997-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Timo Baumgartl</fullName>
+        <birthDate>1996-03-04</birthDate>
+        <birthplace>Böblingen</birthplace>
+        <nationality>DEU</nationality>
+        <height>189</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2014-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Erwin Waldner</fullName>
+        <birthDate>1933-01-24</birthDate>
+        <birthplace>Nürtingen</birthplace>
+        <nationality>DEU</nationality>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1963-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Alexandru Maxim</fullName>
+        <birthDate>1990-07-08</birthDate>
+        <birthplace>Piatra Neamț</birthplace>
+        <nationality>ROU</nationality>
+        <height>179</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2013-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Borys Tashchy</fullName>
+        <birthDate>1993-07-26</birthDate>
+        <birthplace>Odessa</birthplace>
+        <nationality>UKR</nationality>
+        <height>192</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Hans-Peter Makan</fullName>
+        <birthDate>1960-01-01</birthDate>
+        <birthplace>Weinheim</birthplace>
+        <nationality>DEU</nationality>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1982-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Simon Terodde</fullName>
+        <birthDate>1988-03-02</birthDate>
+        <birthplace>Bocholt, Germany</birthplace>
+        <nationality>DEU</nationality>
+        <height>192</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Philipp Lahm</fullName>
+        <birthDate>1983-11-11</birthDate>
+        <birthplace>Munich</birthplace>
+        <nationality>DEU</nationality>
+        <height>170</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2003-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Carlos Mané</fullName>
+        <birthDate>1994-03-11</birthDate>
+        <birthplace>Lisbon</birthplace>
+        <nationality>PRT</nationality>
+        <height>172</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Max Besuschkow</fullName>
+        <birthDate>1997-05-31</birthDate>
+        <birthplace>Tübingen</birthplace>
+        <nationality>DEU</nationality>
+        <height>185</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Stephen Sama</fullName>
+        <birthDate>1993-03-05</birthDate>
+        <birthplace>Bamenda</birthplace>
+        <nationality>CMR</nationality>
+        <height>188</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Caniggia Elva</fullName>
+        <birthDate>1996-07-14</birthDate>
+        <birthplace>Vieux Fort, Saint Lucia</birthplace>
+        <nationality>LCA</nationality>
+        <height>178</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Steffen Handschuh</fullName>
+        <height>176</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>2001-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Karl Allgöwer</fullName>
+        <birthDate>1957-01-05</birthDate>
+        <birthplace>Geislingen an der Steige</birthplace>
+        <nationality>DEU</nationality>
+        <height>186</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1980-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Artem Kravets</fullName>
+        <birthplace>Kamianske</birthplace>
+        <nationality>UKR</nationality>
+        <height>189</height>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Günter Seibold</fullName>
+        <birthDate>1936-12-11</birthDate>
+        <birthplace>Stuttgart</birthplace>
+        <nationality>DEU</nationality>
+        <height>173</height>
+        <clubMembershipValidAsOf>1958-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Dieter Brenninger</fullName>
+        <birthDate>1944-02-16</birthDate>
+        <birthplace>Erding</birthplace>
+        <nationality>DEU</nationality>
+        <height>174</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1972-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Marc Ziegler</fullName>
+        <birthDate>1976-06-13</birthDate>
+        <birthplace>Blieskastel</birthplace>
+        <nationality>DEU</nationality>
+        <height>192</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2010-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Jens Todt</fullName>
+        <birthDate>1970-01-05</birthDate>
+        <birthplace>Hamelin</birthplace>
+        <nationality>DEU</nationality>
+        <height>187</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>1999-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Kurt Niedermayer</fullName>
+        <birthDate>1955-11-25</birthDate>
+        <birthplace>Reilingen</birthplace>
+        <nationality>DEU</nationality>
+        <position>DF</position>
+        <clubMembershipValidAsOf>1982-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Benjamin Pavard</fullName>
+        <birthplace>Maubeuge</birthplace>
+        <nationality>FRA</nationality>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Manfred Kastl</fullName>
+        <birthDate>1965-09-23</birthDate>
+        <birthplace>Nuremberg</birthplace>
+        <nationality>DEU</nationality>
+        <height>186</height>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1989-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Berkay Özcan</fullName>
+        <birthDate>1998-02-15</birthDate>
+        <birthplace>Karlsruhe</birthplace>
+        <nationality>DEU</nationality>
+        <height>178</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Hans Arnold (footballer)</fullName>
+        <birthDate>1941-10-08</birthDate>
+        <birthplace>Mannheim</birthplace>
+        <nationality>DEU</nationality>
+        <height>175</height>
+        <clubMembershipValidAsOf>1963-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Martin Spanring</fullName>
+        <birthDate>1969-10-14</birthDate>
+        <birthplace>Munich</birthplace>
+        <nationality>DEU</nationality>
+        <height>188</height>
+        <clubMembershipValidAsOf>1997-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>René Deck</fullName>
+        <birthDate>1945-06-08</birthDate>
+        <height>184</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>1975-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Matthias Zimmermann (footballer, born 1992)</fullName>
+        <birthDate>1992-06-16</birthDate>
+        <birthplace>Pforzheim</birthplace>
+        <nationality>DEU</nationality>
+        <height>176</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Rolf Geiger</fullName>
+        <birthDate>1934-10-16</birthDate>
+        <birthplace>Marbach am Neckar</birthplace>
+        <nationality>DEU</nationality>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1963-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Mamadou Bah</fullName>
+        <birthDate>1988-04-25</birthDate>
+        <birthplace>Conakry</birthplace>
+        <nationality>GIN</nationality>
+        <height>185</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2010-01-01</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>dbpedia_4</id>
+    <name>SV Werder Bremen</name>
+    <country>DEU</country>
+    <leagueLabel>Bundesliga</leagueLabel>
+    <players>
+      <player>
+        <fullName>Viktor Skrypnyk</fullName>
+        <birthDate>1969-11-19</birthDate>
+        <birthplace>Novomoskovsk, Ukraine</birthplace>
+        <nationality>UKR</nationality>
+        <height>184</height>
+        <clubMembershipValidAsOf>1996-01-01</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>dbpedia_5</id>
+    <name>Borussia Dortmund</name>
+    <country>DEU</country>
+    <nameOfStadium>Westfalenstadion</nameOfStadium>
+    <cityOfStadium>Dortmund</cityOfStadium>
+    <stadiumCapacity>42800</stadiumCapacity>
+    <leagueLabel>Bundesliga</leagueLabel>
+    <players>
+      <player>
+        <fullName>Wolfgang de Beer</fullName>
+        <birthDate>1964-01-02</birthDate>
+        <birthplace>Dinslaken</birthplace>
+        <nationality>DEU</nationality>
+        <height>181</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>1986-01-01</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>dbpedia_6</id>
+    <name>Eintracht Frankfurt</name>
+    <country>DEU</country>
+    <nameOfStadium>Commerzbank-Arena</nameOfStadium>
+    <cityOfStadium>Frankfurt</cityOfStadium>
+    <stadiumCapacity>51500</stadiumCapacity>
+    <leagueLabel>Bundesliga</leagueLabel>
+    <players>
+      <player>
+        <fullName>Marco Fabián</fullName>
+        <birthDate>1989-07-21</birthDate>
+        <birthplace>Guadalajara</birthplace>
+        <nationality>MEX</nationality>
+        <height>170</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>dbpedia_7</id>
+    <name>Hertha BSC</name>
+    <country>DEU</country>
+    <nameOfStadium>Olympiastadion (Berlin)</nameOfStadium>
+    <cityOfStadium>Berlin</cityOfStadium>
+    <stadiumCapacity>74475</stadiumCapacity>
+    <leagueLabel>Bundesliga</leagueLabel>
+    <players>
+      <player>
+        <fullName>Søren Skov</fullName>
+        <birthDate>1954-02-21</birthDate>
+        <birthplace>Nyborg Municipality</birthplace>
+        <nationality>DNK</nationality>
+        <position>FW</position>
+        <clubMembershipValidAsOf>1983-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Valentin Stocker</fullName>
+        <birthDate>1989-04-12</birthDate>
+        <birthplace>Lucerne</birthplace>
+        <nationality>CHE</nationality>
+        <height>178</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-01-01</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>dbpedia_8</id>
+    <name>SC Freiburg</name>
+    <country>DEU</country>
+    <nameOfStadium>Schwarzwald-Stadion</nameOfStadium>
+    <stadiumCapacity>18000</stadiumCapacity>
+    <leagueLabel>Bundesliga</leagueLabel>
+    <players>
+      <player>
+        <fullName>Rafał Gikiewicz</fullName>
+        <birthDate>1987-10-26</birthDate>
+        <birthplace>Olsztyn</birthplace>
+        <nationality>POL</nationality>
+        <height>190</height>
+        <position>GK</position>
+        <clubMembershipValidAsOf>2016-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Mike Frantz</fullName>
+        <birthDate>1986-10-14</birthDate>
+        <birthplace>Saarbrücken</birthplace>
+        <nationality>DEU</nationality>
+        <height>180</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2014-01-01</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+  <club>
+    <id>dbpedia_9</id>
+    <name>Real Madrid C.F.</name>
+    <country>ESP</country>
+    <nameOfStadium>Santiago Bernabéu Stadium</nameOfStadium>
+    <leagueLabel>La Liga</leagueLabel>
+    <players>
+      <player>
+        <fullName>Lucas Silva (footballer, born 1993)</fullName>
+        <birthplace>Bom Jesus de Goiás</birthplace>
+        <height>182</height>
+        <position>MF</position>
+        <clubMembershipValidAsOf>2015-01-01</clubMembershipValidAsOf>
+      </player>
+      <player>
+        <fullName>Pepe (footballer, born 1983)</fullName>
+        <birthplace>Maceió</birthplace>
+        <nationality>BRA</nationality>
+        <height>188</height>
+        <position>DF</position>
+        <clubMembershipValidAsOf>2007-01-01</clubMembershipValidAsOf>
+      </player>
+    </players>
+  </club>
+</clubs>
