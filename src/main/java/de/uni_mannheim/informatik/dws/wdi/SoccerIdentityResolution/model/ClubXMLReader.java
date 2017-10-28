@@ -13,12 +13,7 @@ import de.uni_mannheim.informatik.dws.winter.model.DataSet;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader;
 
-/**
- * A {@link XMLMatchableReader} for {@link Movie}s.
- * 
- * @author Oliver Lehmberg (oli@dwslab.de)
- * 
- */
+
 public class ClubXMLReader extends XMLMatchableReader<Club, Attribute>  {
 
 	/* (non-Javadoc)
@@ -40,29 +35,22 @@ public class ClubXMLReader extends XMLMatchableReader<Club, Attribute>  {
 		// fill the attributes
 		club.setName(getValueFromChildElement(node, "name"));
 		club.setCountry(getValueFromChildElement(node, "country"));
-		club.setLeagueLabel(getValueFromChildElement(node, "leagueLabel"));
+		club.setNameOfStadium(getValueFromChildElement(node, "nameOfStadium"));
+		club.setCityOfStadium(getValueFromChildElement(node, "cityOfStadium"));
+		club.setLeague(getValueFromChildElement(node, "league"));
+		
+		// convert string to integer
+		try {
+			Integer stadiumCapacity = Integer.parseInt(getValueFromChildElement(node, "stadiumCapacity"));
+			club.setStadiumCapacity(stadiumCapacity);
+		} catch (Exception e) {
+			club.setStadiumCapacity(null);
+		}
 
-		// convert the date string into a DateTime object
-//		try {
-//			String date = getValueFromChildElement(node, "date");
-//			if (date != null && !date.isEmpty()) {
-//				DateTimeFormatter formatter = new DateTimeFormatterBuilder()
-//				        .appendPattern("yyyy-MM-dd")
-//				        .parseDefaulting(ChronoField.CLOCK_HOUR_OF_DAY, 0)
-//				        .parseDefaulting(ChronoField.MINUTE_OF_HOUR, 0)
-//				        .parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
-//				        .toFormatter(Locale.ENGLISH);
-//				LocalDateTime dt = LocalDateTime.parse(date, formatter);
-//				movie.setDate(dt);
-//			}
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-
-		// load the list of actors
-//		List<Actor> actors = getObjectListFromChildElement(node, "actors",
-//				"actor", new ActorXMLReader(), provenanceInfo);
-//		movie.setActors(actors);
+		// load the list of players
+		List<Player> players = getObjectListFromChildElement(node, "players",
+				"player", new PlayerXMLReader(), provenanceInfo);
+		club.setPlayers(players);
 
 		return club;
 	}
