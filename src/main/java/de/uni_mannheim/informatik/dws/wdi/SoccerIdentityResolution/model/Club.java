@@ -12,32 +12,40 @@ import java.util.List;
 import de.uni_mannheim.informatik.dws.winter.model.AbstractRecord;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 
-/**
- * A {@link AbstractRecord} representing a movie.
- * 
- * @author Oliver Lehmberg (oli@dwslab.de)
- * 
- */
+
 public class Club implements Matchable {
 
 	/*
-	 * example entry <movie> <id>academy_awards_2</id> <title>True Grit</title>
-	 * <director> <name>Joel Coen and Ethan Coen</name> </director> <actors>
-	 * <actor> <name>Jeff Bridges</name> </actor> <actor> <name>Hailee
-	 * Steinfeld</name> </actor> </actors> <date>2010-01-01</date> </movie>
+	 * <club>
+	    <!-- Most common national name. -->
+	    <name>FC Bayern München</name>
+	    <!-- ISO 3166 alpha 3 country code -->
+	    <country>DEU</country>
+	    <nameOfStadium>Allianz Arena</nameOfStadium>
+	    <!-- English name of city-->
+	    <cityOfStadium>Munich</cityOfStadium>
+	    <!-- integer, no thousand separator-->
+	    <stadiumCapacity>75000</stadiumCapacity>
+	    <!-- Name of league (national name) -->
+	    <league>Bundesliga</league>
+	    <players>...</players>
+	   </club>
 	 */
 
 	protected String id;
 	protected String provenance;
 	private String name;
 	private String country;
-	private String leagueLabel;
-	// private List<Actor> actors;
+	private String nameOfStadium;
+	private String cityOfStadium;
+	private Integer stadiumCapacity;
+	private String league;
+	private List<Player> players;
 
 	public Club(String identifier, String provenance) {
 		id = identifier;
 		this.provenance = provenance;
-		// actors = new LinkedList<>();
+		players = new LinkedList<>();
 	}
 
 	@Override
@@ -66,26 +74,50 @@ public class Club implements Matchable {
 		this.country = country;
 	}
 
-	public String getLeagueLabel() {
-		return leagueLabel;
+	public String getNameOfStadium() {
+		return nameOfStadium;
 	}
 
-	public void setLeagueLabel(String leagueLabel) {
-		this.leagueLabel = leagueLabel;
+	public void setNameOfStadium(String nameOfStadium) {
+		this.nameOfStadium = nameOfStadium;
 	}
 
-//	public List<Actor> getActors() {
-//		return actors;
-//	}
-//
-//	public void setActors(List<Actor> actors) {
-//		this.actors = actors;
-//	}
+	public String getCityOfStadium() {
+		return cityOfStadium;
+	}
+
+	public void setCityOfStadium(String cityOfStadium) {
+		this.cityOfStadium = cityOfStadium;
+	}
+
+	public Integer getStadiumCapacity() {
+		return stadiumCapacity;
+	}
+
+	public void setStadiumCapacity(Integer stadiumCapacity) {
+		this.stadiumCapacity = stadiumCapacity;
+	}
+
+	public String getLeague() {
+		return league;
+	}
+
+	public void setLeague(String leagueLabel) {
+		this.league = leagueLabel;
+	}
+
+	public List<Player> getPlayers() {
+		return players;
+	}
+
+	public void setPlayers(List<Player> players) {
+		this.players = players;
+	}
 
 	@Override
 	public String toString() {
-		return String.format("[Movie: %s / %s / %s]", getName(),
-				getCountry(), getLeagueLabel());
+		return String.format("[Club: %s / %s / %s]", getName(),
+				getCountry(), getLeague());
 	}
 
 	@Override
