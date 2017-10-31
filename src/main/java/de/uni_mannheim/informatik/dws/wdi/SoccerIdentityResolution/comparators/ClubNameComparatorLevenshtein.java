@@ -1,4 +1,4 @@
-package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.Comparators;
+package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators;
 
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Club;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.Comparator;
