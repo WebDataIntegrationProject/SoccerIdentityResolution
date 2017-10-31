@@ -15,7 +15,15 @@ public class PlayerBlockerByFirstLettersOfName extends
     @Override
     public void generateBlockingKeys(Player record, Processable<Correspondence<Attribute, Matchable>> correspondences, DataIterator<Pair<String, Player>> resultCollector) {
 
-        resultCollector.next(new Pair<>(record.getFullName().toLowerCase().substring(0,2), record));
+        // change the offset only here
+        int numberOfCharactersForOffset = 3;
+
+        if(record.getFullName() != null){
+            if(record.getFullName().length() >= numberOfCharactersForOffset){
+                resultCollector.next(new Pair<>(record.getFullName().toLowerCase().substring(0,numberOfCharactersForOffset), record));
+            }
+        }
+
     }
 
 }
