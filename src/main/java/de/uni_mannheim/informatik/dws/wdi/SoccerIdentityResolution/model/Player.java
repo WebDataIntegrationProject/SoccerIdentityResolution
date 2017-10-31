@@ -4,10 +4,11 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import de.uni_mannheim.informatik.dws.winter.model.AbstractRecord;
+import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 
 
-public class Player extends AbstractRecord<Attribute> implements Serializable {
+public class Player extends AbstractRecord<Attribute> implements Serializable, Matchable {
 
 	/*
 	 <player>

@@ -4,7 +4,7 @@ import java.io.File;
 
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Club;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.ClubXMLReader;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.Comparators.ClubNameComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorLevenshtein;
 //import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Blocking.MovieBlockingKeyByDecadeGenerator;
 //import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators.MovieDateComparator10Years;
 //import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators.MovieTitleComparatorLevenshtein;
@@ -13,8 +13,6 @@ import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.Comparators.C
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.NoBlocker;
-import de.uni_mannheim.informatik.dws.winter.matching.blockers.SortedNeighbourhoodBlocker;
-import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
@@ -69,8 +67,8 @@ public class IR_using_linear_combination
 		MatchingEvaluator<Club, Attribute> evaluator = new MatchingEvaluator<Club, Attribute>(true);
 		Performance perfTest = evaluator.evaluateMatching(correspondences.get(),
 				gsTest);
-		new ErrorAnalysis().printFalsePositives(correspondences, gsTest);
-		new ErrorAnalysis().printFalseNegatives(dataDbpedia, dataJokecampOthers, correspondences, gsTest);
+		new ErrorAnalysisClubs().printFalsePositives(correspondences, gsTest);
+		new ErrorAnalysisClubs().printFalseNegatives(dataDbpedia, dataJokecampOthers, correspondences, gsTest);
 		// print the evaluation result
 		System.out.println("Dbpedia <-> Jokecamp others");
 		System.out
