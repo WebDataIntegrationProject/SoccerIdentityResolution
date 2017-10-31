@@ -17,11 +17,7 @@ public class PlayerBlockerByBirthYear extends
     @Override
     public void generateBlockingKeys(Player record, Processable<Correspondence<Attribute, Matchable>> correspondences, DataIterator<Pair<String, Player>> resultCollector) {
 
-        System.out.println(record.getFullName());
-
         if(record.getBirthDate() != null) {
-            System.out.println(record.getBirthDate().toString());
-
             resultCollector.next(new Pair<>(record.getBirthDate().toString().substring(0, 4), record));
         }
 
