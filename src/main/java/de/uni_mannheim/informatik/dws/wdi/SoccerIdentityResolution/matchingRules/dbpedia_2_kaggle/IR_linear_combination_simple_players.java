@@ -1,8 +1,15 @@
-package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution;
+package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.dbpedia_2_kaggle;
 
 import java.io.File;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByBirthYear;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisPlayers;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.FeaturesToCSV;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByFirstLettersOfName;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerBirthDateComparatorLevenshtein;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerNameComparatorLevenshtein;
@@ -17,9 +24,7 @@ import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.algorithms.RuleLearner;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
-import de.uni_mannheim.informatik.dws.winter.matching.rules.LearnableMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
-import de.uni_mannheim.informatik.dws.winter.matching.rules.WekaMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.*;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.FeatureVectorDataSet;
@@ -28,38 +33,39 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.RecordCSVFormatt
 import de.uni_mannheim.informatik.dws.winter.model.io.CSVCorrespondenceFormatter;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class IR_using_linear_combination_players
+/**
+ * Data Set DBpedia ↔ Kaggle
+ * Learning Combination Rules for Players
+ */
+public class IR_linear_combination_simple_players
 {
-
 
     static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = true;
 
     public static void main( String[] args ) throws Exception
     {
+
         // loading data
         HashedDataSet<Player, Attribute> dataDbpedia = new HashedDataSet<>();
         new PlayerXMLReader().loadFromXML(new File("data/input/dbpedia.xml"), "/clubs/club/players/player", dataDbpedia);
         HashedDataSet<Player, Attribute> dataKaggle = new HashedDataSet<>();
         new PlayerXMLReader().loadFromXML(new File("data/input/kaggle.xml"), "/clubs/club/players/player", dataKaggle);
-        HashedDataSet<Player, Attribute> dataEuro2016 = new HashedDataSet<>();
-        new PlayerXMLReader().loadFromXML(new File("data/input/euro2016.xml"), "/clubs/club/players/player", dataKaggle);
-
 
         System.out.println("Sample from dbpedia: " + dataDbpedia.getRandomRecord());
         System.out.println("Sample from jokecamp others: " + dataKaggle.getRandomRecord());
 
         // create a matching rule
         LinearCombinationMatchingRule<Player, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-                0.9);
+                0.0);
 
 
         // add comparators
         // matchingRule.addComparator(new MovieDateComparator10Years(), 0.5);
-        matchingRule.addComparator(new PlayerNameComparatorLevenshtein(), 0.4);
-        matchingRule.addComparator(new PlayerBirthDateComparatorLevenshtein(), 0.6);
+        matchingRule.addComparator(new PlayerNameComparatorLevenshtein(), 0.5);
+        matchingRule.addComparator(new PlayerBirthDateComparatorLevenshtein(), 0.5);
 
         // create a blocker (blocking strategy)
-		StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByFirstLettersOfName());
+        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByFirstLettersOfName());
 //        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByBirthYear());
 
 //        NoBlocker<Player, Attribute> blocker = new NoBlocker<>();
@@ -89,7 +95,7 @@ public class IR_using_linear_combination_players
         new ErrorAnalysisPlayers().printFalsePositives(correspondences, gsTest);
         new ErrorAnalysisPlayers().printFalseNegatives(dataDbpedia, dataKaggle, correspondences, gsTest);
         // print the evaluation result
-        System.out.println("Dbpedia <-> Kaggle");
+        System.out.println("Dbpedia ↔ Kaggle");
         System.out
                 .println(String.format(
                         "Precision: %.4f\nRecall: %.4f\nF1: %.4f",
@@ -111,8 +117,8 @@ public class IR_using_linear_combination_players
             );
 
             new RecordCSVFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_features.csv"), features);
-
-            System.out.println("Finished Writing...");
+            System.out.println(FeaturesToCSV.writeFeaturesInCSV(features, "data/output/dbpedia_2_kaggle_features2.csv"));
+            System.out.println("Finished Writing.");
         }
 
     }
