@@ -31,7 +31,8 @@ DBPedia_Hertha_Zehlendorf15179,Kaggle_Hertha_BSC_Berlin3171,false
 DBPedia_FC_Hertha_Wiesbach28339,Kaggle_Hertha_BSC_Berlin3171,false
 Kaggle_Hertha_BSC_Berlin3171,Kaggle_Hertha_BSC_Berlin3171,true
 Kaggle_Académica_de_Coimbra1465,DBPedia_Associação_Académica_de_Coimbra_–_O.A.F.27287,true
-
-
-
+DBPedia_Grasshopper_Club_Zürich22011,Kaggle_Grasshopper_Club_Zürich3437,true
+Kaggle_Tondela3808,DBPedia_Grasshopper_Club_Zürich22011,false
+DBPedia_Hawarden_Rangers_F.C.41561,Kaggle_Queens_Park_Rangers1388,false
+DBPedia_Paris_Saint-Germain_F.C.23152,Kaggle_Paris_Saint-Germain1255,true
 
