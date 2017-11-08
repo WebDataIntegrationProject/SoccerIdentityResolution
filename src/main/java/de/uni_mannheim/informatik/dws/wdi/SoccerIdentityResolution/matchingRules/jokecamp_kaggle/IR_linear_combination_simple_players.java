@@ -40,7 +40,7 @@ import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 public class IR_linear_combination_simple_players
 {
 
-    static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = true;
+    static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = false;
 
     public static void main( String[] args ) throws Exception
     {
@@ -86,7 +86,7 @@ public class IR_linear_combination_simple_players
         // load the gold standard (test set)
         MatchingGoldStandard gsTest = new MatchingGoldStandard();
         gsTest.loadFromCSVFile(new File(
-                "data/goldstandard/gs_jokecamp_kaggle_player.csv"));
+                "data/goldstandard/gs_jokecamp_kaggle_players.csv"));
 
         // evaluate your result
         MatchingEvaluator<Player, Attribute> evaluator = new MatchingEvaluator<Player, Attribute>(true);
@@ -116,8 +116,8 @@ public class IR_linear_combination_simple_players
                     dataJokecamp, dataKaggle, gsTest, matchingRule, null
             );
 
-            new RecordCSVFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_features.csv"), features);
-            System.out.println(FeaturesToCSV.writeFeaturesInCSV(features, "data/output/dbpedia_2_kaggle_features2.csv"));
+            new RecordCSVFormatter().writeCSV(new File("data/output/jokecamp_kaggle_features.csv"), features);
+            System.out.println(FeaturesToCSV.writeFeaturesInCSV(features, "data/output/jokecamp_kaggle_features2.csv"));
             System.out.println("Finished Writing.");
         }
 
