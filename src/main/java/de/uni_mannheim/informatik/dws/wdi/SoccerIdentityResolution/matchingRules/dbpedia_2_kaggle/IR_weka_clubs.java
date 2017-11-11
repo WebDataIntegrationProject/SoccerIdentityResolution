@@ -28,7 +28,7 @@ import java.io.File;
 public class IR_weka_clubs
 {
 
-    static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = true;
+    static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = false;
 
     public static void main( String[] args ) throws Exception
     {
