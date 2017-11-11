@@ -7,18 +7,18 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
 
-public class PlayersClubNameLevenshtein implements Comparator<Player, Attribute> {
+public class PlayerClubNameLevenshtein implements Comparator<Player, Attribute> {
 
     private static final long serialVersionUID = 1L;
     LevenshteinSimilarity sim = new LevenshteinSimilarity();
     boolean useStringSimplifier = false;
 
-    public PlayersClubNameLevenshtein(boolean lowerCase) {
+    public PlayerClubNameLevenshtein(boolean lowerCase) {
         super();
         useStringSimplifier = true;
     }
 
-    public PlayersClubNameLevenshtein() { super(); }
+    public PlayerClubNameLevenshtein() { super(); }
 
 
     @Override

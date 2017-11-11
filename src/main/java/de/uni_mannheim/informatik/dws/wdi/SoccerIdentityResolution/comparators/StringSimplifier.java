@@ -52,4 +52,17 @@ public class StringSimplifier {
         return returnString;
     }
 
-}
+    public static String simplifyStringClubOptimized(String inputString){
+        String resultString = simplifyString(inputString);
+
+        resultString = resultString.replaceAll("^fc ", "");
+        resultString = resultString.replaceAll(" fc$", "");
+        resultString = resultString.replace(" fc ", " ");
+
+        return resultString;
+
+    }
+
+
+
+    }

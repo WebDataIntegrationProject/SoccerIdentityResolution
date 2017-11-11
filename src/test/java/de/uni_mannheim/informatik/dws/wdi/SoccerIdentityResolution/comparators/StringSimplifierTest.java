@@ -4,6 +4,7 @@ import junit.framework.Assert;
 import junit.framework.TestCase;
 
 public class StringSimplifierTest extends TestCase {
+
     public void testSimplifyString() throws Exception {
 
         // tests lowercasing, umlauts, parentheses deletion, symbol deletion
@@ -14,6 +15,15 @@ public class StringSimplifierTest extends TestCase {
 
         // tests lowercasing, accent stripping
         Assert.assertEquals(StringSimplifier.simplifyString("Liberté"), "liberte");
+    }
+
+    public void testSimplifyStringClubOptimized(){
+        Assert.assertEquals(StringSimplifier.simplifyStringClubOptimized("FC Liberté"), "liberte");
+        Assert.assertEquals(StringSimplifier.simplifyStringClubOptimized("Liberté FC"), "liberte");
+        Assert.assertEquals(StringSimplifier.simplifyStringClubOptimized("Libertéfc FC"), "libertefc");
+        Assert.assertEquals(StringSimplifier.simplifyStringClubOptimized("fcLibertéfc FC"), "fclibertefc");
+
+
     }
 
 }
