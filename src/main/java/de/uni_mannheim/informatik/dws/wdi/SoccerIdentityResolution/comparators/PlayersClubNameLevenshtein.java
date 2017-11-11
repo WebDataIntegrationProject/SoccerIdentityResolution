@@ -7,18 +7,36 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
 
-public class PlayerNameComparatorLevenshtein implements Comparator<Player, Attribute> {
+public class PlayersClubNameLevenshtein implements Comparator<Player, Attribute> {
 
     private static final long serialVersionUID = 1L;
-    private LevenshteinSimilarity sim = new LevenshteinSimilarity();
+    LevenshteinSimilarity sim = new LevenshteinSimilarity();
+    boolean useStringSimplifier = false;
+
+    public PlayersClubNameLevenshtein(boolean lowerCase) {
+        super();
+        useStringSimplifier = true;
+    }
+
+    public PlayersClubNameLevenshtein() { super(); }
+
 
     @Override
     public double compare(Player record1, Player record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
 
-        if(record1.getFullName() == null || record2.getFullName() == null){
+        if(record1.getClubName() == null || record2.getClubName() == null){
             return 0.0;
         }
 
-        return sim.calculate(record1.getFullName(), record2.getFullName());
+        String string1 = record1.getClubName();
+        String string2 = record2.getClubName();
+
+        if(useStringSimplifier){
+            string1 = StringSimplifier.simplifyString(string1);
+            string2 = StringSimplifier.simplifyString(string2);
+        }
+
+        return sim.calculate(string1, string2);
+
     }
 }

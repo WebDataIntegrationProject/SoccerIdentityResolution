@@ -50,10 +50,15 @@ public class Player extends AbstractRecord<Attribute> implements Serializable, M
 	private Integer caps;
 	private Boolean isInNationalTeam;
 	private LocalDateTime clubMembershipValidAsOf;
+	private String clubName;
 
 	public Player(String identifier, String provenance) {
 		super(identifier, provenance);
 	}
+
+	public String getClubName() {return clubName; }
+
+	public void setClubName(String clubName) { this.clubName = clubName; }
 
 	public String getFullName() {
 		return fullName;
@@ -207,8 +212,8 @@ public class Player extends AbstractRecord<Attribute> implements Serializable, M
 
 	@Override
 	public String toString() {
-		return String.format("[Player: %s / %s / %s / %s]", getFullName(),
-				getBirthplace(), getNationality(), getClubMembershipValidAsOf());
+		return String.format("[Player: %s / %s / %s / %s / %s]", getFullName(),
+				getBirthplace(), getNationality(), getClubName(), getClubMembershipValidAsOf());
 	}
 	
 	/* (non-Javadoc)
