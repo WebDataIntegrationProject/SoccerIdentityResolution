@@ -75,7 +75,6 @@ public class FeaturesToCSV {
     }
 
 
-
         public static void writeContent(File f, String content){
 
         try {

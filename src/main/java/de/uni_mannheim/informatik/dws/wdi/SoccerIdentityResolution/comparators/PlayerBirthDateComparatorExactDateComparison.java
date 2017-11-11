@@ -8,7 +8,7 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
 import java.lang.*;
 
-public class PlayerBirthDateComparatorDateComparison implements Comparator<Player, Attribute> {
+public class PlayerBirthDateComparatorExactDateComparison implements Comparator<Player, Attribute> {
 
     private static final long serialVersionUID = 1L;
 
