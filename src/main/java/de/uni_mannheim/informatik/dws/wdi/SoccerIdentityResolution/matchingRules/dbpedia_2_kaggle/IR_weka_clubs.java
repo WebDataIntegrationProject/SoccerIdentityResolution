@@ -1,17 +1,13 @@
 package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.dbpedia_2_kaggle;
 
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisPlayers;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByBirthYear;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerBirthDateComparatorLevenshtein;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerClubNameComparatorLevenshtein;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerHeightComparator;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerNameComparatorLevenshtein;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Player;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.PlayerXMLReader;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisClubs;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.*;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Club;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.ClubXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.algorithms.RuleLearner;
-import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
+import de.uni_mannheim.informatik.dws.winter.matching.blockers.NoBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.WekaMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
@@ -27,72 +23,73 @@ import java.io.File;
 
 /**
  * Data Set DBpedia ↔ Kaggle
- * Learning Combination Rules for Players
+ * Learning Combination Rules for Clubs
  */
-public class IR_weka_players
+public class IR_weka_clubs
 {
 
-    static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = true;
+    static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = false;
 
     public static void main( String[] args ) throws Exception
     {
 
         // loading data
-        HashedDataSet<Player, Attribute> dataDbpedia = new HashedDataSet<>();
-        new PlayerXMLReader().loadFromXML(new File("data/input/dbpedia.xml"), "/clubs/club/players/player", dataDbpedia);
-        HashedDataSet<Player, Attribute> dataKaggle = new HashedDataSet<>();
-        new PlayerXMLReader().loadFromXML(new File("data/input/kaggle.xml"), "/clubs/club/players/player", dataKaggle);
+        HashedDataSet<Club, Attribute> dataDbpedia = new HashedDataSet<>();
+        new ClubXMLReader().loadFromXML(new File("data/input/dbpedia.xml"), "/clubs/club", dataDbpedia);
+        HashedDataSet<Club, Attribute> dataKaggle = new HashedDataSet<>();
+        new ClubXMLReader().loadFromXML(new File("data/input/kaggle.xml"), "/clubs/club", dataKaggle);
 
         System.out.println("Sample from dbpedia: " + dataDbpedia.getRandomRecord());
         System.out.println("Sample from kaggle: " + dataKaggle.getRandomRecord());
 
         String options[] = new String[] {""};
         String modelType = "SimpleLogistic"; // using a logistic regression
-        WekaMatchingRule<Player, Attribute> matchingRule = new WekaMatchingRule<>(0.9, modelType, options);
+        WekaMatchingRule<Club, Attribute> matchingRule = new WekaMatchingRule<>(0.9, modelType, options);
 
 
         // add comparators
-        matchingRule.addComparator(new PlayerNameComparatorLevenshtein());
-        matchingRule.addComparator(new PlayerBirthDateComparatorLevenshtein());
-        matchingRule.addComparator(new PlayerClubNameComparatorLevenshtein());
-        matchingRule.addComparator(new PlayerHeightComparator());
+        matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true));
 
 
         // create a blocker (blocking strategy)
-        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByBirthYear());
+        //StandardRecordBlocker<Club, Attribute> blocker = new StandardRecordBlocker<Club, Attribute>(new ClubBlockerByBirthYear());
+		NoBlocker<Club, Attribute> blocker = new NoBlocker<>();
+
 
         // load the gold standard (test set)
         MatchingGoldStandard goldStandardForTraining = new MatchingGoldStandard();
-        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_76.csv"));
+        System.out.println("Loading Training Gold Standard");
+        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_clubs_67.csv"));
 
         // train the matching rule's model
-        RuleLearner<Player, Attribute> learner = new RuleLearner<>();
+        RuleLearner<Club, Attribute> learner = new RuleLearner<>();
         learner.learnMatchingRule(dataDbpedia, dataKaggle, null, matchingRule, goldStandardForTraining);
 
         // Initialize Matching Engine
-        MatchingEngine<Player, Attribute> engine = new MatchingEngine<>();
+        MatchingEngine<Club, Attribute> engine = new MatchingEngine<>();
 
         // Execute the matching
-        Processable<Correspondence<Player, Attribute>> correspondences = engine.runIdentityResolution(
+        Processable<Correspondence<Club, Attribute>> correspondences = engine.runIdentityResolution(
                 dataDbpedia, dataKaggle, null, matchingRule,
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_correspondences_players.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_correspondences_Clubs.csv"), correspondences);
 
 
         // gold standard for evaluation
         MatchingGoldStandard goldStandardForEvaluation = new MatchingGoldStandard();
-        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_38.csv"));
+        System.out.println("Loading Evaluation Gold Standard");
+        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_clubs_36.csv"));
 
 
 
         // evaluate your result
-        MatchingEvaluator<Player, Attribute> evaluator = new MatchingEvaluator<Player, Attribute>(true);
+        MatchingEvaluator<Club, Attribute> evaluator = new MatchingEvaluator<Club, Attribute>(true);
         Performance perfTest = evaluator.evaluateMatching(correspondences.get(),
                 goldStandardForEvaluation);
-        new ErrorAnalysisPlayers().printFalsePositives(correspondences, goldStandardForEvaluation);
-        new ErrorAnalysisPlayers().printFalseNegatives(dataDbpedia, dataKaggle, correspondences, goldStandardForEvaluation);
+        new ErrorAnalysisClubs().printFalsePositives(correspondences, goldStandardForEvaluation);
+        new ErrorAnalysisClubs().printFalseNegatives(dataDbpedia, dataKaggle, correspondences, goldStandardForEvaluation);
         // print the evaluation result
         System.out.println("Dbpedia ↔ Kaggle");
         System.out
@@ -107,11 +104,11 @@ public class IR_weka_players
 
             // gold standard for all entries
             MatchingGoldStandard goldStandardForExternalTool = new MatchingGoldStandard();
-            goldStandardForExternalTool.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player.csv"));
+            goldStandardForExternalTool.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_clubs.csv"));
 
 
             // generate feature data set for RapidMiner
-            RuleLearner<Player, Attribute> learner2 = new RuleLearner<>();
+            RuleLearner<Club, Attribute> learner2 = new RuleLearner<>();
 
             FeatureVectorDataSet features = learner2.generateTrainingDataForLearning(
                     dataDbpedia, dataKaggle, goldStandardForExternalTool, matchingRule, null
@@ -122,9 +119,6 @@ public class IR_weka_players
             System.out.println("Finished Writing...");
         }
 
-
-
     }
-
 
 }

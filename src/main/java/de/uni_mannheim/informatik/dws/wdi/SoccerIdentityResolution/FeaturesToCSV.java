@@ -12,6 +12,9 @@ import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * A helper class which allows to save features of comparators to a CSV file.
+ */
 public class FeaturesToCSV {
 
     /**
@@ -70,7 +73,6 @@ public class FeaturesToCSV {
     public static String writeFeaturesInCSV(FeatureVectorDataSet features, String pathName){
         return writeFeaturesInCSV(features, new File(pathName));
     }
-
 
 
         public static void writeContent(File f, String content){
