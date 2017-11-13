@@ -15,11 +15,9 @@ public class PlayerNameComparatorLevenshtein implements Comparator<Player, Attri
     @Override
     public double compare(Player record1, Player record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
 
-
         if(record1.getFullName() == null || record2.getFullName() == null){
             return 0.0;
         }
-
 
         return sim.calculate(record1.getFullName(), record2.getFullName());
     }
