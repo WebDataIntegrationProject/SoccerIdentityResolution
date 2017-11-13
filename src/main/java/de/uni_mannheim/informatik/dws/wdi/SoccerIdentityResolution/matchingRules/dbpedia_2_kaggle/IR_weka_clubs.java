@@ -49,6 +49,7 @@ public class IR_weka_clubs
 
         // add comparators
         matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true));
+        matchingRule.addComparator(new ClubPlayerFullComparator("data/output/dbpedia_2_kaggle_correspondences_players.csv"));
 
 
         // create a blocker (blocking strategy)
@@ -74,7 +75,7 @@ public class IR_weka_clubs
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_correspondences_Clubs.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_correspondences_clubs.csv"), correspondences);
 
 
         // gold standard for evaluation
