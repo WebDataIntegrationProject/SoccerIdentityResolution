@@ -44,7 +44,6 @@ public class IR_linear_combination_simple_clubs
         LinearCombinationMatchingRule<Club, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
                 0.7);
         // add comparators
-        // matchingRule.addComparator(new MovieDateComparator10Years(), 0.5);
         matchingRule.addComparator(new ClubNameComparatorLevenshtein(), 1);
 
         // create a blocker (blocking strategy)
