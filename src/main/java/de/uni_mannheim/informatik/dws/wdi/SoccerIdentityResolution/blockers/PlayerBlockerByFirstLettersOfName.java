@@ -10,17 +10,30 @@ import de.uni_mannheim.informatik.dws.winter.processing.DataIterator;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
 
+/**
+ * This blocker uses the first x letters of the name field for the player.
+ */
 public class PlayerBlockerByFirstLettersOfName extends
         RecordBlockingKeyGenerator<Player, Attribute> {
+
+    private int numberOfLetters;
+
+    public PlayerBlockerByFirstLettersOfName(int numberOfLetters){
+        this.numberOfLetters = numberOfLetters;
+    }
+
+    public PlayerBlockerByFirstLettersOfName(){
+        // use the standard value of 3
+        this.numberOfLetters = 3;
+    }
+
     @Override
     public void generateBlockingKeys(Player record, Processable<Correspondence<Attribute, Matchable>> correspondences, DataIterator<Pair<String, Player>> resultCollector) {
 
-        // change the offset only here
-        int numberOfCharactersForOffset = 3;
 
         if(record.getFullName() != null){
-            if(record.getFullName().length() >= numberOfCharactersForOffset){
-                resultCollector.next(new Pair<>(record.getFullName().toLowerCase().substring(0,numberOfCharactersForOffset), record));
+            if(record.getFullName().length() >= numberOfLetters){
+                resultCollector.next(new Pair<>(record.getFullName().toLowerCase().substring(0,numberOfLetters), record));
             }
         }
 

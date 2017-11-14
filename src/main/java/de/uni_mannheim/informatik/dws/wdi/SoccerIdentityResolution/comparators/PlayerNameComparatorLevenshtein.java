@@ -11,6 +11,15 @@ public class PlayerNameComparatorLevenshtein implements Comparator<Player, Attri
 
     private static final long serialVersionUID = 1L;
     private LevenshteinSimilarity sim = new LevenshteinSimilarity();
+    private boolean simplifyString;
+
+    public PlayerNameComparatorLevenshtein(boolean simplifyString){
+        this.simplifyString = simplifyString;
+    }
+
+    public PlayerNameComparatorLevenshtein(){
+        this.simplifyString = false;
+    }
 
     @Override
     public double compare(Player record1, Player record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
@@ -19,6 +28,16 @@ public class PlayerNameComparatorLevenshtein implements Comparator<Player, Attri
             return 0.0;
         }
 
-        return sim.calculate(record1.getFullName(), record2.getFullName());
+        String name1simplified, name2simplified;
+        if(simplifyString){
+            name1simplified = StringSimplifier.simplifyString(record1.getFullName());
+            name2simplified = StringSimplifier.simplifyString(record2.getFullName());
+        } else {
+            return sim.calculate(record1.getFullName(), record2.getFullName());
+        }
+
+        return sim.calculate(name1simplified, name2simplified);
+
+
     }
 }
