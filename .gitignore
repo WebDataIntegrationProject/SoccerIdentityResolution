@@ -35,3 +35,6 @@ data/output
 # User-specific stuff:
 .idea/
 /target/
+
+# Jan's Playground
+/src/main/java/de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution/matchingRules/dbpedia_2_kaggle/Playground

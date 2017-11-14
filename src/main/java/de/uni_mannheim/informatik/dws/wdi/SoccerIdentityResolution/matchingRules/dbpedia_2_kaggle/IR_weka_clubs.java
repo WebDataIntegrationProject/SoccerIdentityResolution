@@ -49,7 +49,8 @@ public class IR_weka_clubs
 
         // add comparators
         matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true));
-        matchingRule.addComparator(new ClubPlayerFullComparator("data/output/dbpedia_2_kaggle_correspondences_players.csv"));
+        //matchingRule.addComparator(new ClubPlayerFullComparator("data/output/dbpedia_2_kaggle_correspondences_players.csv"));
+        //matchingRule.addComparator(new ClubPlayerNameComparator());
 
 
         // create a blocker (blocking strategy)
@@ -83,14 +84,13 @@ public class IR_weka_clubs
         System.out.println("Loading Evaluation Gold Standard");
         goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_clubs_36.csv"));
 
-
-
         // evaluate your result
         MatchingEvaluator<Club, Attribute> evaluator = new MatchingEvaluator<Club, Attribute>(true);
         Performance perfTest = evaluator.evaluateMatching(correspondences.get(),
                 goldStandardForEvaluation);
         new ErrorAnalysisClubs().printFalsePositives(correspondences, goldStandardForEvaluation);
         new ErrorAnalysisClubs().printFalseNegatives(dataDbpedia, dataKaggle, correspondences, goldStandardForEvaluation);
+
         // print the evaluation result
         System.out.println("Dbpedia ↔ Kaggle");
         System.out
@@ -105,7 +105,7 @@ public class IR_weka_clubs
 
             // gold standard for all entries
             MatchingGoldStandard goldStandardForExternalTool = new MatchingGoldStandard();
-            goldStandardForExternalTool.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_clubs.csv"));
+            goldStandardForExternalTool.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_clubs_external_tool.csv"));
 
 
             // generate feature data set for RapidMiner
