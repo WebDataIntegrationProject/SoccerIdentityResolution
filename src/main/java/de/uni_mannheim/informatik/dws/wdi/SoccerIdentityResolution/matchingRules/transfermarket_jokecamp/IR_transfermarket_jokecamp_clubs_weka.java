@@ -7,6 +7,8 @@ import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Club;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.ClubXMLReader;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.ClubBlockerByLeague;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorLevenshteinOptimized;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubPlayerFullComparator;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerBirthDateComparatorLevenshtein;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerHeightComparator;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
@@ -42,7 +44,8 @@ public class IR_transfermarket_jokecamp_clubs_weka
         WekaMatchingRule<Club, Attribute> matchingRule = new WekaMatchingRule<>(0.6, modelType, options);
         
         // add comparators
-        matchingRule.addComparator(new ClubNameComparatorLevenshtein(false));
+        matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true));
+        matchingRule.addComparator(new ClubPlayerFullComparator("data/output/transfermarket_jokecamp_clubs_correspondences.csv"));
         
         // load the training set
         MatchingGoldStandard gsTraining = new MatchingGoldStandard();
