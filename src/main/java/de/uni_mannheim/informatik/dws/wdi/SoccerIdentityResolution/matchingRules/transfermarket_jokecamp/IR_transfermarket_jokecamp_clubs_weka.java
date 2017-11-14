@@ -45,7 +45,7 @@ public class IR_transfermarket_jokecamp_clubs_weka
         
         // add comparators
         matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true));
-        matchingRule.addComparator(new ClubPlayerFullComparator("data/output/transfermarket_jokecamp_clubs_correspondences.csv"));
+        matchingRule.addComparator(new ClubPlayerFullComparator("data/output/transfermarket_jokecamp_weka_clubs_correspondences.csv"));
         
         // load the training set
         MatchingGoldStandard gsTraining = new MatchingGoldStandard();
@@ -67,7 +67,7 @@ public class IR_transfermarket_jokecamp_clubs_weka
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/transfermarket_jokecamp_clubs_correspondences.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/transfermarket_jokecamp_weka_clubs_correspondences.csv"), correspondences);
 
         // load the gold standard (test set)
         MatchingGoldStandard gsTest = new MatchingGoldStandard();
