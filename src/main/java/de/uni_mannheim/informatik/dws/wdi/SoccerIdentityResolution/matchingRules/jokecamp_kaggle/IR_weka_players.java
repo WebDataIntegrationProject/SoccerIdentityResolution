@@ -2,13 +2,18 @@ package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRule
 
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisPlayers;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByBirthYear;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByFirstLettersOfName;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerBirthDateComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerClubNameComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerHeightComparator;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerNameComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Club;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Player;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.PlayerXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.algorithms.RuleLearner;
+import de.uni_mannheim.informatik.dws.winter.matching.blockers.NoBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.WekaMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
@@ -41,8 +46,8 @@ public class IR_weka_players
         HashedDataSet<Player, Attribute> dataKaggle = new HashedDataSet<>();
         new PlayerXMLReader().loadFromXML(new File("data/input/kaggle.xml"), "/clubs/club/players/player", dataKaggle);
 
-        System.out.println("Sample from dbpedia: " + dataJokecamp.getRandomRecord());
-        System.out.println("Sample from jokecamp others: " + dataKaggle.getRandomRecord());
+        System.out.println("Sample from jokecamp: " + dataJokecamp.getRandomRecord());
+        System.out.println("Sample from kaggle: " + dataKaggle.getRandomRecord());
 
         String options[] = new String[] {""};
         String modelType = "SimpleLogistic"; // using a logistic regression
@@ -50,37 +55,43 @@ public class IR_weka_players
 
 
         // add comparators
-        matchingRule.addComparator(new PlayerNameComparatorLevenshtein());
-        matchingRule.addComparator(new PlayerBirthDateComparatorLevenshtein());
+        matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true));
+        matchingRule.addComparator(new PlayerClubNameComparatorLevenshtein());
+        matchingRule.addComparator(new PlayerHeightComparator());
 
         // create a blocker (blocking strategy)
-        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByBirthYear());
+        NoBlocker<Player, Attribute> blocker = new NoBlocker<>();
+        //StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByFirstLettersOfName());
 
         // load the gold standard (test set)
         MatchingGoldStandard goldStandardForTraining = new MatchingGoldStandard();
-        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_jokecamp_kaggle_players.csv"));
+        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_kaggle_jokecamp_players.csv"));
 
         // train the matching rule's model
         RuleLearner<Player, Attribute> learner = new RuleLearner<>();
-        learner.learnMatchingRule(dataJokecamp, dataKaggle, null, matchingRule, goldStandardForTraining);
+        learner.learnMatchingRule(dataKaggle, dataJokecamp, null, matchingRule, goldStandardForTraining);
 
         // Initialize Matching Engine
         MatchingEngine<Player, Attribute> engine = new MatchingEngine<>();
 
         // Execute the matching
         Processable<Correspondence<Player, Attribute>> correspondences = engine.runIdentityResolution(
-                dataJokecamp, dataKaggle, null, matchingRule,
+                dataKaggle, dataJokecamp, null, matchingRule,
                 blocker);
 
         // write the correspondences to the output file
         new CSVCorrespondenceFormatter().writeCSV(new File("data/output/jokecamp_kaggle_correspondences_players.csv"), correspondences);
 
+     // gold standard for evaluation
+        MatchingGoldStandard goldStandardForEvaluation = new MatchingGoldStandard();
+        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_jokecamp_kaggle_players_test.csv"));
+
         // evaluate your result
         MatchingEvaluator<Player, Attribute> evaluator = new MatchingEvaluator<Player, Attribute>(true);
         Performance perfTest = evaluator.evaluateMatching(correspondences.get(),
-                goldStandardForTraining);
-        new ErrorAnalysisPlayers().printFalsePositives(correspondences, goldStandardForTraining);
-        new ErrorAnalysisPlayers().printFalseNegatives(dataJokecamp, dataKaggle, correspondences, goldStandardForTraining);
+                goldStandardForEvaluation);
+        new ErrorAnalysisPlayers().printFalsePositives(correspondences, goldStandardForEvaluation);
+        new ErrorAnalysisPlayers().printFalseNegatives(dataJokecamp, dataKaggle, correspondences, goldStandardForEvaluation);
         // print the evaluation result
         System.out.println("Jokecamp ↔ Kaggle");
         System.out

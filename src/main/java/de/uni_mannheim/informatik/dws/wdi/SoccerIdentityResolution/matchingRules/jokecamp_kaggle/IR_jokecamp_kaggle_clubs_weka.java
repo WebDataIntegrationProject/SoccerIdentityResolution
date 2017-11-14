@@ -5,13 +5,11 @@ import java.io.File;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisClubs;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Club;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.ClubXMLReader;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.ClubBlockerByLeague;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.*;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.algorithms.RuleLearner;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.NoBlocker;
-import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.WekaMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
@@ -21,6 +19,11 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.io.CSVCorrespondenceFormatter;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
+
+/**
+ * Data Set JokeCamp Others ↔ Kaggle
+ * Learning Combination Rules for Clubs
+ */
 public class IR_jokecamp_kaggle_clubs_weka
 {
     public static void main( String[] args ) throws Exception
@@ -37,22 +40,23 @@ public class IR_jokecamp_kaggle_clubs_weka
         // create a matching rule
         String options[] = new String[] { "" };
         String modelType = "SimpleLogistic";
-        WekaMatchingRule<Club, Attribute> matchingRule = new WekaMatchingRule<>(0.6, modelType, options);
+        WekaMatchingRule<Club, Attribute> matchingRule = new WekaMatchingRule<>(0.9, modelType, options);
         
         // add comparators
-        matchingRule.addComparator(new ClubNameComparatorLevenshtein(false));
-        matchingRule.addComparator(new ClubNameComparatorLevenshtein(true));
+        matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true));
+        matchingRule.addComparator(new ClubPlayerFullComparator("data/output/jokecamp_kaggle_correspondences_players.csv"));
+        
+        // create a blocker (blocking strategy)
+        NoBlocker<Club, Attribute> blocker = new NoBlocker<>();
         
         // load the training set
-        MatchingGoldStandard gsTraining = new MatchingGoldStandard();
-        gsTraining.loadFromCSVFile(new File("data/goldstandard/gs_jokecamp_kaggle_clubs.csv"));
+        MatchingGoldStandard goldStandardForTraining = new MatchingGoldStandard();
+        System.out.println("Loading Training Gold Standard");
+        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_jokecamp_kaggle_clubs.csv"));
         
         // train the matching rule's model
         RuleLearner<Club, Attribute> learner = new RuleLearner<>();
-        learner.learnMatchingRule(dataKaggle, dataJokecamp, null, matchingRule, gsTraining);
-
-        // create a blocker (blocking strategy)
-        NoBlocker<Club, Attribute> blocker = new NoBlocker<>();
+        learner.learnMatchingRule(dataKaggle, dataJokecamp, null, matchingRule, goldStandardForTraining);
         
         // Initialize Matching Engine
         MatchingEngine<Club, Attribute> engine = new MatchingEngine<>();
@@ -60,22 +64,22 @@ public class IR_jokecamp_kaggle_clubs_weka
         // Execute the matching
         Processable<Correspondence<Club, Attribute>> correspondences = engine.runIdentityResolution(
                 dataKaggle, dataJokecamp, null, matchingRule,
-               blocker);
+                blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/jokecamp_kaggle_clubs_correspondences.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/jokecamp_kaggle_correspondences_clubs.csv"), correspondences);
 
         // load the gold standard (test set)
-        MatchingGoldStandard gsTest = new MatchingGoldStandard();
-        gsTest.loadFromCSVFile(new File(
-                "data/goldstandard/gs_jokecamp_kaggle_clubs.csv"));
+        MatchingGoldStandard goldStandardForEvaluation= new MatchingGoldStandard();
+        System.out.println("Loading Evaluation Gold Standard");
+        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_jokecamp_kaggle_clubs_test.csv"));
 
         // evaluate your result
         MatchingEvaluator<Club, Attribute> evaluator = new MatchingEvaluator<Club, Attribute>(true);
         Performance perfTest = evaluator.evaluateMatching(correspondences.get(),
-                gsTest);
-        new ErrorAnalysisClubs().printFalsePositives(correspondences, gsTest);
-        new ErrorAnalysisClubs().printFalseNegatives(dataKaggle, dataJokecamp, correspondences, gsTest);
+        		goldStandardForEvaluation);
+        new ErrorAnalysisClubs().printFalsePositives(correspondences, goldStandardForEvaluation);
+        new ErrorAnalysisClubs().printFalseNegatives(dataKaggle, dataJokecamp, correspondences, goldStandardForEvaluation);
         // print the evaluation result
         System.out.println("Jokecamp <-> Kaggle");
         System.out
