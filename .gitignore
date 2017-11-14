@@ -34,3 +34,4 @@ data/output
 
 # User-specific stuff:
 .idea/
+/target/

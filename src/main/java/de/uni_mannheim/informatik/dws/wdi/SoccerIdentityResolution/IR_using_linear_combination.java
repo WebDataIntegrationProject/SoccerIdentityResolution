@@ -27,12 +27,12 @@ public class IR_using_linear_combination
     public static void main( String[] args ) throws Exception
     {
     	// loading data
-		HashedDataSet<Club, Attribute> dataDbpedia = new HashedDataSet<>();
-		new ClubXMLReader().loadFromXML(new File("data/input/dbpedia.xml"), "/clubs/club", dataDbpedia);
+		HashedDataSet<Club, Attribute> transferMarket = new HashedDataSet<>();
+		new ClubXMLReader().loadFromXML(new File("data/input/transfermarket.xml"), "/clubs/club", transferMarket);
 		HashedDataSet<Club, Attribute> dataJokecampOthers = new HashedDataSet<>();
 		new ClubXMLReader().loadFromXML(new File("data/input/jokecamp-others.xml"), "/clubs/club", dataJokecampOthers);
 		
-		System.out.println("Sample from dbpedia: " + dataDbpedia.getRandomRecord());
+		System.out.println("Sample from dbpedia: " + transferMarket.getRandomRecord());
 		System.out.println("Sample from jokecamp others: " + dataJokecampOthers.getRandomRecord());
 		
 		// create a matching rule
@@ -52,25 +52,25 @@ public class IR_using_linear_combination
 
 		// Execute the matching
 		Processable<Correspondence<Club, Attribute>> correspondences = engine.runIdentityResolution(
-				dataDbpedia, dataJokecampOthers, null, matchingRule,
+				transferMarket, dataJokecampOthers, null, matchingRule,
 				blocker);
 
 		// write the correspondences to the output file
-		new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_2_jokecamp_others_correspondences.csv"), correspondences);
+		new CSVCorrespondenceFormatter().writeCSV(new File("data/output/transfer_market_jokecamp_others_correspondences.csv"), correspondences);
 
 		// load the gold standard (test set)
 		MatchingGoldStandard gsTest = new MatchingGoldStandard();
 		gsTest.loadFromCSVFile(new File(
-				"data/goldstandard/gs_dbpedia_2_jokecamp_others.csv"));
+				"data/goldstandard/gs_transfermarket_jokecamp_clubs.csv"));
 
 		// evaluate your result
 		MatchingEvaluator<Club, Attribute> evaluator = new MatchingEvaluator<Club, Attribute>(true);
 		Performance perfTest = evaluator.evaluateMatching(correspondences.get(),
 				gsTest);
 		new ErrorAnalysisClubs().printFalsePositives(correspondences, gsTest);
-		new ErrorAnalysisClubs().printFalseNegatives(dataDbpedia, dataJokecampOthers, correspondences, gsTest);
+		new ErrorAnalysisClubs().printFalseNegatives(transferMarket, dataJokecampOthers, correspondences, gsTest);
 		// print the evaluation result
-		System.out.println("Dbpedia <-> Jokecamp others");
+		System.out.println("TransferMarket <-> Jokecamp others");
 		System.out
 				.println(String.format(
 						"Precision: %.4f\nRecall: %.4f\nF1: %.4f",
