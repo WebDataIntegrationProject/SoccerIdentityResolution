@@ -52,9 +52,9 @@ public class IR_weka_players
         WekaMatchingRule<Player, Attribute> matchingRule = new WekaMatchingRule<>(0.9, modelType, options);
         
         // add comparators
-//      matchingRule.addComparator(new PlayerNameComparatorLevenshtein());
-//      matchingRule.addComparator(new PlayerHeightComparator());
-//      matchingRule.addComparator(new PlayerPositionComparator());
+        matchingRule.addComparator(new PlayerNameComparatorLevenshtein());
+        matchingRule.addComparator(new PlayerBirthDateComparatorLevenshtein());
+        matchingRule.addComparator(new PlayerHeightComparator());
 
         // create a blocker (blocking strategy)
         //StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByBirthYear());
@@ -80,7 +80,7 @@ public class IR_weka_players
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/tranfermarket_jokecamp_weka_players_correspondences.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/transfermarket_jokecamp_correspondences_players.csv"), correspondences);
 
         // evaluate your result
         MatchingEvaluator<Player, Attribute> evaluator = new MatchingEvaluator<Player, Attribute>(true);
@@ -107,7 +107,7 @@ public class IR_weka_players
                     dataTransferMarket, dataJokecamp, goldStandardForTraining, matchingRule, null
             );
 
-            new RecordCSVFormatter().writeCSV(new File("data/output/tranfermarket_jokecamp_features.csv"), features);
+            new RecordCSVFormatter().writeCSV(new File("data/output/transfermarket_jokecamp_features.csv"), features);
 
             System.out.println("Finished Writing...");
         }
