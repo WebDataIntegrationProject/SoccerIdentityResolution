@@ -19,7 +19,7 @@ public class PlayerPositionComparator implements Comparator<Player, Attribute> {
             return 0.0;
         } 
         
-        if(record1.getPosition() == record2.getPosition()) {
+        if(record1.getPosition().equals(record2.getPosition())) {
         	return 1;
         } else {
         	return 0; 
