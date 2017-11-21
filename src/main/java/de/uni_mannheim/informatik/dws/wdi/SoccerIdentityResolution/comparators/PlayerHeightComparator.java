@@ -8,6 +8,9 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
 import java.lang.*;
 
+/**
+ * Compares the height of players.
+ */
 public class PlayerHeightComparator implements Comparator<Player, Attribute> {
 
     private static final long serialVersionUID = 1L;
@@ -32,7 +35,7 @@ public class PlayerHeightComparator implements Comparator<Player, Attribute> {
         
         
         if(Math.abs(record1.getHeight() - record2.getHeight()) <= dmax){
-        	similarity = 1 - (Math.abs(record1.getHeight() - record2.getHeight())/dmax);
+        	similarity = 1.0 - (Math.abs(record1.getHeight() - record2.getHeight())/dmax);
         }
        
         return similarity;
