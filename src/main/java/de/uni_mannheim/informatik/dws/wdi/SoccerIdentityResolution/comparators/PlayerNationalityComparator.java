@@ -19,7 +19,7 @@ public class PlayerNationalityComparator implements Comparator<Player, Attribute
             return 0.0;
         } 
         
-        if(record1.getNationality() == record2.getNationality()) {
+        if(record1.getNationality().equals(record2.getNationality())) {
         	return 1;
         } 
         
