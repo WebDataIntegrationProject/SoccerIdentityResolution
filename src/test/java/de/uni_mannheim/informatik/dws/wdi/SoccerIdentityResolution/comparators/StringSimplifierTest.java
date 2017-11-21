@@ -15,6 +15,9 @@ public class StringSimplifierTest extends TestCase {
 
         // tests lowercasing, accent stripping
         Assert.assertEquals(StringSimplifier.simplifyString("Liberté"), "liberte");
+
+        // test for special characters
+        Assert.assertEquals(StringSimplifier.simplifyString("ç"), "c");
     }
 
     public void testSimplifyStringClubOptimized(){
@@ -22,7 +25,6 @@ public class StringSimplifierTest extends TestCase {
         Assert.assertEquals(StringSimplifier.simplifyStringClubOptimized("Liberté FC"), "liberte");
         Assert.assertEquals(StringSimplifier.simplifyStringClubOptimized("Libertéfc FC"), "libertefc");
         Assert.assertEquals(StringSimplifier.simplifyStringClubOptimized("fcLibertéfc FC"), "fclibertefc");
-
 
     }
 
