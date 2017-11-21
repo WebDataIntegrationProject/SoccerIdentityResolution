@@ -11,8 +11,8 @@ import java.lang.*;
 public class PlayerHeightComparator implements Comparator<Player, Attribute> {
 
     private static final long serialVersionUID = 1L;
-    private int dmax;
-    
+    private double dmax;
+
     public PlayerHeightComparator(){
     	this.dmax = 0;
     }
@@ -24,21 +24,20 @@ public class PlayerHeightComparator implements Comparator<Player, Attribute> {
     @Override
     public double compare(Player record1, Player record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
 
-    	int sim = 0;
+    	double similarity = 0;
     	
-        if(record1.getHeight() == null || record2.getHeight() == null){
+        if(record1.getHeight() == null || record2.getHeight() == null || record1.getHeight() == 0 || record2.getHeight() == 0){
             return 0.0;
         }
         
         
         if(Math.abs(record1.getHeight() - record2.getHeight()) <= dmax){
-        	sim = 1 - (Math.abs(record1.getHeight() - record2.getHeight())/dmax);
+        	similarity = 1 - (Math.abs(record1.getHeight() - record2.getHeight())/dmax);
         }
        
-        return sim;
+        return similarity;
 
     }
-
 
 }
 
