@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisPlayers;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.FeaturesToCSV;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByBirthYear;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByBirthYearAndMonth;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByFirstLettersOfName;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorLevenshteinOptimized;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerBirthDateComparatorExactDateComparison;
@@ -67,11 +68,11 @@ public class IR_linear_combination_simple_players
 
         // add comparators
         // matchingRule.addComparator(new MovieDateComparator10Years(), 0.5);
-        matchingRule.addComparator(new PlayerNameComparatorLevenshtein(), 0.2);
-        matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison(), 0.8);
+        matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true), 0.4);
+        matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison(), 0.6);
 
         // create a blocker (blocking strategy)
-        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByBirthYear());
+        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByBirthYearAndMonth());
 //        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByBirthYear());
 
 //        NoBlocker<Player, Attribute> blocker = new NoBlocker<>();
