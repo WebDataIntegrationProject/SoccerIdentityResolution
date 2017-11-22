@@ -34,11 +34,12 @@ public class PlayerNameComparatorCosine implements Comparator<Player, Attribute>
             name1simplified = StringSimplifier.simplifyString(record1.getFullName());
             name2simplified = StringSimplifier.simplifyString(record2.getFullName());
         } else {
-            return sim.apply(record1.getFullName(), record2.getFullName());
+            return 1 - sim.apply(record1.getFullName(), record2.getFullName());
         }
 
-        return sim.apply(name1simplified, name2simplified);
+        return 1 - sim.apply(name1simplified, name2simplified);
 
     }
+  
     
 }
