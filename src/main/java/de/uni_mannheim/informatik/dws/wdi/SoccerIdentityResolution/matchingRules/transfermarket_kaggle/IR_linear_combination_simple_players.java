@@ -63,13 +63,12 @@ public class IR_linear_combination_simple_players
 
         // create a matching rule
         LinearCombinationMatchingRule<Player, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-                0.0);
+                0.8);
 
 
         // add comparators
-        // matchingRule.addComparator(new MovieDateComparator10Years(), 0.5);
-        matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true), 0.4);
-        matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison(), 0.6);
+        matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true), 0.8);
+        matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison(), 0.2);
 
         // create a blocker (blocking strategy)
         StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByBirthYearAndMonth());
