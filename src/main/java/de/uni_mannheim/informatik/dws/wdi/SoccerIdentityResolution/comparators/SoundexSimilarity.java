@@ -42,7 +42,7 @@ public class SoundexSimilarity {
 		String result = word.substring(0,1);
 		String input = word;
 		
-		input = input.replace("a", "");
+		/*input = input.replace("a", "");
 		input = input.replace("e", "");
 		input = input.replace("h", "");
 		input = input.replace("i", "");
@@ -50,6 +50,10 @@ public class SoundexSimilarity {
 		input = input.replace("u", "");
 		input = input.replace("w", "");
 		input = input.replace("y", "");
+		input = input.replace(" ", "");
+		input = input.replace("-", "");*/
+		input = input.replaceAll("[^bfpvcgjkqsxzdtlmnr]", "");
+
 				
 		int i = 1;	// because the first letter is already covered
 		
@@ -76,7 +80,11 @@ public class SoundexSimilarity {
 			}
 
 			
-			if(result.substring(result.length()-2, result.length()-1).equals(result.substring(result.length()-1, result.length()))){
+			if(result.length() < 2){
+				System.out.println("WORD: " + word + " CHAR: " + currentChar + " i: " + i);
+			}
+			
+			if(result.length() > 1 && result.substring(result.length()-2, result.length()-1).equals(result.substring(result.length()-1, result.length()))){
 				result = result.substring(0, result.length()-1);
 			}
 						
