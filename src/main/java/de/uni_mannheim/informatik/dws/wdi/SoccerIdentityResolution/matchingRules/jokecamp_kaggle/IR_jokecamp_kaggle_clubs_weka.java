@@ -44,7 +44,7 @@ public class IR_jokecamp_kaggle_clubs_weka
         
         // add comparators
         matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true));
-        matchingRule.addComparator(new ClubPlayerFullComparator("data/output/jokecamp_kaggle_correspondences_players.csv"));
+        matchingRule.addComparator(new ClubPlayerFullComparator("data/output/jokecamp_2_kaggle_correspondences_players.csv"));
         
         // create a blocker (blocking strategy)
         NoBlocker<Club, Attribute> blocker = new NoBlocker<>();

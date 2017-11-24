@@ -80,7 +80,7 @@ public class IR_weka_players
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/jokecamp_kaggle_correspondences_players.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/jokecamp_2_kaggle_correspondences_players.csv"), correspondences);
 
      // gold standard for evaluation
         MatchingGoldStandard goldStandardForEvaluation = new MatchingGoldStandard();
