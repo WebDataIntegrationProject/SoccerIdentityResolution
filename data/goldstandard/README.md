@@ -1,0 +1,1 @@
+This directory contains all gold standards and splitted gold standards (for training and validation).
