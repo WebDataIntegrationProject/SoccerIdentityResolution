@@ -4,6 +4,7 @@ import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.Map.Entry;
 
+import org.apache.commons.text.similarity.CosineDistance;
 import org.apache.commons.text.similarity.JaccardSimilarity;
 import org.apache.commons.text.similarity.JaroWinklerDistance;
 
@@ -14,6 +15,8 @@ public class MongeElkanSimilarity {
     private JaroWinklerDistance simJaroWinkler = new JaroWinklerDistance();
 	private LevenshteinSimilarity simLevenshtein = new LevenshteinSimilarity();
 	private SoundexSimilarity simSoundex = new SoundexSimilarity();
+	private CosineDistance simCosine = new CosineDistance();
+
 	
 	public double calculate(String name1, String name2, String similarityMeasure){
 		String[] partsOfName1 = name1.split(" ");
@@ -27,7 +30,8 @@ public class MongeElkanSimilarity {
 					case "jaccard": table.put(i + "-" + j, simJaccard.apply(partsOfName1[i], partsOfName2[j])); break;
 					case "jaroWinkler": table.put(i + "-" + j, simJaroWinkler.apply(partsOfName1[i], partsOfName2[j])); break;
 					case "levenshtein": table.put(i + "-" + j, simLevenshtein.calculate(partsOfName1[i], partsOfName2[j])); break;
-					case "soundex": table.put(i + "-" + j, simSoundex.calculate(partsOfName1[i], partsOfName2[j])); 
+					case "soundex": table.put(i + "-" + j, simSoundex.calculate(partsOfName1[i], partsOfName2[j])); break;
+					case "cosine": table.put(i + "-" + j, simCosine.apply(partsOfName1[i], partsOfName2[j]));
 				}				
 			}
 		}
