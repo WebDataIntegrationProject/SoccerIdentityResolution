@@ -16,12 +16,15 @@ import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.Play
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByNameSoundex;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByNameSoundexLastName;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorLevenshteinOptimized;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorMongeElkan;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerBirthDateComparatorExactDateComparison;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerBirthDateComparatorLevenshtein;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerNameComparatorCosine;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerNameComparatorJaccard;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerNameComparatorJaroWinkler;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerNameComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerNameComparatorMongeElkan;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerNameComparatorPhoneticsCombination;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerNameComparatorSoundex;
 //import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Blocking.MovieBlockingKeyByDecadeGenerator;
 //import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators.MovieDateComparator10Years;
@@ -73,13 +76,18 @@ public class IR_linear_combination_simple_players
 
 
         // add comparators
-       // matchingRule.addComparator(new PlayerNameComparatorCosine(true), 0.8);			//?????
-        matchingRule.addComparator(new PlayerNameComparatorJaccard(true), 1.0);			// 0.9750 (0.8*Jaccard + 0.2*Date > 0.8) (same for: 1.0*Jaccard > 0.8)
+       // matchingRule.addComparator(new PlayerNameComparatorCosine(true), 0.8);			//0.9474 ((0.8*Cosine + 0.2*Date > 0.8))
+       // matchingRule.addComparator(new PlayerNameComparatorJaccard(true), 1.0);			// 0.9750 (0.8*Jaccard + 0.2*Date > 0.8) (same for: 1.0*Jaccard > 0.8)
        // matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true), 0.8);	
-       // matchingRule.addComparator(new PlayerNameComparatorJaroWinkler(true), 0.8); 	//0.9750 (0.8*JaroWinkler + 0.2*Date > 0.8)
+       matchingRule.addComparator(new PlayerNameComparatorJaroWinkler(true), 0.8); 	//0.9750 (0.8*JaroWinkler + 0.2*Date > 0.8)
        // matchingRule.addComparator(new PlayerNameComparatorSoundex(true), 0.8);			// 0.9474 (0.8*Soundex + 0.2*Date > 0.8)
+       // matchingRule.addComparator(new PlayerNameComparatorPhoneticsCombination(true), 0.8); // 0.9474 (0.8*PhoneticsCombination + 0.2*Date > 0.8)
+        //matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "jaroWinkler"), 1); // 0.9750
+        //matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "cosine"), 0.8);	// 0.8250
+
         
-        //matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison(), 0.7);
+        
+        matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison(), 0.2);
 
         // create a blocker (blocking strategy)
          StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByBirthYearAndMonth());
