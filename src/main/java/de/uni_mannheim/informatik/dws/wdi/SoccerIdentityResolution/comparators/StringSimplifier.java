@@ -3,6 +3,12 @@ package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators;
 
 import org.apache.commons.lang.StringUtils;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,16 +25,52 @@ import java.util.regex.Pattern;
  */
 public class StringSimplifier {
 
+	 static String path_ClubNameStopWordsDictionary = "data/ClubNameStopWordsDictionary.csv";
+	 static String[] stopWordsDictionary = {
+			 "fc",
+			 "sc",
+			 "fv",
+			 "sc",
+			 "tsv",
+			 "vf",
+			 "alemannia",
+			 "germania",
+			 "teutonia",
+			 "bavaria",
+			 "borussia",
+			 "eintracht",
+			 "concordia",
+			 "union",
+			 "fortuna",
+			 "victoria",
+			 "viktoria",
+			 "kickers",
+			 "werder",
+			 "hertha",
+			 "arminia",
+			 "amicitia",
+			 "olympia",
+			 "wacker",
+			 "rapid",
+			 "rapide",
+			 "vorwaerts",
+			 "dynamo",
+			 "dinamo",
+			 "athletic",
+			 "athletico"
+	 };
+
+	
     public static String simplifyString(String inputString){
 
         // lowercasing
         String returnString = inputString.toLowerCase();
 
         // removing some characters that are not helpful
-        returnString = returnString.replace(".", "");
-        returnString = returnString.replace(",", "");
-        returnString = returnString.replace(";", "");
-        returnString = returnString.replace(":", "");
+       // returnString = returnString.replace(".", "");
+        //returnString = returnString.replace(",", "");
+       // returnString = returnString.replace(";", "");
+       // returnString = returnString.replace(":", "");
 
         // German umlauts
         returnString = returnString.replace("Ä", "Ae");
@@ -46,13 +88,69 @@ public class StringSimplifier {
         // strip accents
         returnString = org.apache.commons.lang3.StringUtils.stripAccents(returnString);
 
-        // trimming
-        returnString = returnString.trim();
+        // treat "-" connected names as 2 separate names
+        returnString = returnString.replace("-", " ");
+        
+        // removing all kinds of punctuation, special characters and numbers
+        returnString = returnString.replaceAll("[^a-z0-9 ]", "");
+        
+        // trimming & removal of multiple whitespaces
+        returnString = returnString.trim().replaceAll(" +", " ");
+        
+        
+        
 
         return returnString;
     }
 
-    public static String simplifyStringClubOptimized(String inputString){
+    public static String simplifyStringClubOptimized_SLOW(String inputString){
+    	
+    	String resultString = simplifyString(inputString);
+    	
+    	BufferedReader br = null;
+		try {
+		
+			
+			br = new BufferedReader(new FileReader(path_ClubNameStopWordsDictionary));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		};
+        String stopWord = "";
+        
+
+        try {
+			while ((stopWord = br.readLine()) != null) {
+
+				resultString = resultString.replaceAll("^" + stopWord + " ", "");
+		        resultString = resultString.replaceAll(" " + stopWord + "$", "");
+		        resultString = resultString.replace(" " + stopWord + " ", " ");
+
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+        return resultString;
+    }
+    
+    
+   public static String simplifyStringClubOptimized(String inputString){
+    	
+    	String resultString = simplifyString(inputString);
+    	
+    	for(int i=0; i<stopWordsDictionary.length; i++){
+    		
+    		resultString = resultString.replaceAll("^" + stopWordsDictionary[i] + " ", "");
+	        resultString = resultString.replaceAll(" " + stopWordsDictionary[i] + "$", "");
+	        resultString = resultString.replace(" " + stopWordsDictionary[i] + " ", " ");
+    	}
+			
+        return resultString;
+    }
+    
+    public static String simplifyStringClubName(String inputString){
         String resultString = simplifyString(inputString);
 
         resultString = resultString.replaceAll("^fc ", "");
@@ -63,6 +161,7 @@ public class StringSimplifier {
 
     }
 
-
-
+    public static void main (String[] args){
+    	System.out.println(StringSimplifier.simplifyStringClubOptimized(" mohamed     ali   syal  a"));
     }
+}
