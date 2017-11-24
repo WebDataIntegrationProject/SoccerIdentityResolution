@@ -59,11 +59,7 @@ public class MongeElkanSimilarity {
 			
 			// remove the collected keys of pairs containing one of the word of the current pair from the hashtable
 			for(int i=0; i<removals.size(); i++){
-		        System.out.println(removals.get(i));
 				table.remove(removals.get(i));
-				if(i== removals.size() -1 ){
-					System.out.println("---------");
-				}
 			}
 
 			
@@ -72,7 +68,6 @@ public class MongeElkanSimilarity {
 		double similarity = 0.0;
 		
 		for(int i=0; i<allMaxValues.size(); i++){
-			System.out.println(i + ": " + allMaxValues.get(i));
 			similarity = similarity + allMaxValues.get(i);
 		}
 		
