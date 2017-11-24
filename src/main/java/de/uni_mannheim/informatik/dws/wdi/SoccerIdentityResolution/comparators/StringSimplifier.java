@@ -102,8 +102,42 @@ public class StringSimplifier {
 
         return returnString;
     }
+    
+    
+   public static String simplifyStringClubOptimized(String inputString){
+    	
+    	String resultString = simplifyString(inputString);
+    	
+    	for(int i=0; i<stopWordsDictionary.length; i++){
+    		
+    		String before = resultString;
+    		resultString = resultString.replaceAll("^" + stopWordsDictionary[i] + " ", "");
+	        resultString = resultString.replaceAll(" " + stopWordsDictionary[i] + "$", "");
+	        resultString = resultString.replace(" " + stopWordsDictionary[i] + " ", " ");
+	        
+	        // assumption: a name will only contain one stop word -> to make the computation faster!
+	        if(!before.equals(resultString)){
+	        	break;
+	        }
+    	}
+			
+        return resultString;
+    }
+    
+    public static String simplifyStringClubName(String inputString){
+        String resultString = simplifyString(inputString);
 
-    public static String simplifyStringClubOptimized_SLOW(String inputString){
+        resultString = resultString.replaceAll("^fc ", "");
+        resultString = resultString.replaceAll(" fc$", "");
+        resultString = resultString.replace(" fc ", " ");
+
+        return resultString;
+
+    }
+    
+    
+ // NOTE: this is the CSV based version but this seems to be too slow! 
+    /*public static String simplifyStringClubOptimized(String inputString){
     	
     	String resultString = simplifyString(inputString);
     	
@@ -133,33 +167,7 @@ public class StringSimplifier {
 		}
         
         return resultString;
-    }
-    
-    
-   public static String simplifyStringClubOptimized(String inputString){
-    	
-    	String resultString = simplifyString(inputString);
-    	
-    	for(int i=0; i<stopWordsDictionary.length; i++){
-    		
-    		resultString = resultString.replaceAll("^" + stopWordsDictionary[i] + " ", "");
-	        resultString = resultString.replaceAll(" " + stopWordsDictionary[i] + "$", "");
-	        resultString = resultString.replace(" " + stopWordsDictionary[i] + " ", " ");
-    	}
-			
-        return resultString;
-    }
-    
-    public static String simplifyStringClubName(String inputString){
-        String resultString = simplifyString(inputString);
-
-        resultString = resultString.replaceAll("^fc ", "");
-        resultString = resultString.replaceAll(" fc$", "");
-        resultString = resultString.replace(" fc ", " ");
-
-        return resultString;
-
-    }
+    }*/
 
     public static void main (String[] args){
     	System.out.println(StringSimplifier.simplifyStringClubOptimized(" mohamed     ali   syal  a"));
