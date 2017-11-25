@@ -14,9 +14,9 @@ public class ClubLeagueComparatorLevenshtein implements Comparator<Club, Attribu
     LevenshteinSimilarity sim = new LevenshteinSimilarity();
     boolean useStringSimplifier = false;
 
-    public ClubLeagueComparatorLevenshtein(boolean lowerCase) {
+    public ClubLeagueComparatorLevenshtein(boolean useStringSimplifier) {
         super();
-        useStringSimplifier = true;
+        this.useStringSimplifier = useStringSimplifier;
     }
 
     public ClubLeagueComparatorLevenshtein() { super(); }
