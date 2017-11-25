@@ -33,7 +33,7 @@ public class IR_transfermarket_jokecamp_clubs_weka
         HashedDataSet<Club, Attribute> transferMarket = new HashedDataSet<>();
         new ClubXMLReader().loadFromXML(new File("data/input/transfermarket.xml"), "/clubs/club", transferMarket);
         HashedDataSet<Club, Attribute> dataJokecamp = new HashedDataSet<>();
-        new ClubXMLReader().loadFromXML(new File("data/input/jokecamp-others.xml"), "/clubs/club", dataJokecamp);
+        new ClubXMLReader().loadFromXML(new File("data/input/jokecamp.xml"), "/clubs/club", dataJokecamp);
 
         System.out.println("Sample from transfermarket: " + transferMarket.getRandomRecord());
         System.out.println("Sample from jokecamp: " + dataJokecamp.getRandomRecord());

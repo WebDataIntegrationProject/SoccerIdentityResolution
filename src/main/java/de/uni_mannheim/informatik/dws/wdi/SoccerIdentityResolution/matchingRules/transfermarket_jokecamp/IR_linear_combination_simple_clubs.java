@@ -35,7 +35,7 @@ public class IR_linear_combination_simple_clubs
     	HashedDataSet<Club, Attribute> dataTransfermarket = new HashedDataSet<>();
         new ClubXMLReader().loadFromXML(new File("data/input/transfermarket.xml"), "/clubs/club", dataTransfermarket);
         HashedDataSet<Club, Attribute> dataJokecamp = new HashedDataSet<>();
-        new ClubXMLReader().loadFromXML(new File("data/input/jokecamp-others.xml"), "/clubs/club", dataJokecamp);
+        new ClubXMLReader().loadFromXML(new File("data/input/jokecamp.xml"), "/clubs/club", dataJokecamp);
         
         System.out.println("Sample from transfermarket: " + dataTransfermarket.getRandomRecord());
         System.out.println("Sample from jokecamp others: " + dataJokecamp.getRandomRecord());

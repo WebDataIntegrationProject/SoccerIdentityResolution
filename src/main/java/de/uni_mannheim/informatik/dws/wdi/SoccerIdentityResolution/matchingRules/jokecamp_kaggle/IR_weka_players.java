@@ -42,7 +42,7 @@ public class IR_weka_players
 
         // loading data
         HashedDataSet<Player, Attribute> dataJokecamp = new HashedDataSet<>();
-        new PlayerXMLReader().loadFromXML(new File("data/input/jokecamp-others.xml"), "/clubs/club/players/player", dataJokecamp);
+        new PlayerXMLReader().loadFromXML(new File("data/input/jokecamp.xml"), "/clubs/club/players/player", dataJokecamp);
         HashedDataSet<Player, Attribute> dataKaggle = new HashedDataSet<>();
         new PlayerXMLReader().loadFromXML(new File("data/input/kaggle.xml"), "/clubs/club/players/player", dataKaggle);
 

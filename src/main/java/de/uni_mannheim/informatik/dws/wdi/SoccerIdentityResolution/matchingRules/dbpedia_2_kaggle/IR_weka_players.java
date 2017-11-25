@@ -2,6 +2,7 @@ package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRule
 
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisPlayers;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByBirthYear;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByBirthYearAndMonth;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByFirstLettersOfName;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.*;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Player;
@@ -48,9 +49,9 @@ public class IR_weka_players
         String modelType = "SimpleLogistic"; // using a logistic regression
         WekaMatchingRule<Player, Attribute> matchingRule = new WekaMatchingRule<>(0.9, modelType, options);
 
-
         // add comparators
-        matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true));
+        //matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true));
+        matchingRule.addComparator(new PlayerNameComparatorJaroWinkler(true));
         matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison());
         matchingRule.addComparator(new PlayerClubNameComparatorLevenshtein());
         matchingRule.addComparator(new PlayerHeightComparator());
@@ -58,8 +59,9 @@ public class IR_weka_players
 
 
         // create a blocker (blocking strategy)
-        // StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByBirthYear());
-        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByFirstLettersOfName(1));
+        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByBirthYear());
+        //StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByBirthYearAndMonth());
+        // StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByFirstLettersOfName(1));
 
 
         // load the gold standard (test set)
