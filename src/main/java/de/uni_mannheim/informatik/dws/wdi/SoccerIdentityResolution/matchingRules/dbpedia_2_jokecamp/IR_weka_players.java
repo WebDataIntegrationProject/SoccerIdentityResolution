@@ -49,10 +49,8 @@ public class IR_weka_players
         WekaMatchingRule<Player, Attribute> matchingRule = new WekaMatchingRule<>(0.9, modelType, options);
 
         // add comparators
-        //matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true));
-        matchingRule.addComparator(new PlayerNameComparatorJaroWinkler(true));
-        //matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison());
-        matchingRule.addComparator(new PlayerClubNameComparatorLevenshtein());
+        matchingRule.addComparator(new PlayerClubNameComparatorLevenshtein(true));
+        matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true));
         matchingRule.addComparator(new PlayerHeightComparator());
         matchingRule.addComparator(new PlayerPositionComparator());
 
@@ -63,7 +61,7 @@ public class IR_weka_players
 
         // load the gold standard (test set)
         MatchingGoldStandard goldStandardForTraining = new MatchingGoldStandard();
-        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_84.csv"));
+        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_jokecamp_players_97.csv"));
 
         // train the matching rule's model
         RuleLearner<Player, Attribute> learner = new RuleLearner<>();
@@ -78,12 +76,12 @@ public class IR_weka_players
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_correspondences_players.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_2_jokecamp_correspondences_players.csv"), correspondences);
 
 
         // gold standard for evaluation
         MatchingGoldStandard goldStandardForEvaluation = new MatchingGoldStandard();
-        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_42.csv"));
+        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_jokecamp_players_53.csv"));
 
 
 
@@ -101,30 +99,7 @@ public class IR_weka_players
                         perfTest.getPrecision(), perfTest.getRecall(),
                         perfTest.getF1()));
 
-        if(WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL) {
-
-            System.out.println("Writing Features for an External Tool...");
-
-            // gold standard for all entries
-            MatchingGoldStandard goldStandardForExternalTool = new MatchingGoldStandard();
-            goldStandardForExternalTool.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_external_tool.csv"));
-
-
-            // generate feature data set for RapidMiner
-            RuleLearner<Player, Attribute> learner2 = new RuleLearner<>();
-
-            FeatureVectorDataSet features = learner2.generateTrainingDataForLearning(
-                    dataDbpedia, dataJokecamp, goldStandardForExternalTool, matchingRule, null
-            );
-
-            new RecordCSVFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_features.csv"), features);
-
-            System.out.println("Finished Writing...");
-        }
-
-
 
     }
-
 
 }
