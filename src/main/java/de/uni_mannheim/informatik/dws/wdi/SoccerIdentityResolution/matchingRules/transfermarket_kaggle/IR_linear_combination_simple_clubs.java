@@ -5,7 +5,14 @@ import java.io.File;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisClubs;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Club;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.ClubXMLReader;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorCosine;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorDoubleMetaphone;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorJaccard;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorJaroWinkler;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorLevenshteinOptimized;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorMongeElkan;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorSoundex;
 //import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Blocking.MovieBlockingKeyByDecadeGenerator;
 //import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators.MovieDateComparator10Years;
 //import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators.MovieTitleComparatorLevenshtein;
@@ -24,7 +31,7 @@ import de.uni_mannheim.informatik.dws.winter.model.io.CSVCorrespondenceFormatter
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
 /**
- * Data Set Transfermarket ↔ Jokecamp
+ * Data Set Transfermarket ↔ Kaggle
  * Learning Combination Rules for Clubs
  */
 public class IR_linear_combination_simple_clubs
@@ -44,8 +51,17 @@ public class IR_linear_combination_simple_clubs
         LinearCombinationMatchingRule<Club, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
                 0.7);
         // add comparators
-        // matchingRule.addComparator(new MovieDateComparator10Years(), 0.5);
-        matchingRule.addComparator(new ClubNameComparatorLevenshtein(), 1);
+
+        //matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true), 1); // 0.8387
+        // matchingRule.addComparator(new ClubNameComparatorJaccard(true), 1); // 0.8077
+        //matchingRule.addComparator(new ClubNameComparatorJaroWinkler(true), 1); // 0,8142
+        // matchingRule.addComparator(new ClubNameComparatorSoundex(true), 1); // 0.8200
+        //matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "jaroWinkler"), 1); // 0.7966
+       // matchingRule.addComparator(new ClubNameComparatorCosine(true), 1);  // 0.8411 --> with dictionary: 0.8440
+        matchingRule.addComparator(new ClubNameComparatorDoubleMetaphone(true), 1); //0.8190
+        
+        
+        
 
         // create a blocker (blocking strategy)
 //		StandardRecordBlocker<Club, Attribute> blocker = new StandardRecordBlocker<Club, Attribute>(new MovieBlockingKeyByDecadeGenerator());
