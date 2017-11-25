@@ -24,7 +24,7 @@ import java.util.regex.Pattern;
 public class ClubPlayerFullComparator implements Comparator<Club, Attribute> {
 
     private static final long serialVersionUID = 1L;
-    LevenshteinSimilarity sim = new LevenshteinSimilarity();
+    private boolean isVerbose = false;
 
     static HashMap<String, String> playerMapping;
 
@@ -55,6 +55,11 @@ public class ClubPlayerFullComparator implements Comparator<Club, Attribute> {
         } catch (IOException ioe){
             ioe.printStackTrace();
         }
+    }
+
+    public ClubPlayerFullComparator(String playerCorrespondenceFile, boolean isVerbose){
+        this(playerCorrespondenceFile);
+        this.isVerbose = isVerbose;
     }
 
 
@@ -102,14 +107,16 @@ public class ClubPlayerFullComparator implements Comparator<Club, Attribute> {
                 {
 
                     numberOfMatches++;
-                    System.out.println("Player match! " + player1.getFullName() + " and " + player2.getFullName());
+                    if (isVerbose){ System.out.println("Player match! " + player1.getFullName() + " and " + player2.getFullName()); }
                     break club2loop;
                 }
             }
         }
 
-        if(numberOfMatches > 0){
-            System.out.println(record1.getName() + " and " + record2.getName() + " have " + numberOfMatches + " players in common.");
+        if(isVerbose) {
+            if (numberOfMatches > 0) {
+                System.out.println(record1.getName() + " and " + record2.getName() + " have " + numberOfMatches + " players in common.");
+            }
         }
 
         // return the match ratio normalized with the smaller team size
