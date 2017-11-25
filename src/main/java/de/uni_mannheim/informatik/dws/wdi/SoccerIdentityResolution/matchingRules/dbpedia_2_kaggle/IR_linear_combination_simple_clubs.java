@@ -66,7 +66,7 @@ public class IR_linear_combination_simple_clubs
         // load the gold standard (test set)
         MatchingGoldStandard gsTest = new MatchingGoldStandard();
         gsTest.loadFromCSVFile(new File(
-                "data/goldstandard/gs_dbpedia_2_kaggle_clubs.csv"));
+                "data/goldstandard/completeGoldstandard/gs_dbpedia_2_kaggle_clubs.csv"));
 
         // evaluate your result
         MatchingEvaluator<Club, Attribute> evaluator = new MatchingEvaluator<Club, Attribute>(true);

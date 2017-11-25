@@ -30,7 +30,7 @@ import java.io.File;
 public class IR_weka_players
 {
 
-    static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = true;
+    static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = false;
 
     public static void main( String[] args ) throws Exception
     {
@@ -54,6 +54,7 @@ public class IR_weka_players
         matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison());
         matchingRule.addComparator(new PlayerClubNameComparatorLevenshtein());
         matchingRule.addComparator(new PlayerHeightComparator());
+        matchingRule.addComparator(new PlayerWeightComparator());
 
 
         // create a blocker (blocking strategy)
