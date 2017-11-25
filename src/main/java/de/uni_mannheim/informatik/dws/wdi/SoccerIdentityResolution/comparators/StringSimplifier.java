@@ -28,11 +28,21 @@ public class StringSimplifier {
 	 static String path_ClubNameStopWordsDictionary = "data/ClubNameStopWordsDictionary.csv";
 	 static String[] stopWordsDictionary = {
 			 "fc",
+			 "fcm",
 			 "sc",
 			 "fv",
 			 "sc",
 			 "tsv",
 			 "vf",
+			 "united",
+			 "real",
+			 "ff",
+			 "asd",
+			 "ifk",
+			 "as",
+			 "ac",
+			 "msk",
+			 "fk",
 			 "alemannia",
 			 "germania",
 			 "teutonia",
@@ -57,7 +67,12 @@ public class StringSimplifier {
 			 "dynamo",
 			 "dinamo",
 			 "athletic",
-			 "athletico"
+			 "athletico",
+			 "atletico",
+			 "usd",
+			 "aik",
+			 "kf",
+			 "wanderers"
 	 };
 
 	
@@ -97,9 +112,6 @@ public class StringSimplifier {
         // trimming & removal of multiple whitespaces
         returnString = returnString.trim().replaceAll(" +", " ");
         
-        
-        
-
         return returnString;
     }
     
