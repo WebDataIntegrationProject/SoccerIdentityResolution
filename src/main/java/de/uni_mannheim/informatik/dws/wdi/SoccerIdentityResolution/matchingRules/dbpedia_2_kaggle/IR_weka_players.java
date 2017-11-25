@@ -64,7 +64,7 @@ public class IR_weka_players
 
         // load the gold standard (test set)
         MatchingGoldStandard goldStandardForTraining = new MatchingGoldStandard();
-        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_76.csv"));
+        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_84.csv"));
 
         // train the matching rule's model
         RuleLearner<Player, Attribute> learner = new RuleLearner<>();
@@ -84,7 +84,7 @@ public class IR_weka_players
 
         // gold standard for evaluation
         MatchingGoldStandard goldStandardForEvaluation = new MatchingGoldStandard();
-        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_38.csv"));
+        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_42.csv"));
 
 
 

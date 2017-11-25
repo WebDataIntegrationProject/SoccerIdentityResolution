@@ -52,7 +52,7 @@ public class IR_linear_combination_simple_players
         //matchingRule.addComparator(new PlayerBirthDateComparatorLevenshtein(), 0.5);
 
         // create a blocker (blocking strategy)
-        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByFirstLettersOfName(4));
+        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByFirstLettersOfName(2));
 //        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByBirthYear());
 
 //        NoBlocker<Player, Attribute> blocker = new NoBlocker<>();
