@@ -4,6 +4,7 @@ import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.Map.Entry;
 
+import org.apache.commons.codec.language.DoubleMetaphone;
 import org.apache.commons.text.similarity.CosineDistance;
 import org.apache.commons.text.similarity.JaccardSimilarity;
 import org.apache.commons.text.similarity.JaroWinklerDistance;
@@ -16,6 +17,8 @@ public class MongeElkanSimilarity {
 	private LevenshteinSimilarity simLevenshtein = new LevenshteinSimilarity();
 	private SoundexSimilarity simSoundex = new SoundexSimilarity();
 	private CosineDistance simCosine = new CosineDistance();
+    private DoubleMetaphone simDoubleMetaphone = new DoubleMetaphone();
+
 
 	
 	public double calculate(String name1, String name2, String similarityMeasure){
@@ -31,7 +34,17 @@ public class MongeElkanSimilarity {
 					case "jaroWinkler": table.put(i + "-" + j, simJaroWinkler.apply(partsOfName1[i], partsOfName2[j])); break;
 					case "levenshtein": table.put(i + "-" + j, simLevenshtein.calculate(partsOfName1[i], partsOfName2[j])); break;
 					case "soundex": table.put(i + "-" + j, simSoundex.calculate(partsOfName1[i], partsOfName2[j])); break;
-					case "cosine": table.put(i + "-" + j, simCosine.apply(partsOfName1[i], partsOfName2[j]));
+					case "cosine": table.put(i + "-" + j, simCosine.apply(partsOfName1[i], partsOfName2[j])); break;
+					case "doubleMetaphone": {
+						String dmCode1 = simDoubleMetaphone.doubleMetaphone(partsOfName1[i]);
+						String dmCode2 = simDoubleMetaphone.doubleMetaphone(partsOfName2[j]);
+						if(dmCode1.equals(dmCode2)){
+							table.put(i + "-" + j, 1.0);
+						}
+						else{
+							table.put(i + "-" + j, 0.0);
+						}
+					}
 				}				
 			}
 		}
