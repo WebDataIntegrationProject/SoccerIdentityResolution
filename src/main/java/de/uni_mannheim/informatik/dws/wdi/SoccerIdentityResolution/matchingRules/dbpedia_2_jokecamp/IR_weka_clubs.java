@@ -1,8 +1,7 @@
 package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.dbpedia_2_jokecamp;
 
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisClubs;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorLevenshteinOptimized;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubPlayerFullComparator;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.*;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Club;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.ClubXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
@@ -49,8 +48,11 @@ public class IR_weka_clubs
 
 
         // add comparators
-        matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized());
+        //matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized());
+        matchingRule.addComparator(new ClubNameComparatorLevenshtein(true));
         matchingRule.addComparator(new ClubPlayerFullComparator("data/correspondences/dbpedia_2_jokecamp_correspondences_players.csv", false));
+        matchingRule.addComparator(new ClubStadiumNameComparatorLevenshtein(true));
+        matchingRule.addComparator(new ClubLeagueComparatorLevenshtein(true));
 
 
         // create a blocker (blocking strategy)
@@ -61,7 +63,7 @@ public class IR_weka_clubs
         // load the gold standard (test set)
         MatchingGoldStandard goldStandardForTraining = new MatchingGoldStandard();
         System.out.println("Loading Training Gold Standard");
-        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_clubs_67.csv"));
+        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_jokecamp_clubs_67.csv"));
 
         // train the matching rule's model
         RuleLearner<Club, Attribute> learner = new RuleLearner<>();
@@ -76,13 +78,13 @@ public class IR_weka_clubs
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_correspondences_clubs.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_2_jokecamp_correspondences_clubs.csv"), correspondences);
 
 
         // gold standard for evaluation
         MatchingGoldStandard goldStandardForEvaluation = new MatchingGoldStandard();
         System.out.println("Loading Evaluation Gold Standard");
-        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_clubs_36.csv"));
+        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_jokecamp_clubs_33.csv"));
 
         // evaluate your result
         MatchingEvaluator<Club, Attribute> evaluator = new MatchingEvaluator<Club, Attribute>(true);
@@ -98,27 +100,6 @@ public class IR_weka_clubs
                         "Precision: %.4f\nRecall: %.4f\nF1: %.4f",
                         perfTest.getPrecision(), perfTest.getRecall(),
                         perfTest.getF1()));
-
-        if(WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL) {
-
-            System.out.println("Writing Features for an External Tool...");
-
-            // gold standard for all entries
-            MatchingGoldStandard goldStandardForExternalTool = new MatchingGoldStandard();
-            goldStandardForExternalTool.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_clubs_external_tool.csv"));
-
-
-            // generate feature data set for RapidMiner
-            RuleLearner<Club, Attribute> learner2 = new RuleLearner<>();
-
-            FeatureVectorDataSet features = learner2.generateTrainingDataForLearning(
-                    dataDbpedia, dataJokecamp, goldStandardForExternalTool, matchingRule, null
-            );
-
-            new RecordCSVFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_features.csv"), features);
-
-            System.out.println("Finished Writing...");
-        }
 
     }
 

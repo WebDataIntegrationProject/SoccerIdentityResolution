@@ -11,6 +11,11 @@ public class ClubStadiumNameComparatorLevenshtein implements Comparator<Club, At
 
     private static final long serialVersionUID = 1L;
     private LevenshteinSimilarity sim = new LevenshteinSimilarity();
+    private boolean useStringSimplifier = false;
+
+    public ClubStadiumNameComparatorLevenshtein(boolean useStringSimplifier){
+        this.useStringSimplifier = useStringSimplifier;
+    }
 
     @Override
     public double compare(Club record1, Club record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
@@ -19,9 +24,16 @@ public class ClubStadiumNameComparatorLevenshtein implements Comparator<Club, At
             return 0.0;
         }
 
-        return sim.calculate(record1.getNameOfStadium(), record2.getNameOfStadium());
+        String stadium1 = record1.getNameOfStadium();
+        String stadium2 = record2.getNameOfStadium();
+
+        if(useStringSimplifier){
+            stadium1 = StringSimplifier.simplifyString(stadium1);
+            stadium2 = StringSimplifier.simplifyString(stadium2);
+        }
+
+        return sim.calculate(stadium1, stadium2);
 
     }
-
 
 }
