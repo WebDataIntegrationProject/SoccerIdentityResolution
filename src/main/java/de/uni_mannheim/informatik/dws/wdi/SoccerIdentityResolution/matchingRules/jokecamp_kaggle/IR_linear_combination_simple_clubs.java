@@ -33,7 +33,7 @@ public class IR_linear_combination_simple_clubs
     {
         // loading data
         HashedDataSet<Club, Attribute> dataJokecamp = new HashedDataSet<>();
-        new ClubXMLReader().loadFromXML(new File("data/input/jokecamp-others.xml"), "/clubs/club", dataJokecamp);
+        new ClubXMLReader().loadFromXML(new File("data/input/jokecamp.xml"), "/clubs/club", dataJokecamp);
         HashedDataSet<Club, Attribute> dataKaggle = new HashedDataSet<>();
         new ClubXMLReader().loadFromXML(new File("data/input/kaggle.xml"), "/clubs/club", dataKaggle);
 

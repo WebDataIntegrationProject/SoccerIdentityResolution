@@ -13,9 +13,9 @@ public class PlayerClubNameComparatorLevenshtein implements Comparator<Player, A
     LevenshteinSimilarity sim = new LevenshteinSimilarity();
     boolean useStringSimplifier = false;
 
-    public PlayerClubNameComparatorLevenshtein(boolean lowerCase) {
+    public PlayerClubNameComparatorLevenshtein(boolean useStringSimplifier) {
         super();
-        useStringSimplifier = true;
+        this.useStringSimplifier = useStringSimplifier;
     }
 
     public PlayerClubNameComparatorLevenshtein() { super(); }

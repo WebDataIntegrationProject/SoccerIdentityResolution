@@ -30,7 +30,7 @@ public class IR_using_linear_combination
 		HashedDataSet<Club, Attribute> transferMarket = new HashedDataSet<>();
 		new ClubXMLReader().loadFromXML(new File("data/input/transfermarket.xml"), "/clubs/club", transferMarket);
 		HashedDataSet<Club, Attribute> dataJokecampOthers = new HashedDataSet<>();
-		new ClubXMLReader().loadFromXML(new File("data/input/jokecamp-others.xml"), "/clubs/club", dataJokecampOthers);
+		new ClubXMLReader().loadFromXML(new File("data/input/jokecamp.xml"), "/clubs/club", dataJokecampOthers);
 		
 		System.out.println("Sample from dbpedia: " + transferMarket.getRandomRecord());
 		System.out.println("Sample from jokecamp others: " + dataJokecampOthers.getRandomRecord());
