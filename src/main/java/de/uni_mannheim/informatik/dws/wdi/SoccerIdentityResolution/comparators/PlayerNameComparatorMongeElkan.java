@@ -12,11 +12,19 @@ public class PlayerNameComparatorMongeElkan implements Comparator<Player, Attrib
     private MongeElkanSimilarity sim = new MongeElkanSimilarity();
     private boolean simplifyString;
     private String similarityMeasure;
+    private boolean punishment = false;
 
     public PlayerNameComparatorMongeElkan(boolean simplifyString, String similarityMeasure){
         this.simplifyString = simplifyString;
         this.similarityMeasure = similarityMeasure;
     }
+    
+    public PlayerNameComparatorMongeElkan(boolean simplifyString, String similarityMeasure, boolean punishment){
+        this.simplifyString = simplifyString;
+        this.similarityMeasure = similarityMeasure;
+        this.punishment = punishment;
+    }
+    
 
     public PlayerNameComparatorMongeElkan(){
         this.simplifyString = false;
@@ -33,11 +41,21 @@ public class PlayerNameComparatorMongeElkan implements Comparator<Player, Attrib
         if(simplifyString){
             name1simplified = StringSimplifier.simplifyString(record1.getFullName());
             name2simplified = StringSimplifier.simplifyString(record2.getFullName());
-        } else {
-            return sim.calculate(record1.getFullName(), record2.getFullName(), similarityMeasure);
+            if(punishment){
+            	return sim.calculateWithPunishment(name1simplified, name2simplified, similarityMeasure);
+            }
+            else{
+            	return sim.calculate(name1simplified, name2simplified, similarityMeasure);
+            }
+        } 
+        else {
+        	if (punishment){
+        		return sim.calculateWithPunishment(record1.getFullName(), record2.getFullName(), similarityMeasure);
+        	}
+        	else{
+        		return sim.calculate(record1.getFullName(), record2.getFullName(), similarityMeasure);
+        	}
         }
-
-        return sim.calculate(name1simplified, name2simplified, similarityMeasure);
 
     }
     

@@ -92,4 +92,16 @@ public class MongeElkanSimilarity {
 		
 		return similarity;
 	}
+	
+	public double calculateWithPunishment(String name1, String name2, String similarityMeasure){
+		double similarity = calculate( name1,  name2,  similarityMeasure);
+		
+		String[] partsOfName1 = name1.split(" ");
+		String[] partsOfName2 = name2.split(" ");
+		double diff_numbOfNameParts = Math.abs(partsOfName1.length-partsOfName2.length);
+		
+		similarity = similarity - diff_numbOfNameParts * 0.1;
+		
+		return similarity;
+	}
 }
