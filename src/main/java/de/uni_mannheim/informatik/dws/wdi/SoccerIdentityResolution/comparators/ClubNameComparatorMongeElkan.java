@@ -12,7 +12,15 @@ public class ClubNameComparatorMongeElkan implements Comparator<Club, Attribute>
     private MongeElkanSimilarity sim = new MongeElkanSimilarity();
     boolean useStringSimplifier = false;
     private String similarityMeasure;
+    private boolean punishment = false;
 
+    public ClubNameComparatorMongeElkan(boolean lowerCase, String similarityMeasure, boolean punishment) {
+        super();
+        useStringSimplifier = true;
+        this.similarityMeasure = similarityMeasure;
+        this.punishment = punishment;
+    }
+    
     public ClubNameComparatorMongeElkan(boolean lowerCase, String similarityMeasure) {
         super();
         useStringSimplifier = true;
@@ -37,7 +45,13 @@ public class ClubNameComparatorMongeElkan implements Comparator<Club, Attribute>
             string2 = StringSimplifier.simplifyStringClubOptimized(string2);
         }
 
-        return sim.calculate(string1, string2, similarityMeasure);
+        if(punishment){
+        	return sim.calculateWithPunishment(string1, string2, similarityMeasure);
+        }
+        else{
+        	return sim.calculate(string1, string2, similarityMeasure);
+        }
+        
 
     }
 }
