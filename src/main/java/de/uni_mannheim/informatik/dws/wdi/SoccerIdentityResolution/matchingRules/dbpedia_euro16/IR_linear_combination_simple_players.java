@@ -74,7 +74,7 @@ public class IR_linear_combination_simple_players
 
         // create a matching rule
         LinearCombinationMatchingRule<Player, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-                0.7);
+                0.8);
 
 
         // add comparators
@@ -87,11 +87,12 @@ public class IR_linear_combination_simple_players
         //matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "jaroWinkler"), 1); //     on preprocessed data
         //matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "cosine"), 0.8);	//     on preprocessed data
         //matchingRule.addComparator(new PlayerNameComparatorDoubleMetaphone(true), 0.8);		// F1: 0.9545 [P:0.9265, R:0.9844]   (0.8*DoubleMetaphone + 0.2*Date > 0.8)  on preprocessed data
-        matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "doubleMetaphone"), 0.8);	// F1: 0.9921 [P:1.0, R:0.9844]    (0.8*MongeElkan(DoubleMetaphone) + 0.2*Date > 0.8)  on preprocessed data
-        //matchingRule.addComparator(new PlayerPositionComparator(), 0.1);	// 0.9060 (0.5*MongeElkan(DoubleMetaphone) + 0.3*position + 0.2*Date > 0.8)  on preprocessed data
+        matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "doubleMetaphone",true), 0.75);	// F1: 0.9921 [P:1.0, R:0.9844]    (0.8*MongeElkan(DoubleMetaphone) + 0.2*Date > 0.8)  on preprocessed data
+        matchingRule.addComparator(new PlayerPositionComparator(), 0.05);	// 0.9060 (0.5*MongeElkan(DoubleMetaphone) + 0.3*position + 0.2*Date > 0.8)  on preprocessed data
         																	// 0.9921[P:1.0, R:0.9844] (0.6*MongeElkan(DoubleMetaphone) + 0.2*position + 0.2*Date > 0.8)  on preprocessed data
         																	// 0.7692[P:1.0, R:0.6250]
         																	// 0.8772[P:1,0, R:0.7813]
+        																	// 0.9548[P:1.0, R:0.9136] (0.75*MongeElkan(DoubleMetaphone) + 0.05*position + 0.2*date > 0.8)
         matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison(), 0.2);
 
         // create a blocker (blocking strategy)
@@ -116,7 +117,7 @@ public class IR_linear_combination_simple_players
         // load the gold standard (test set)
         MatchingGoldStandard gsTest = new MatchingGoldStandard();
         gsTest.loadFromCSVFile(new File(
-                "data/goldstandard/gs_dbpedia_euro2016_players.csv"));
+                "data/goldstandard/completeGoldstandard/gs_dbpedia_2_euro2016_players.csv"));
 
         // evaluate your result
         MatchingEvaluator<Player, Attribute> evaluator = new MatchingEvaluator<Player, Attribute>(true);

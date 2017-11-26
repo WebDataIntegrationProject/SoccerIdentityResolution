@@ -3,8 +3,12 @@ package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRule
 import java.io.File;
 
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisClubs;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.ClubBlockerByCountry;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Club;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.ClubXMLReader;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubFullOrderedComparator;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorAdditionalClubVersions;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorCosine;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorDoubleMetaphone;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorJaccard;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorJaroWinkler;
@@ -20,6 +24,7 @@ import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.C
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.NoBlocker;
+import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
@@ -48,22 +53,27 @@ public class IR_linear_combination_simple_clubs
 
         // create a matching rule
         LinearCombinationMatchingRule<Club, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-                0.7);
+                0.85);
         // add comparators
 
         //matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true), 1); // 0.8387
         // matchingRule.addComparator(new ClubNameComparatorJaccard(true), 1); // 0.8077
         //matchingRule.addComparator(new ClubNameComparatorJaroWinkler(true), 1); // 0,8142
         // matchingRule.addComparator(new ClubNameComparatorSoundex(true), 1); // 0.8200
-        //matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "jaroWinkler"), 1); // 0.7966
-       // matchingRule.addComparator(new ClubNameComparatorCosine(true), 1);  // 0.8411 --> with dictionary: 0.8440
-        matchingRule.addComparator(new ClubNameComparatorDoubleMetaphone(true), 1); //0.8190
+        matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "levenshtein", true), 1.0); // 0.7966[P:0.7121, R:0.9038] (MongeElkan(levenshtein) > 0.9)
+        //matchingRule.addComparator(new ClubNameComparatorCosine(true), 0.8);  // 0.8411 --> with dictionary: 0.8440			// 0.7955
+        //matchingRule.addComparator(new ClubNameComparatorDoubleMetaphone(true), 1); //0.8190
+        //matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "cosine", true), 1);
+        
+        
+        
+        //matchingRule.addComparator(new ClubNameComparatorAdditionalClubVersions(true), 0.2); // 0.8*cosine + 0.6234
+        
         
         
         
 
         // create a blocker (blocking strategy)
-//		StandardRecordBlocker<Club, Attribute> blocker = new StandardRecordBlocker<Club, Attribute>(new MovieBlockingKeyByDecadeGenerator());
         NoBlocker<Club, Attribute> blocker = new NoBlocker<>();
 //		SortedNeighbourhoodBlocker<Movie, Attribute, Attribute> blocker = new SortedNeighbourhoodBlocker<>(new MovieBlockingKeyByDecadeGenerator(), 1);
 
@@ -81,7 +91,7 @@ public class IR_linear_combination_simple_clubs
         // load the gold standard (test set)
         MatchingGoldStandard gsTest = new MatchingGoldStandard();
         gsTest.loadFromCSVFile(new File(
-                "data/goldstandard/gs_kaggle_transfermarkt_clubs_103.csv"));
+                "data/goldstandard/completeGoldstandard/gs_kaggle_2_transfermarkt_clubs.csv"));
 
         // evaluate your result
         MatchingEvaluator<Club, Attribute> evaluator = new MatchingEvaluator<Club, Attribute>(true);

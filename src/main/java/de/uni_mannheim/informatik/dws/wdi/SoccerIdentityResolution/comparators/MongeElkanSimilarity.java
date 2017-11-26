@@ -104,4 +104,17 @@ public class MongeElkanSimilarity {
 		
 		return similarity;
 	}
+	
+	public static void main (String[] args){
+		String string1 = "St. Mirren";
+		String string2 = "St. Mirren FC";
+		
+		MongeElkanSimilarity sim = new MongeElkanSimilarity();
+		string1 = StringSimplifier.simplifyStringClubOptimized(string1);
+		string2 = StringSimplifier.simplifyStringClubOptimized(string2);
+
+		System.out.println(sim.calculateWithPunishment(string1, string2,"levenshtein"));
+		
+		
+	}
 }

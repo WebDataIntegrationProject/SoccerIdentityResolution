@@ -16,10 +16,13 @@ import java.util.regex.Pattern;
  * A simplifier which allows to better compare input strings.
  * The following operations are implemented:
  * - lowercasing
- * - removing leading and trailing white spaces
- * - removing ".", ";", ":" and ","
  * - replacing accents with the original letter e.g. á → a
  * - handling of German umlauts and "ß"
+ * - removing leading, trailing multiple white spaces
+ * - all kinds of punctuation, special characters and numbers
+ * - removing club name specific stop words
+ * - removing all parentheses along with their content (with subsequent space)
+ * - treat "-" connected names as 2 separate names
  *
  * Please adapt the unit test if you change something!
  */
@@ -44,6 +47,16 @@ public class StringSimplifier {
 			 "msk",
 			 "fk",
 		 	 "acf",
+		 	 "afc",
+		 	 "cf",
+		 	 "club de",
+		 	 "club",
+		 	 "vfl",
+		 	 "cd",
+		 	 "kaa",
+		 	 "sportverein",
+		 	 "sporting",
+		 	 "sportfreunde",
 			 "alemannia",
 			 "germania",
 			 "teutonia",
@@ -183,6 +196,6 @@ public class StringSimplifier {
     }*/
 
     public static void main (String[] args){
-    	System.out.println(StringSimplifier.simplifyStringClubOptimized(" mohamed     ali   syal  a"));
+    	System.out.println(StringSimplifier.simplifyStringClubOptimized("ac fc Milan Jugend U19 FC"));
     }
 }
