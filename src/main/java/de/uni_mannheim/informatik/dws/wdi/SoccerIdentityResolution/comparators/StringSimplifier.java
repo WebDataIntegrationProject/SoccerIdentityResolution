@@ -43,6 +43,7 @@ public class StringSimplifier {
 			 "ac",
 			 "msk",
 			 "fk",
+		 	 "acf",
 			 "alemannia",
 			 "germania",
 			 "teutonia",
