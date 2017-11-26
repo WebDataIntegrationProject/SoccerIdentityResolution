@@ -63,7 +63,7 @@ public class IR_weka_players
 
         // load the gold standard (training set)
         MatchingGoldStandard goldStandardForTraining = new MatchingGoldStandard();
-        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/completeGoldstandard/gs_dbpedia_2_euro2016_WEKA_test_players.csv"));
+        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/completeGoldstandard/gs_kaggle_2_transfermarkt_WEKA_training_players.csv"));
 
         // train the matching rule's model
         RuleLearner<Player, Attribute> learner = new RuleLearner<>();
@@ -83,7 +83,7 @@ public class IR_weka_players
 
         // gold standard for evaluation
         MatchingGoldStandard goldStandardForEvaluation = new MatchingGoldStandard();
-        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/completeGoldstandard/gs_dbpedia_2_euro2016_WEKA_test_players.csv"));
+        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/completeGoldstandard/gs_kaggle_2_transfermarkt_WEKA_test_players.csv"));
 
 
 
