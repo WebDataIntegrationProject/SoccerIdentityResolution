@@ -86,7 +86,8 @@ public class StringSimplifier {
 			 "usd",
 			 "aik",
 			 "kf",
-			 "wanderers"
+			 "wanderers",
+			 "fotball"
 	 };
 
 	
