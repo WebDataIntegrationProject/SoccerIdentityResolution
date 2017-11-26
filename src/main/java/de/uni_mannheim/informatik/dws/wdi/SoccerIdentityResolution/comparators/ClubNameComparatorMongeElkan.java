@@ -45,7 +45,11 @@ public class ClubNameComparatorMongeElkan implements Comparator<Club, Attribute>
             string2 = StringSimplifier.simplifyStringClubOptimized(string2);
         }
 
-        if(punishment){
+        if(AlternativeClubChecker.checkForAlternativeClub(string1) != AlternativeClubChecker.checkForAlternativeClub(string2)){
+        	return 0.0;
+        }
+        
+        else if(punishment){
         	return sim.calculateWithPunishment(string1, string2, similarityMeasure);
         }
         else{
@@ -53,5 +57,39 @@ public class ClubNameComparatorMongeElkan implements Comparator<Club, Attribute>
         }
         
 
+    }
+    
+    public static void main (String[] args){
+        MongeElkanSimilarity sim = new MongeElkanSimilarity();
+        String similarityMeasure = "levenshtein";
+
+    	double similarity;
+    	
+    	String string1 = "St. Mirren";
+    	String string2 = "St. Mirren  FC ";
+    	
+    	
+    	string1 = StringSimplifier.simplifyStringClubOptimized(string1);
+        string2 = StringSimplifier.simplifyStringClubOptimized(string2);
+        
+        System.out.println(string1);
+        System.out.println(string2);
+        
+        System.out.println(AlternativeClubChecker.checkForAlternativeClub(string1));
+        System.out.println(AlternativeClubChecker.checkForAlternativeClub(string2));
+        System.out.println(AlternativeClubChecker.checkForAlternativeClub(string1) != AlternativeClubChecker.checkForAlternativeClub(string2));
+        
+        if(AlternativeClubChecker.checkForAlternativeClub(string1) != AlternativeClubChecker.checkForAlternativeClub(string2)){
+        	similarity = 0.0;
+        }
+        
+        else if(true){
+        	similarity =  sim.calculateWithPunishment(string1, string2, similarityMeasure);
+        }
+        else{
+        	similarity =  sim.calculate(string1, string2, similarityMeasure);
+        }
+        
+        System.out.println(similarity);
     }
 }

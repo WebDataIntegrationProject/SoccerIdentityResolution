@@ -111,7 +111,7 @@ public class IR_linear_combination_simple_players
         // load the gold standard (test set)
         MatchingGoldStandard gsTest = new MatchingGoldStandard();
         gsTest.loadFromCSVFile(new File(
-                "data/goldstandard/gs_kaggle_transfermarkt_players_101.csv"));
+                "data/goldstandard/completeGoldstandard/gs_kaggle_2_transfermarkt_players.csv"));
 
         // evaluate your result
         MatchingEvaluator<Player, Attribute> evaluator = new MatchingEvaluator<Player, Attribute>(true);
