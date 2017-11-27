@@ -49,7 +49,8 @@ public class IR_weka_clubs
 
         // add comparators
         //matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized());
-        matchingRule.addComparator(new ClubNameComparatorLevenshtein(true));
+        //matchingRule.addComparator(new ClubNameComparatorLevenshtein(true));
+        matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "levenshtein", true));
         matchingRule.addComparator(new ClubPlayerFullComparator("data/correspondences/dbpedia_2_jokecamp_correspondences_players.csv", false));
         matchingRule.addComparator(new ClubStadiumNameComparatorLevenshtein(true));
         matchingRule.addComparator(new ClubLeagueComparatorLevenshtein(true));
