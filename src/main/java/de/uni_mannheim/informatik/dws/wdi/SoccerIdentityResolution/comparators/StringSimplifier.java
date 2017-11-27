@@ -54,6 +54,8 @@ public class StringSimplifier {
 		 	 "vfl",
 		 	 "cd",
 		 	 "kaa",
+		 	 "city",
+		 	 "cp",
 		 	 "sportverein",
 		 	 "sporting",
 		 	 "sportfreunde",
