@@ -42,7 +42,7 @@ public class IR_linear_combination_simple_clubs
 
         // create a matching rule
         LinearCombinationMatchingRule<Club, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-                0.7);
+                0.9);
         // add comparators
         // matchingRule.addComparator(new MovieDateComparator10Years(), 0.5);
         matchingRule.addComparator(new ClubNameComparatorLevenshtein(), 1);
