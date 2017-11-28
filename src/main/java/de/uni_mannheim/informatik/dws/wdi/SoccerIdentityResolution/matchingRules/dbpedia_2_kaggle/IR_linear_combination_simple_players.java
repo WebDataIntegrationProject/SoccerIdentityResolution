@@ -27,8 +27,6 @@ import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 public class IR_linear_combination_simple_players
 {
 
-    static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = false;
-
     public static void main( String[] args ) throws Exception
     {
 
@@ -68,7 +66,7 @@ public class IR_linear_combination_simple_players
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_correspondences_players.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/base_dbpedia_2_kaggle_correspondences_players.csv"), correspondences);
 
         // load the gold standard (test set)
         MatchingGoldStandard gsTest = new MatchingGoldStandard();
@@ -89,24 +87,6 @@ public class IR_linear_combination_simple_players
                         perfTest.getPrecision(), perfTest.getRecall(),
                         perfTest.getF1()));
 
-
-        if(WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL) {
-
-            System.out.println("Writing Features for an External Tool...");
-
-            // generate feature data set for RapidMiner
-            RuleLearner<Player, Attribute> learner = new RuleLearner<>();
-
-            FeatureVectorDataSet features = learner.generateTrainingDataForLearning(
-                    dataDbpedia, dataKaggle, gsTest, matchingRule, null
-            );
-
-            new RecordCSVFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_features.csv"), features);
-            System.out.println(FeaturesToCSV.writeFeaturesInCSV(features, "data/output/dbpedia_2_kaggle_features2.csv"));
-            System.out.println("Finished Writing.");
-        }
-
     }
-
 
 }

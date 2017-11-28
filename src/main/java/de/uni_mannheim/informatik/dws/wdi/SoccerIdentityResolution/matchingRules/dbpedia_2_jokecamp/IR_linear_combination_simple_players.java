@@ -69,7 +69,7 @@ public class IR_linear_combination_simple_players
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_2_jokecamp_correspondences_players.csv"), correspondences);
+        //new CSVCorrespondenceFormatter().writeCSV(new File("data/output/basic_dbpedia_2_jokecamp_correspondences_players.csv"), correspondences);
 
         // load the gold standard (test set)
         MatchingGoldStandard gsTest = new MatchingGoldStandard();

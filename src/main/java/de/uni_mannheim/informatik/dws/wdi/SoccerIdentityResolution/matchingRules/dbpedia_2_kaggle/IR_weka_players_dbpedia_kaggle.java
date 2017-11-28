@@ -31,8 +31,6 @@ import java.io.File;
 public class IR_weka_players_dbpedia_kaggle
 {
 
-    static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = false;
-
     public static void main( String[] args ) throws Exception
     {
 
@@ -105,28 +103,6 @@ public class IR_weka_players_dbpedia_kaggle
                         "Precision: %.4f\nRecall: %.4f\nF1: %.4f",
                         perfTest.getPrecision(), perfTest.getRecall(),
                         perfTest.getF1()));
-
-        if(WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL) {
-
-            System.out.println("Writing Features for an External Tool...");
-
-            // gold standard for all entries
-            MatchingGoldStandard goldStandardForExternalTool = new MatchingGoldStandard();
-            goldStandardForExternalTool.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_external_tool.csv"));
-
-
-            // generate feature data set for RapidMiner
-            RuleLearner<Player, Attribute> learner2 = new RuleLearner<>();
-
-            FeatureVectorDataSet features = learner2.generateTrainingDataForLearning(
-                    dataDbpedia, dataKaggle, goldStandardForExternalTool, matchingRule, null
-            );
-
-            new RecordCSVFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_features.csv"), features);
-
-            System.out.println("Finished Writing...");
-        }
-
 
 
     }

@@ -63,7 +63,7 @@ public class IR_weka_players_dbpedia_jokecamp
 
         // load the gold standard (test set)
         MatchingGoldStandard goldStandardForTraining = new MatchingGoldStandard();
-        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_jokecamp_players_97.csv"));
+        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_jokecamp_players_112.csv"));
 
         // train the matching rule's model
         RuleLearner<Player, Attribute> learner = new RuleLearner<>();
@@ -83,7 +83,7 @@ public class IR_weka_players_dbpedia_jokecamp
 
         // gold standard for evaluation
         MatchingGoldStandard goldStandardForEvaluation = new MatchingGoldStandard();
-        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_jokecamp_players_53.csv"));
+        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_jokecamp_players_63.csv"));
 
 
 
@@ -94,7 +94,7 @@ public class IR_weka_players_dbpedia_jokecamp
         new ErrorAnalysisPlayers().printFalsePositives(correspondences, goldStandardForEvaluation);
         new ErrorAnalysisPlayers().printFalseNegatives(dataDbpedia, dataJokecamp, correspondences, goldStandardForEvaluation);
         // print the evaluation result
-        System.out.println("Dbpedia ↔ Kaggle");
+        System.out.println("Dbpedia ↔ Jokecamp");
         System.out
                 .println(String.format(
                         "Precision: %.4f\nRecall: %.4f\nF1: %.4f",

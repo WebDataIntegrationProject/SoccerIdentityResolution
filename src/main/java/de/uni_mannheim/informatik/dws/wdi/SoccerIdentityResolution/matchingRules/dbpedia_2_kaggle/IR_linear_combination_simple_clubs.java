@@ -61,7 +61,7 @@ public class IR_linear_combination_simple_clubs
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_2_kaggle_correspondences_clubs.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/base_dbpedia_2_kaggle_correspondences_clubs.csv"), correspondences);
 
         // load the gold standard (test set)
         MatchingGoldStandard gsTest = new MatchingGoldStandard();
