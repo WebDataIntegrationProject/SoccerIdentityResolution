@@ -51,6 +51,7 @@ public class IR_weka_clubs_dbpedia_kaggle
         matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true));
         matchingRule.addComparator(new ClubPlayerFullComparator("data/correspondences/dbpedia_2_kaggle_correspondences_players.csv", false));
         //matchingRule.addComparator(new ClubPlayerNameComparator(false));
+        matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "levenshtein", true));
 
 
         // create a blocker (blocking strategy)

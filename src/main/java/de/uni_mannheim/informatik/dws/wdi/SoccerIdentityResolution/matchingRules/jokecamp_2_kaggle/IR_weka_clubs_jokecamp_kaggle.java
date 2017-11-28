@@ -43,9 +43,11 @@ public class IR_weka_clubs_jokecamp_kaggle
         WekaMatchingRule<Club, Attribute> matchingRule = new WekaMatchingRule<>(0.9, modelType, options);
         
         // add comparators
-        matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true));
+        // matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true));
         matchingRule.addComparator(new ClubPlayerFullComparator("data/output/jokecamp_2_kaggle_correspondences_players.csv"));
-        
+        matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "levenshtein", true));
+
+
         // create a blocker (blocking strategy)
         NoBlocker<Club, Attribute> blocker = new NoBlocker<>();
         

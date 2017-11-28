@@ -14,9 +14,9 @@ public class ClubNameComparatorMongeElkan implements Comparator<Club, Attribute>
     private String similarityMeasure;
     private boolean punishment = false;
 
-    public ClubNameComparatorMongeElkan(boolean lowerCase, String similarityMeasure, boolean punishment) {
+    public ClubNameComparatorMongeElkan(boolean useStringSimplifier, String similarityMeasure, boolean punishment) {
         super();
-        useStringSimplifier = true;
+        this.useStringSimplifier = useStringSimplifier;
         this.similarityMeasure = similarityMeasure;
         this.punishment = punishment;
     }

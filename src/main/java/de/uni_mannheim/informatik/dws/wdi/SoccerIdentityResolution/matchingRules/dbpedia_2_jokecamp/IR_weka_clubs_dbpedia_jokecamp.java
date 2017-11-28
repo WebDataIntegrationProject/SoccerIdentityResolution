@@ -95,7 +95,7 @@ public class IR_weka_clubs_dbpedia_jokecamp
         new ErrorAnalysisClubs().printFalseNegatives(dataDbpedia, dataJokecamp, correspondences, goldStandardForEvaluation);
 
         // print the evaluation result
-        System.out.println("Dbpedia ↔ Kaggle");
+        System.out.println("Dbpedia ↔ Jokecamp");
         System.out
                 .println(String.format(
                         "Precision: %.4f\nRecall: %.4f\nF1: %.4f",
