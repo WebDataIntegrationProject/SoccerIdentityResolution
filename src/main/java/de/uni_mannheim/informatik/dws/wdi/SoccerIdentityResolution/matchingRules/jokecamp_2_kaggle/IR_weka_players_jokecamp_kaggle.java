@@ -2,9 +2,7 @@ package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRule
 
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisPlayers;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByFirstLettersOfName;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerClubNameComparatorLevenshtein;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerHeightComparator;
-import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerNameComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.*;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Player;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.PlayerXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
@@ -51,6 +49,8 @@ public class IR_weka_players_jokecamp_kaggle
 
         // add comparators
         matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true));
+        matchingRule.addComparator(new PlayerNameComparatorJaroWinkler(true));
+        matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "doubleMetaphone", true));
         matchingRule.addComparator(new PlayerClubNameComparatorLevenshtein());
         matchingRule.addComparator(new PlayerHeightComparator());
 

@@ -51,6 +51,8 @@ public class IR_weka_players_dbpedia_jokecamp
         // add comparators
         matchingRule.addComparator(new PlayerClubNameComparatorLevenshtein(true));
         matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true));
+        matchingRule.addComparator(new PlayerNameComparatorJaroWinkler(true));
+        matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "doubleMetaphone", true));
         matchingRule.addComparator(new PlayerHeightComparator());
         matchingRule.addComparator(new PlayerPositionComparator());
 

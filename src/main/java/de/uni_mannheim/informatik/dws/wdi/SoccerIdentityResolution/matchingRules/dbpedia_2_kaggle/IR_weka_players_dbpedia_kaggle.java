@@ -51,7 +51,9 @@ public class IR_weka_players_dbpedia_kaggle
 
         // add comparators
         //matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true));
+        matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true));
         matchingRule.addComparator(new PlayerNameComparatorJaroWinkler(true));
+        matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "doubleMetaphone", true));
         matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison());
         matchingRule.addComparator(new PlayerClubNameComparatorLevenshtein());
         matchingRule.addComparator(new PlayerHeightComparator());
@@ -66,7 +68,7 @@ public class IR_weka_players_dbpedia_kaggle
 
         // load the gold standard (test set)
         MatchingGoldStandard goldStandardForTraining = new MatchingGoldStandard();
-        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_84.csv"));
+        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_88.csv"));
 
         // train the matching rule's model
         RuleLearner<Player, Attribute> learner = new RuleLearner<>();
@@ -86,7 +88,7 @@ public class IR_weka_players_dbpedia_kaggle
 
         // gold standard for evaluation
         MatchingGoldStandard goldStandardForEvaluation = new MatchingGoldStandard();
-        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_42.csv"));
+        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_player_44.csv"));
 
 
 
