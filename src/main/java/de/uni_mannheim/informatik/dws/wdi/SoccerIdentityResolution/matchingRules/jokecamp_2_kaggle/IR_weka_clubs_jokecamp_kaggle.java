@@ -1,4 +1,4 @@
-package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.jokecamp_kaggle;
+package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.jokecamp_2_kaggle;
 
 import java.io.File;
 
@@ -24,7 +24,7 @@ import de.uni_mannheim.informatik.dws.winter.processing.Processable;
  * Data Set JokeCamp Others ↔ Kaggle
  * Learning Combination Rules for Clubs
  */
-public class IR_jokecamp_kaggle_clubs_weka
+public class IR_weka_jokecamp_kaggle_clubs
 {
     public static void main( String[] args ) throws Exception
     {
