@@ -51,14 +51,14 @@ public class IR_weka_players_dbpedia_jokecamp
         // add comparators
         matchingRule.addComparator(new PlayerClubNameComparatorLevenshtein(true));
         matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true));
-        matchingRule.addComparator(new PlayerNameComparatorJaroWinkler(true));
-        matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "doubleMetaphone", true));
+        // matchingRule.addComparator(new PlayerNameComparatorJaroWinkler(true));
+        // matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "doubleMetaphone", true));
         matchingRule.addComparator(new PlayerHeightComparator());
         matchingRule.addComparator(new PlayerPositionComparator());
 
 
         // create a blocker (blocking strategy)
-        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByFirstLettersOfName(2));
+        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByFirstLettersOfName(3));
 
 
         // load the gold standard (test set)
@@ -83,7 +83,7 @@ public class IR_weka_players_dbpedia_jokecamp
 
         // gold standard for evaluation
         MatchingGoldStandard goldStandardForEvaluation = new MatchingGoldStandard();
-        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_jokecamp_players_63.csv"));
+        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_jokecamp_players_64.csv"));
 
 
 
