@@ -60,11 +60,14 @@ public class IR_linear_combination_simple_clubs
         // matchingRule.addComparator(new ClubNameComparatorJaccard(true), 1); // 0.8077
         //matchingRule.addComparator(new ClubNameComparatorJaroWinkler(true), 1); // 0,8142
         // matchingRule.addComparator(new ClubNameComparatorSoundex(true), 1); // 0.8200
-        matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "levenshtein", true), 1.0); // 0.7966[P:0.7121, R:0.9038] (MongeElkan(levenshtein) > 0.9)
         //matchingRule.addComparator(new ClubNameComparatorCosine(true), 0.8);  // 0.8411 --> with dictionary: 0.8440			// 0.7955
         //matchingRule.addComparator(new ClubNameComparatorDoubleMetaphone(true), 1); //0.8190
         //matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "cosine", true), 1);
         
+        //***BEST:***
+        matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "levenshtein", true), 1.0); // F1:0.8462 [P:0.8462, R:0.8462] (MongeElkan(levenshtein) > 0.85)
+
+        //matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true), 1.0);
         
         
         //matchingRule.addComparator(new ClubNameComparatorAdditionalClubVersions(true), 0.2); // 0.8*cosine + 0.6234

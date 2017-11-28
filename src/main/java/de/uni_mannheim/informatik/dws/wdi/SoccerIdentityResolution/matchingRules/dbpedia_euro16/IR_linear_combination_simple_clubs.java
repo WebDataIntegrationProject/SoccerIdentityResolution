@@ -51,14 +51,14 @@ public class IR_linear_combination_simple_clubs
 
         // create a matching rule
         LinearCombinationMatchingRule<Club, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-                0.9);
+                0.85);
         // add comparators
 
         //matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true), 1); // 
         // matchingRule.addComparator(new ClubNameComparatorJaccard(true), 1); // 
         //matchingRule.addComparator(new ClubNameComparatorJaroWinkler(true), 1); // 
         // matchingRule.addComparator(new ClubNameComparatorSoundex(true), 1); // 
-        matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "levenshtein", true), 1); // 0.7692 (MongeElkan(levenshtein) > 0.85)
+        //matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "levenshtein", true), 1); // 0.7692 (MongeElkan(levenshtein) > 0.85)
         																							// 0.7778 (MongeElkan(levenshtein) > 0.9)
         //matchingRule.addComparator(new ClubNameComparatorCosine(true), 1.0);  //  (0.8*CosineName + 0.2*country > 0.8)
         //matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "cosine", true), 0.7);
@@ -69,6 +69,8 @@ public class IR_linear_combination_simple_clubs
         //matchingRule.addComparator(new ClubLeagueComparatorMongeElkan(true, "cosine"), 0.3); 
         //matchingRule.addComparator(new ClubNameComparatorDoubleMetaphone(true), 1); 
         
+        
+        matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "levenshtein", true), 1.0);	// F1: 0.7770 [P:0.7200, R:0.8438]
         
 
         // create a blocker (blocking strategy)
