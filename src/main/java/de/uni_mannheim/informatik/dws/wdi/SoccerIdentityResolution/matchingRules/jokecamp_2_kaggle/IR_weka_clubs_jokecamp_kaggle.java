@@ -52,7 +52,7 @@ public class IR_weka_clubs_jokecamp_kaggle
         // load the training set
         MatchingGoldStandard goldStandardForTraining = new MatchingGoldStandard();
         System.out.println("Loading Training Gold Standard");
-        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_jokecamp_kaggle_clubs.csv"));
+        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_jokecamp_kaggle_clubs_75.csv"));
         
         // train the matching rule's model
         RuleLearner<Club, Attribute> learner = new RuleLearner<>();
@@ -67,12 +67,12 @@ public class IR_weka_clubs_jokecamp_kaggle
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/jokecamp_kaggle_correspondences_clubs.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/jokecamp_2_kaggle_correspondences_clubs.csv"), correspondences);
 
         // load the gold standard (test set)
         MatchingGoldStandard goldStandardForEvaluation= new MatchingGoldStandard();
         System.out.println("Loading Evaluation Gold Standard");
-        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_jokecamp_kaggle_clubs_test.csv"));
+        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_jokecamp_kaggle_clubs_75.csv"));
 
         // evaluate your result
         MatchingEvaluator<Club, Attribute> evaluator = new MatchingEvaluator<Club, Attribute>(true);

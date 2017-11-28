@@ -1,6 +1,7 @@
 package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.jokecamp_2_kaggle;
 
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisPlayers;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByFirstLettersOfName;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerClubNameComparatorLevenshtein;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerHeightComparator;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.PlayerNameComparatorLevenshtein;
@@ -10,6 +11,7 @@ import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.algorithms.RuleLearner;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.NoBlocker;
+import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.WekaMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
@@ -29,8 +31,6 @@ import java.io.File;
  */
 public class IR_weka_players_jokecamp_kaggle
 {
-
-    static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = true;
 
     public static void main( String[] args ) throws Exception
     {
@@ -55,12 +55,12 @@ public class IR_weka_players_jokecamp_kaggle
         matchingRule.addComparator(new PlayerHeightComparator());
 
         // create a blocker (blocking strategy)
-        NoBlocker<Player, Attribute> blocker = new NoBlocker<>();
-        //StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByFirstLettersOfName());
+        //NoBlocker<Player, Attribute> blocker = new NoBlocker<>();
+        StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByFirstLettersOfName(2));
 
         // load the gold standard (test set)
         MatchingGoldStandard goldStandardForTraining = new MatchingGoldStandard();
-        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_kaggle_jokecamp_players.csv"));
+        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_jokecamp_2_kaggle_players_80.csv"));
 
         // train the matching rule's model
         RuleLearner<Player, Attribute> learner = new RuleLearner<>();
@@ -79,7 +79,7 @@ public class IR_weka_players_jokecamp_kaggle
 
      // gold standard for evaluation
         MatchingGoldStandard goldStandardForEvaluation = new MatchingGoldStandard();
-        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_jokecamp_kaggle_players_test.csv"));
+        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_jokecamp_2_kaggle_players_40.csv"));
 
         // evaluate your result
         MatchingEvaluator<Player, Attribute> evaluator = new MatchingEvaluator<Player, Attribute>(true);
@@ -95,23 +95,6 @@ public class IR_weka_players_jokecamp_kaggle
                         perfTest.getPrecision(), perfTest.getRecall(),
                         perfTest.getF1()));
 
-        if(WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL) {
-
-            System.out.println("Writing Features for an External Tool...");
-
-            // generate feature data set for RapidMiner
-            RuleLearner<Player, Attribute> learner2 = new RuleLearner<>();
-
-            FeatureVectorDataSet features = learner2.generateTrainingDataForLearning(
-                    dataJokecamp, dataKaggle, goldStandardForTraining, matchingRule, null
-            );
-
-            new RecordCSVFormatter().writeCSV(new File("data/output/jokecamp_kaggle_features.csv"), features);
-
-            System.out.println("Finished Writing...");
-        }
-
     }
-
 
 }
