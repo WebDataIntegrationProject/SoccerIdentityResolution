@@ -1,4 +1,4 @@
-package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.jokecamp_kaggle;
+package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.jokecamp_2_kaggle;
 
 import java.io.File;
 
@@ -42,9 +42,9 @@ public class IR_linear_combination_simple_clubs
 
         // create a matching rule
         LinearCombinationMatchingRule<Club, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-                0.7);
+                0.9);
         // add comparators
-        matchingRule.addComparator(new ClubNameComparatorLevenshtein(), 1);
+        matchingRule.addComparator(new ClubNameComparatorLevenshtein(), 1.0);
 
         // create a blocker (blocking strategy)
 //		StandardRecordBlocker<Club, Attribute> blocker = new StandardRecordBlocker<Club, Attribute>(new MovieBlockingKeyByDecadeGenerator());

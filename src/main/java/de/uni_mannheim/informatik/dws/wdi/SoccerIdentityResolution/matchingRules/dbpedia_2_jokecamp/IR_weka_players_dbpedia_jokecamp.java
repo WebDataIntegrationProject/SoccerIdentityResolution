@@ -27,7 +27,7 @@ import java.io.File;
  * Data Set DBpedia ↔ Kaggle
  * Learning Combination Rules for Players
  */
-public class IR_weka_players
+public class IR_weka_players_dbpedia_jokecamp
 {
 
     static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = false;

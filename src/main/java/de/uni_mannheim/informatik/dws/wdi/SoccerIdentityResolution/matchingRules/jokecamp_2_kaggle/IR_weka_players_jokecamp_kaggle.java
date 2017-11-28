@@ -27,7 +27,7 @@ import java.io.File;
  * Data Set Jokecamp ↔ Kaggle
  * Learning Combination Rules for Players
  */
-public class IR_weka_jokecamp_kaggle_players
+public class IR_weka_players_jokecamp_kaggle
 {
 
     static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = true;

@@ -24,7 +24,7 @@ import de.uni_mannheim.informatik.dws.winter.processing.Processable;
  * Data Set JokeCamp Others ↔ Kaggle
  * Learning Combination Rules for Clubs
  */
-public class IR_weka_jokecamp_kaggle_clubs
+public class IR_weka_clubs_jokecamp_kaggle
 {
     public static void main( String[] args ) throws Exception
     {
