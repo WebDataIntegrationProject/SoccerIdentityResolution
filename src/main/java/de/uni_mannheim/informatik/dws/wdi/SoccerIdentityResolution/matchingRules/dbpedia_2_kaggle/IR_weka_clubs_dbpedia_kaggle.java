@@ -25,7 +25,7 @@ import java.io.File;
  * Data Set DBpedia ↔ Kaggle
  * Learning Combination Rules for Clubs
  */
-public class IR_weka_clubs
+public class IR_weka_clubs_dbpedia_kaggle
 {
 
     static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = false;
@@ -61,7 +61,7 @@ public class IR_weka_clubs
         // load the gold standard (test set)
         MatchingGoldStandard goldStandardForTraining = new MatchingGoldStandard();
         System.out.println("Loading Training Gold Standard");
-        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_clubs_67.csv"));
+        goldStandardForTraining.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_clubs_77.csv"));
 
         // train the matching rule's model
         RuleLearner<Club, Attribute> learner = new RuleLearner<>();
@@ -82,7 +82,7 @@ public class IR_weka_clubs
         // gold standard for evaluation
         MatchingGoldStandard goldStandardForEvaluation = new MatchingGoldStandard();
         System.out.println("Loading Evaluation Gold Standard");
-        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_clubs_36.csv"));
+        goldStandardForEvaluation.loadFromCSVFile(new File("data/goldstandard/gs_dbpedia_2_kaggle_clubs_39.csv"));
 
         // evaluate your result
         MatchingEvaluator<Club, Attribute> evaluator = new MatchingEvaluator<Club, Attribute>(true);

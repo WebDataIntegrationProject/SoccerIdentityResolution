@@ -18,6 +18,11 @@ public class StringSimplifierTest extends TestCase {
 
         // test for special characters
         Assert.assertEquals(StringSimplifier.simplifyString("ç"), "c");
+
+        // test with concrete example
+        Assert.assertEquals(StringSimplifier.simplifyStringClubOptimized("AC Mailand"), "mailand");
+        Assert.assertEquals(StringSimplifier.simplifyStringClubOptimized("Mailand"), "mailand");
+
     }
 
     public void testSimplifyStringClubOptimized(){

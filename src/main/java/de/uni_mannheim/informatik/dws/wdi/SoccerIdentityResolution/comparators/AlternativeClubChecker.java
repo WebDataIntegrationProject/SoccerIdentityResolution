@@ -55,6 +55,8 @@ public class AlternativeClubChecker {
     
     public static void main (String[] args){
     	System.out.println(AlternativeClubChecker.checkForAlternativeClub("Polonia Bytom"));
-    }
+		System.out.println(AlternativeClubChecker.checkForAlternativeClub("Polonia Bytom Jugend"));
+		System.out.println(true == false);
+	}
 
 }
