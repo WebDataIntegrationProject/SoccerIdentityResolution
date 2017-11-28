@@ -24,7 +24,7 @@ public class ClubCorrespondencesCleaner {
 			 String line;
 			 boolean isAlternativeClub_first;
 			 boolean isAlternativeClub_second;
-			 File fout = new File("data/output/club_correspondences_CLEANED.csv");
+			 File fout = new File("data/output/kaggle_2_transfermarket_correspondences_clubs.csv");
 			 FileOutputStream fos = new FileOutputStream(fout);
 			 BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
 			 Pattern pattern = Pattern.compile(".*u[0-9][0-9]");
