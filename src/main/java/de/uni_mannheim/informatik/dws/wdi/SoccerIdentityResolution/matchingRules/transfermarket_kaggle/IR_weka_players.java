@@ -46,15 +46,16 @@ public class IR_weka_players
 
         String options[] = new String[] {""};
         String modelType = "SimpleLogistic"; // using a logistic regression
-        WekaMatchingRule<Player, Attribute> matchingRule = new WekaMatchingRule<>(0.8, modelType, options);
+        WekaMatchingRule<Player, Attribute> matchingRule = new WekaMatchingRule<>(0.85, modelType, options);
 
         // add comparators
         matchingRule.addComparator(new PlayerNameComparatorLevenshtein(true));
         matchingRule.addComparator(new PlayerNameComparatorJaroWinkler(true));
         matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "doubleMetaphone", true));
         matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison());
-        matchingRule.addComparator(new PlayerHeightComparator());
+        matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "doubleMetaphone"));
         
+        matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison());
 
 
         // create a blocker (blocking strategy)

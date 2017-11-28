@@ -92,7 +92,7 @@ public class IR_linear_combination_simple_players
         																	// 0.9921[P:1.0, R:0.9844] (0.6*MongeElkan(DoubleMetaphone) + 0.2*position + 0.2*Date > 0.8)  on preprocessed data
         																	// 0.7692[P:1.0, R:0.6250]
         																	// 0.8772[P:1,0, R:0.7813]
-        																	// 0.9548[P:1.0, R:0.9136] (0.75*MongeElkan(DoubleMetaphone) + 0.05*position + 0.2*date > 0.8)
+        																	// 0.9615[P:1.0, R:0.9259] (0.75*MongeElkan(DoubleMetaphone) + 0.05*position + 0.2*date > 0.8)
         matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison(), 0.2);
 
         // create a blocker (blocking strategy)

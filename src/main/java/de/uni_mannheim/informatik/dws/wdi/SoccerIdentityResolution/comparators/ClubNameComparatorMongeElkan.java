@@ -65,8 +65,8 @@ public class ClubNameComparatorMongeElkan implements Comparator<Club, Attribute>
 
     	double similarity;
     	
-    	String string1 = "St. Mirren";
-    	String string2 = "St. Mirren  FC ";
+    	String string1 = "KAA Gent";
+    	String string2 = "KAA Gent I";
     	
     	
     	string1 = StringSimplifier.simplifyStringClubOptimized(string1);
