@@ -1,4 +1,4 @@
-package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.jokecamp_kaggle;
+package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.jokecamp_2_kaggle;
 
 import java.io.File;
 
@@ -42,9 +42,9 @@ public class IR_linear_combination_simple_clubs
 
         // create a matching rule
         LinearCombinationMatchingRule<Club, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-                0.7);
+                0.9);
         // add comparators
-        matchingRule.addComparator(new ClubNameComparatorLevenshtein(), 1);
+        matchingRule.addComparator(new ClubNameComparatorLevenshtein(), 1.0);
 
         // create a blocker (blocking strategy)
 //		StandardRecordBlocker<Club, Attribute> blocker = new StandardRecordBlocker<Club, Attribute>(new MovieBlockingKeyByDecadeGenerator());
@@ -60,12 +60,12 @@ public class IR_linear_combination_simple_clubs
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/jokecamp_kaggle_correspondences.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/base_jokecamp_kaggle_clubs_correspondences.csv"), correspondences);
 
         // load the gold standard (test set)
         MatchingGoldStandard gsTest = new MatchingGoldStandard();
         gsTest.loadFromCSVFile(new File(
-                "data/goldstandard/gs_jokecamp_kaggle_clubs.csv"));
+                "data/goldstandard/completeGoldstandard/gs_jokecamp_kaggle_clubs.csv"));
 
         // evaluate your result
         MatchingEvaluator<Club, Attribute> evaluator = new MatchingEvaluator<Club, Attribute>(true);

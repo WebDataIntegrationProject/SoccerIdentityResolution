@@ -1,12 +1,6 @@
-package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.jokecamp_kaggle;
+package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.jokecamp_2_kaggle;
 
 import java.io.File;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisPlayers;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.FeaturesToCSV;
@@ -28,7 +22,6 @@ import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMat
 import de.uni_mannheim.informatik.dws.winter.model.*;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.FeatureVectorDataSet;
-import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Record;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.RecordCSVFormatter;
 import de.uni_mannheim.informatik.dws.winter.model.io.CSVCorrespondenceFormatter;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
@@ -39,8 +32,6 @@ import de.uni_mannheim.informatik.dws.winter.processing.Processable;
  */
 public class IR_linear_combination_simple_players
 {
-
-    static boolean WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL = false;
 
     public static void main( String[] args ) throws Exception
     {
@@ -56,13 +47,13 @@ public class IR_linear_combination_simple_players
 
         // create a matching rule
         LinearCombinationMatchingRule<Player, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-                0.0);
+                0.9);
 
 
         // add comparators
         // matchingRule.addComparator(new MovieDateComparator10Years(), 0.5);
-        matchingRule.addComparator(new PlayerNameComparatorLevenshtein(), 0.5);
-        matchingRule.addComparator(new PlayerBirthDateComparatorLevenshtein(), 0.5);
+        matchingRule.addComparator(new PlayerNameComparatorLevenshtein(), 1.0);
+        //matchingRule.addComparator(new PlayerBirthDateComparatorLevenshtein(), 0.5);
 
         // create a blocker (blocking strategy)
         StandardRecordBlocker<Player, Attribute> blocker = new StandardRecordBlocker<Player, Attribute>(new PlayerBlockerByFirstLettersOfName());
@@ -81,12 +72,12 @@ public class IR_linear_combination_simple_players
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/jokecamp_2_kaggle_correspondences_players.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/base_jokecamp_2_kaggle_correspondences_players.csv"), correspondences);
 
         // load the gold standard (test set)
         MatchingGoldStandard gsTest = new MatchingGoldStandard();
         gsTest.loadFromCSVFile(new File(
-                "data/goldstandard/gs_jokecamp_kaggle_players.csv"));
+                "data/goldstandard/completeGoldstandard/gs_jokecamp_kaggle_players.csv"));
 
         // evaluate your result
         MatchingEvaluator<Player, Attribute> evaluator = new MatchingEvaluator<Player, Attribute>(true);
@@ -101,25 +92,6 @@ public class IR_linear_combination_simple_players
                         "Precision: %.4f\nRecall: %.4f\nF1: %.4f",
                         perfTest.getPrecision(), perfTest.getRecall(),
                         perfTest.getF1()));
-
-
-
-
-        if(WRITE_FEATURE_SET_FOR_EXTERNAL_TOOL) {
-
-            System.out.println("Writing Features for an External Tool...");
-
-            // generate feature data set for RapidMiner
-            RuleLearner<Player, Attribute> learner = new RuleLearner<>();
-
-            FeatureVectorDataSet features = learner.generateTrainingDataForLearning(
-                    dataJokecamp, dataKaggle, gsTest, matchingRule, null
-            );
-
-            new RecordCSVFormatter().writeCSV(new File("data/output/jokecamp_kaggle_features.csv"), features);
-            System.out.println(FeaturesToCSV.writeFeaturesInCSV(features, "data/output/jokecamp_kaggle_features2.csv"));
-            System.out.println("Finished Writing.");
-        }
 
     }
 
