@@ -1,4 +1,4 @@
-package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.jokecamp_2_kaggle;
+package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.kaggle_jokecamp;
 
 import java.io.File;
 
@@ -6,6 +6,7 @@ import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysis
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Club;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.ClubXMLReader;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorMongeElkan;
 //import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Blocking.MovieBlockingKeyByDecadeGenerator;
 //import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators.MovieDateComparator10Years;
 //import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators.MovieTitleComparatorLevenshtein;
@@ -24,7 +25,7 @@ import de.uni_mannheim.informatik.dws.winter.model.io.CSVCorrespondenceFormatter
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
 /**
- * Data Set Jokecamp ↔ Kaggle
+ * Data Set Kaggle ↔ Jokecamp
  * Learning Combination Rules for Clubs
  */
 public class IR_linear_combination_simple_clubs
@@ -32,19 +33,24 @@ public class IR_linear_combination_simple_clubs
     public static void main( String[] args ) throws Exception
     {
         // loading data
+    	HashedDataSet<Club, Attribute> kaggle = new HashedDataSet<>();
+        new ClubXMLReader().loadFromXML(new File("data/input/kaggle.xml"), "/clubs/club", kaggle);
         HashedDataSet<Club, Attribute> dataJokecamp = new HashedDataSet<>();
         new ClubXMLReader().loadFromXML(new File("data/input/jokecamp.xml"), "/clubs/club", dataJokecamp);
-        HashedDataSet<Club, Attribute> dataKaggle = new HashedDataSet<>();
-        new ClubXMLReader().loadFromXML(new File("data/input/kaggle.xml"), "/clubs/club", dataKaggle);
-
+        
+        System.out.println("Sample from transfermarket: " + kaggle.getRandomRecord());
         System.out.println("Sample from jokecamp others: " + dataJokecamp.getRandomRecord());
-        System.out.println("Sample from kaggle: " + dataKaggle.getRandomRecord());
 
         // create a matching rule
         LinearCombinationMatchingRule<Club, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-                0.9);
+                0.85);
+        
+        // F1:0.8440 [P:0.9583, R:0.7541]
+        
+        
         // add comparators
-        matchingRule.addComparator(new ClubNameComparatorLevenshtein(), 1.0);
+        // matchingRule.addComparator(new MovieDateComparator10Years(), 0.5);
+        matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "levenshtein", true), 1.0);
 
         // create a blocker (blocking strategy)
 //		StandardRecordBlocker<Club, Attribute> blocker = new StandardRecordBlocker<Club, Attribute>(new MovieBlockingKeyByDecadeGenerator());
@@ -56,11 +62,11 @@ public class IR_linear_combination_simple_clubs
 
         // Execute the matching
         Processable<Correspondence<Club, Attribute>> correspondences = engine.runIdentityResolution(
-                dataJokecamp, dataKaggle, null, matchingRule,
+                kaggle, dataJokecamp, null, matchingRule,
                 blocker);
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/base_jokecamp_kaggle_clubs_correspondences.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/kaggle_jokecamp_correspondences.csv"), correspondences);
 
         // load the gold standard (test set)
         MatchingGoldStandard gsTest = new MatchingGoldStandard();
@@ -72,9 +78,9 @@ public class IR_linear_combination_simple_clubs
         Performance perfTest = evaluator.evaluateMatching(correspondences.get(),
                 gsTest);
         new ErrorAnalysisClubs().printFalsePositives(correspondences, gsTest);
-        new ErrorAnalysisClubs().printFalseNegatives(dataJokecamp, dataKaggle, correspondences, gsTest);
+        new ErrorAnalysisClubs().printFalseNegatives(kaggle, dataJokecamp, correspondences, gsTest);
         // print the evaluation result
-        System.out.println("Jokecamp ↔ Kaggle");
+        System.out.println("Kaggle ↔ Jokecamp");
         System.out
                 .println(String.format(
                         "Precision: %.4f\nRecall: %.4f\nF1: %.4f",

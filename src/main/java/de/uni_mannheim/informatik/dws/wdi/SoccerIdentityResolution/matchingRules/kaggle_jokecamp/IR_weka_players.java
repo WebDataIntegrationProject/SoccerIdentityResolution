@@ -1,4 +1,4 @@
-package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.transfermarket_jokecamp;
+package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.kaggle_jokecamp;
 
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisPlayers;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.PlayerBlockerByBirthYear;

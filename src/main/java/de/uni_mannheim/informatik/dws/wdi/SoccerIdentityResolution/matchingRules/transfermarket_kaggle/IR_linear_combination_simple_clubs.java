@@ -64,7 +64,7 @@ public class IR_linear_combination_simple_clubs
         //matchingRule.addComparator(new ClubNameComparatorDoubleMetaphone(true), 1); //0.8190
         //matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "cosine", true), 1);
         
-        //***BEST:***
+        
         matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "levenshtein", true), 1.0); // F1:0.8462 [P:0.8462, R:0.8462] (MongeElkan(levenshtein) > 0.85)
 
         //matchingRule.addComparator(new ClubNameComparatorLevenshteinOptimized(true), 1.0);

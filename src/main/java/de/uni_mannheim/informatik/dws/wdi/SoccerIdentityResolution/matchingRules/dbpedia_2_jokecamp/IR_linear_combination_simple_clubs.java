@@ -2,6 +2,7 @@ package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRule
 
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisClubs;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorMongeElkan;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Club;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.ClubXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
@@ -43,10 +44,13 @@ public class IR_linear_combination_simple_clubs
 
         // create a matching rule
         LinearCombinationMatchingRule<Club, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-                0.9);
+                0.85);
+        
+        // F1:0.6667 [P:0.7931, R: 0.5750]
+        
         // add comparators
         // matchingRule.addComparator(new MovieDateComparator10Years(), 0.5);
-        matchingRule.addComparator(new ClubNameComparatorLevenshtein(), 1);
+        matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "levenshtein", true), 1.0);
 
         // create a blocker (blocking strategy)
 //		StandardRecordBlocker<Club, Attribute> blocker = new StandardRecordBlocker<Club, Attribute>(new MovieBlockingKeyByDecadeGenerator());

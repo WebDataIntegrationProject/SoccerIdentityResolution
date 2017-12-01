@@ -72,7 +72,7 @@ public class IR_linear_combination_simple_players
 
         // create a matching rule
         LinearCombinationMatchingRule<Player, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-                0.9);
+                0.85);
 
 
         // add comparators
@@ -86,7 +86,7 @@ public class IR_linear_combination_simple_players
         //matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "cosine"), 0.8);	// 0.8250  on preprocessed data
         //matchingRule.addComparator(new PlayerNameComparatorDoubleMetaphone(true), 0.8);		// 0.9333 (0.8*DoubleMetaphone + 0.2*Date > 0.8)  on preprocessed data
         matchingRule.addComparator(new PlayerNameComparatorMongeElkan(true, "doubleMetaphone"), 0.8);	// F1:0.9784 [P:0.9714, R:0.9855] (0.8*MongeElkan(DoubleMetaphone) + 0.2*Date > 0.9)  on preprocessed data
-    
+        
         matchingRule.addComparator(new PlayerBirthDateComparatorExactDateComparison(), 0.2);
 
         // create a blocker (blocking strategy)
