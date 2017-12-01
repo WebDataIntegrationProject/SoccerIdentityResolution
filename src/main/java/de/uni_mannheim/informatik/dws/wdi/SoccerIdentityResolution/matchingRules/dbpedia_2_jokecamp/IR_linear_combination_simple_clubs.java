@@ -1,6 +1,7 @@
 package de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.matchingRules.dbpedia_2_jokecamp;
 
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.ErrorAnalysisClubs;
+import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.blockers.ClubBlockerByCountry;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorLevenshtein;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.comparators.ClubNameComparatorMongeElkan;
 import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.Club;
@@ -8,6 +9,7 @@ import de.uni_mannheim.informatik.dws.wdi.SoccerIdentityResolution.model.ClubXML
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.NoBlocker;
+import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
@@ -46,15 +48,17 @@ public class IR_linear_combination_simple_clubs
         LinearCombinationMatchingRule<Club, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
                 0.85);
         
-        // F1:0.6667 [P:0.7931, R: 0.5750]
+        // F1:0.6486 [P:0.7059, R: 0.6486]
         
         // add comparators
         // matchingRule.addComparator(new MovieDateComparator10Years(), 0.5);
         matchingRule.addComparator(new ClubNameComparatorMongeElkan(true, "levenshtein", true), 1.0);
 
         // create a blocker (blocking strategy)
-//		StandardRecordBlocker<Club, Attribute> blocker = new StandardRecordBlocker<Club, Attribute>(new MovieBlockingKeyByDecadeGenerator());
+		//StandardRecordBlocker<Club, Attribute> blocker = new StandardRecordBlocker<Club, Attribute>(new ClubBlockerByCountry());
         NoBlocker<Club, Attribute> blocker = new NoBlocker<>();
+        
+        
 //		SortedNeighbourhoodBlocker<Movie, Attribute, Attribute> blocker = new SortedNeighbourhoodBlocker<>(new MovieBlockingKeyByDecadeGenerator(), 1);
 
         // Initialize Matching Engine
